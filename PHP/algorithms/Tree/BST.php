@@ -11,7 +11,7 @@ class Node
     public $right;
     public $parent;
 
-    public function __construct(int $data = null, Node $parent = null)
+    public function __construct(int $data = null, BinaryNode $parent = null)
     {
         $this->data = $data;
         $this->parent = $parent;
@@ -106,7 +106,7 @@ class BST
 
     public function __construct(int $data)
     {
-        $this->root = new Node($data);
+        $this->root = new BinaryNode($data);
     }
 
     public function isEmpty(): bool
@@ -117,7 +117,7 @@ class BST
     public function insert(int $data)
     {
         if ($this->isEmpty()) {
-            $node = new Node($data);
+            $node = new BinaryNode($data);
             $this->root = $node;
             return $node;
         }
@@ -127,7 +127,7 @@ class BST
                 if ($node->right) {
                     $node = $node->right;
                 } else {
-                    $node->right = new Node($data, $node);
+                    $node->right = new BinaryNode($data, $node);
                     $node = $node->right;
                     break;
                 }
@@ -135,7 +135,7 @@ class BST
                 if ($node->left) {
                     $node = $node->left;
                 } else {
-                    $node->left = new Node($data, $node);
+                    $node->left = new BinaryNode($data, $node);
                     $node = $node->left;
                     break;
                 }
@@ -146,7 +146,7 @@ class BST
         return $node;
     }
 
-    public function traverse(Node $node, string $type = "in-order")
+    public function traverse(BinaryNode $node, string $type = "in-order")
     {
         switch ($type) {
             case "in-order":
@@ -161,7 +161,7 @@ class BST
         }
     }
 
-    public function preOrder(Node $node)
+    public function preOrder(BinaryNode $node)
     {
         if ($node) {
             echo $node->data." ";
@@ -174,7 +174,7 @@ class BST
         }
     }
 
-    public function inOrder(Node $node)
+    public function inOrder(BinaryNode $node)
     {
         if ($node) {
             if ($node->left) {
@@ -187,7 +187,7 @@ class BST
         }
     }
 
-    public function postOrder(Node $node)
+    public function postOrder(BinaryNode $node)
     {
         if ($node) {
             if ($node->left) {

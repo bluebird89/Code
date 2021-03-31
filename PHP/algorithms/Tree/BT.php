@@ -2,6 +2,7 @@
 
 namespace Algorithms\Tree;
 
+include '../../vendor/autoload.php';
 
 class BT
 {
@@ -9,7 +10,7 @@ class BT
     /**
      * 前序遍历
      *
-     * @param  Node  $tree
+     * @param  BinaryNode  $tree
      */
     public static function preOrderTraverse($tree): void
     {
@@ -24,7 +25,7 @@ class BT
     /**
      * 中序遍历
      *
-     * @param  Node  $tree
+     * @param  BinaryNode  $tree
      */
     public static function midOrderTraverse($tree): void
     {
@@ -39,7 +40,7 @@ class BT
     /**
      * 后序遍历
      *
-     * @param  Node  $tree
+     * @param  BinaryNode  $tree
      */
     public static function postOrderTraverse($tree): void
     {
@@ -52,9 +53,9 @@ class BT
     }
 }
 
-$node1 = new Node('A');
-$node2 = new Node('B');
-$node3 = new Node('C');
+$node1 = new BinaryNode('A');
+$node2 = new BinaryNode('B');
+$node3 = new BinaryNode('C');
 $node1->left = $node2;
 $node1->right = $node3;
 BT::preOrderTraverse($node1);

@@ -1,14 +1,21 @@
 <?php
 
+namespace Algorithms;
+
+/*
+ * 递归：基于栈结构实现
+ */
+
 class Recursive
 {
 
-    # 输入一个正整数n，输出n!的值。其中n!=123*…*n,即求阶乘
+    # 输入一个正整数n，输出n!的值。其中n!=1*2*3…*n,即求阶乘
     public function factorial(int $n): int
     {
         if ($n === 1) {
             return 1;
         }
+
         return $n * self::factorial($n - 1);
     }
 
@@ -89,5 +96,16 @@ echo $instance->step2(6).PHP_EOL;
 
 $fibs = $instance->fib(9);
 foreach ($fibs as $fib) {
-    echo " ".$fib;
+    echo " ".$fib.PHP_EOL;
 }
+
+function countdown($number)
+{
+    echo $number." ";
+    if ($number == 0) {
+        return;
+    }
+    countdown($number - 1);
+}
+
+countdown(10);

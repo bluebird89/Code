@@ -5,7 +5,7 @@ namespace Algorithms\Tree;
 class BinarySortedTree extends BT
 {
     /**
-     * @var Node
+     * @var BinaryNode
      */
     private $tree;
 
@@ -18,20 +18,20 @@ class BinarySortedTree extends BT
     {
         // 如果是空树，则将数据插入到根节点
         if (!$this->tree) {
-            $this->tree = new Node($data);
+            $this->tree = new BinaryNode($data);
             return;
         }
         $p = $this->tree;
         while ($p) {
             if ($data < $p->data) {
                 if (!$p->left) {
-                    $p->left = new Node($data);
+                    $p->left = new BinaryNode($data);
                     return;
                 }
                 $p = $p->left;
             } elseif ($data > $p->data) {
                 if (!$p->right) {
-                    $p->right = new Node($data);
+                    $p->right = new BinaryNode($data);
                     return;
                 }
                 $p = $p->right;

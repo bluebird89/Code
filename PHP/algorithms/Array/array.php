@@ -71,7 +71,7 @@ for ($i = 0; $i < 10000; $i++) {
     $array[$i] = $i;
 }
 echo memory_get_usage() - $startMemory, ' bytes'.PHP_EOL;
-echo microtime() - $startTime, ' nano second';
+echo microtime() - $startTime .' nano second';
 
 $graph = [];
 $nodes = ['A', 'B', 'C', 'D', 'E'];

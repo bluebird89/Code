@@ -163,8 +163,6 @@ class BST
 }
 
 try {
-
-
     $tree = new BST(10);
 
     $tree->insert(12);

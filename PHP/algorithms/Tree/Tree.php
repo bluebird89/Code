@@ -8,6 +8,12 @@ use SplStack;
 
 include '../../vendor/autoload.php';
 
+/**
+ * 多叉树
+ * Class Tree
+ *
+ * @package Algorithms\Tree
+ */
 class Tree
 {
 
@@ -23,7 +29,7 @@ class Tree
 
         if ($node) {
             echo str_repeat("-", $level);
-            echo $node->data."\n";
+            echo $node->data.PHP_EOL;
 
             foreach ($node->children as $childNode) {
                 $this->traverse($childNode, $level + 1);
@@ -48,7 +54,31 @@ class Tree
         return $visited;
     }
 
-    public function DFS(TreeNode $node): SplQueue
+    public function dfs(TreeNode $node)
+    {
+
+        if ($node->data == null) {
+            return;
+        }
+
+        $visited = new SplQueue;
+        static::enqueue($visited, $node);
+        return $visited;
+    }
+
+    public static function enqueue(&$visited, $node)
+    {
+        $visited->enqueue($node);
+        foreach (array_reverse($node->children) as $child) {
+            if ($child->data != null) {
+                static::enqueue($visited, $child);
+            }
+        }
+    }
+
+    // 用栈来将要遍历的节点压栈，然后出栈后检查此节点是否还有未遍历的节点，有的话压栈，没有的话不断回溯（出栈）
+    // 反序压栈
+    public function DFSWithStack(TreeNode $node): SplQueue
     {
         $stack = new SplStack;
         $visited = new SplQueue;
@@ -59,7 +89,9 @@ class Tree
             $visited->enqueue($current);
             $current->children = array_reverse($current->children);
             foreach ($current->children as $child) {
-                $stack->push($child);
+                if ($child->data != null) {
+                    $stack->push($child);
+                }
             }
         }
 
@@ -116,6 +148,7 @@ $node8 = new TreeNode("13");
 $node4->addChildren($node6);
 $node4->addChildren($node7);
 $node5->addChildren($node8);
+
 echo '---------------- BFS-----------'.PHP_EOL;
 $visited = $tree->BFS($tree->root);
 while (!$visited->isEmpty()) {
@@ -124,7 +157,16 @@ while (!$visited->isEmpty()) {
 
 echo '---------------- DFS-----------'.PHP_EOL;
 try {
-    $visited = $tree->DFS($tree->root);
+    $visited = $tree->DFSWithStack($tree->root);
+    while (!$visited->isEmpty()) {
+        echo $visited->dequeue()->data."\n";
+    }
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
+echo '---------------- DFS by recrusive-----------'.PHP_EOL;
+try {
+    $visited = $tree->dfs($tree->root);
     while (!$visited->isEmpty()) {
         echo $visited->dequeue()->data."\n";
     }

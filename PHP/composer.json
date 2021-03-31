@@ -29,7 +29,8 @@
     "tarsana/functional": "^2.2",
     "ext-intl": "*",
     "apache/thrift": "^0.13.0",
-    "ext-bcmath": "*"
+    "ext-bcmath": "*",
+    "ext-memcache": "*"
   },
   "autoload": {
 	"files": [

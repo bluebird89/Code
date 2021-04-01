@@ -3,46 +3,49 @@
 #include <iostream>
 #include <set>
 
-int main(int argc, char const *argv[]) {
-  // std::set<int> test_set;
-  // const int A_LEN = 7;
-  // const int B_LEN = 8;
+int main(int argc, char const *argv[])
+{
+    // std::set<int> test_set;
+    // const int A_LEN = 7;
+    // const int B_LEN = 8;
 
-  // int a[A_LEN] = {5, 4, 7, 8, 9, 3, 6};
-  // int b[B_LEN] = {5, 4, 7, 8, 9, 3, 6, 2};
+    // int a[A_LEN] = {5, 4, 7, 8, 9, 3, 6};
+    // int b[B_LEN] = {5, 4, 7, 8, 9, 3, 6, 2};
 
-  // for (int i = 0; i < A_LEN; i++) {
-  //   test_set.insert(a[i]);
-  // }
+    // for (int i = 0; i < A_LEN; i++) {
+    //   test_set.insert(a[i]);
+    // }
 
-  // for (int i = 0; i < B_LEN; i++) {
-  //   if (test_set.find(b[i]) != test_set.end()) {
-  //     printf("b[%d] = iostrrtrtams%d in in arrat A.\n", i, b[i]);
-  //   }
-  // }
+    // for (int i = 0; i < B_LEN; i++) {
+    //   if (test_set.find(b[i]) != test_set.end()) {
+    //     printf("b[%d] = iostrrtrtams%d in in arrat A.\n", i, b[i]);
+    //   }
+    // }
 
-  std::set<int> myset;
-  std::set<int>::iterator it;
-  std::pair<std::set<int>::iterator, bool> ret;
+    std::set<int> myset;
+    std::set<int>::iterator it;
+    std::pair<std::set<int>::iterator, bool> ret;
 
-  // set some initial values:
-  for (int i = 1; i <= 5; ++i) myset.insert(i * 10);  // set: 10 20 30 40 50
+    // set some initial values:
+    for (int i = 1; i <= 5; ++i)
+        myset.insert(i * 10); // set: 10 20 30 40 50
 
-  ret = myset.insert(20);  // no new element inserted
+    ret = myset.insert(20); // no new element inserted
 
-  if (ret.second == false) it = ret.first;  // "it" now points to element 20
+    if (ret.second == false)
+        it = ret.first; // "it" now points to element 20
 
-  myset.insert(it, 25);  // max efficiency inserting
-  myset.insert(it, 24);  // max efficiency inserting
-  myset.insert(it, 26);  // no max efficiency inserting
+    myset.insert(it, 25); // max efficiency inserting
+    myset.insert(it, 24); // max efficiency inserting
+    myset.insert(it, 26); // no max efficiency inserting
 
-  int myints[] = {5, 10, 15};  // 10 already in set, not inserted
-  myset.insert(myints, myints + 3);
+    int myints[] = {5, 10, 15}; // 10 already in set, not inserted
+    myset.insert(myints, myints + 3);
 
-  std::cout << "myset contains:";
-  for (it = myset.begin(); it != myset.end(); ++it)
-    std::cout << ' ' << *it;
-  std::cout << '\n';
+    std::cout << "myset contains:";
+    for (it = myset.begin(); it != myset.end(); ++it)
+        std::cout << ' ' << *it;
+    std::cout << '\n';
 
-  return 0;
+    return 0;
 }

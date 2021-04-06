@@ -1,9 +1,14 @@
-#include <stdio.h>
+using namespace std;
+
+#include <iostream>
+#define PRICE 30
 
 int main(int argc, char const *argv[])
 {
     int number;
     float discount;
+    cout << "Input good's count:";
+    cin >> number;
 
     if (number > 10000)
     {
@@ -17,6 +22,7 @@ int main(int argc, char const *argv[])
     {
         discount = 0;
     };
+    cout << PRICE * number * (1 - discount) << endl;
 
     int i = 1, j = 2, k = 3, x;
     x = (i > 0) ? (j = j * 2) : (k = k * 2);
@@ -41,7 +47,7 @@ int main(int argc, char const *argv[])
         printf("< 60\n");
         break;
     default:
-        printf("YOu have input wrong score.\n");
+        printf("You have input wrong score.\n");
         break;
     }
 

@@ -12,10 +12,10 @@ int main(int argc, char const *argv[])
     putchar(97);
     putchar('b');
     printf("\nInput a char:\n");
-    //   c3 = getchar();
-    //   putchar(c3);
-    //   c3 = getchar();
-    //   putchar(c3);
+    c3 = getchar();
+    putchar(c3);
+    c3 = getchar();
+    putchar(c3);
 
     printf("%-10ld\n", 345352345234345);
 

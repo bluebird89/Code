@@ -1,7 +1,19 @@
+using namespace std;
+
+#include <iostream>
 #include <stdio.h>
 
 int main(int argc, char const *argv[])
 {
+    int x, y, *m = &x, *n = &y;
+    cin >> x;
+    cin >> *n;
+    // 通过指针操作数据
+    *m = *m + 100;
+    y += 200;
+    cout << x << ' ' << &x << ' ' << m << endl;
+    cout << y << ' ' << &y << ' ' << n << endl;
+
     int a[5] = {1, 2, 3, 4, 5};
     int *p[5], i;
     int **pp = p;

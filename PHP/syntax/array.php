@@ -1,9 +1,10 @@
 <?php
 
-# 可以包含任何数据类型，支持无限扩容,将传统数组和字典类型合二为一, 底层通过哈希表实现数组功能
 require '../vendor/autoload.php';
 
+# 可以包含任何数据类型，支持无限扩容,将传统数组和字典类型合二为一, 底层通过哈希表实现数组功能
 use Oop\Users;
+
 
 # 索引数组
 $season = ["summer", "winter", "spring", "autumn"];
@@ -53,16 +54,16 @@ echo "<br />";
 $array3 = range("z", "a");
 print_r($array3);
 
-$array = range(1,10);
-$fillarray = range("a","d");
-$arrayFilled = array_fill(0,5,$fillarray);//这里的$fillarray可以是字符串，如"test".
+$array = range(1, 10);
+$fillarray = range("a", "d");
+$arrayFilled = array_fill(0, 5, $fillarray);//这里的$fillarray可以是字符串，如"test".
 echo "<pre>";
-print_r ($arrayFilled);
+print_r($arrayFilled);
 echo "</pre>";
-$keys = array("string","2",9,"SDK","PK");
-$array2 = array_fill_keys($keys,"testing");
+$keys = array("string", "2", 9, "SDK", "PK");
+$array2 = array_fill_keys($keys, "testing");
 echo "<pre>";
-print_r ($array2);
+print_r($array2);
 echo "</pre>";
 
 # 关联数组
@@ -153,7 +154,7 @@ print_r(array_search('first', ['zero', 'first', 'second'])); # 1
 $vehicles = ['car', 'truck', 'van', 'bus'];
 current($vehicles);
 next($vehicles);
-each($vehicles);
+//each($vehicles);
 echo current($vehicles);
 $a = [1, 2, 3, 4, 5];
 $sum = 0;
@@ -162,6 +163,12 @@ while (next($a)) {
     $sum += $current;
     next($a);
 }
+
+echo $sum.PHP_EOL;
+reset($vehicles);
+do {
+    print key($vehicles).':'.current($vehicles).PHP_EOL;
+} while (next($vehicles));
 
 $array = [
     'fruit1' => 'apple',
@@ -187,7 +194,7 @@ $mode = prev($transport);    // $mode = 'foot';
 $mode = end($transport);     // $mode = 'plane';
 $mode = current($transport); // $mode = 'plane';
 # 返回当前指针位置的键／值对并向前移动数组指针
-print_r(each($transport)); # [1] => plane [value] => bob [0] => 3 [key] => 3
+//print_r(each($transport)); # [1] => plane [value] => bob [0] => 3 [key] => 3
 # 将变量从数组中导入到当前的符号表中
 # 关联数组。此函数会将键名当作变量名，值作为变量的值
 # 对每个键／值对都会在当前的符号表中建立变量，并受到 flags 和 prefix 参数的影响。
@@ -214,7 +221,7 @@ echo "$color, $size, $shape, $wddx_size\n"; // blue, large, sphere, medium
 $input_array = array('a', 'b', 'c');
 print_r(array_chunk($input_array, 2)); # [[a,b], [c]]
 print_r(array_chunk($input_array, 2, true)); # [[a,b], [2 => c]]
-print_r(array_slice());
+//print_r(array_slice());
 
 // 如果提供的是包含一组对象的数组，只有 public 属性会被直接取出。 为了也能取出 private 和 protected 属性，类必须实现 __get() 和 __isset() 魔术方法
 // 返回input数组中键值为column_key的列， 如果指定了可选参数index_key，那么input数组中的这一列的值将作为返回数组中对应值的键
@@ -252,14 +259,16 @@ $a = ['green', 'red', 'yellow'];
 $b = ['avacado', 'apple', 'banara'];
 print_r(array_combine($a, $b)); # [[green] => avacado [red] => apple [yellow] => banara]
 
-array_splice();
+//array_splice();
 
 # 合并一个或多个数组
 # 相同的字符串键名，则后面的值将覆盖前一个值
 # 包含数字键名，后面的值将不会覆盖原来的值，而是附加到后面
 # 如果只给了一个索引数组或者结果包含 数字索引，则键名会以连续方式重新索引
-print_r(array_merge(['Name' => 'henry', 5 => 'Beijing'],
-    ['Name' => 'Lily', 5 => 'Shanghai'])); # [ [Name] => Lily [0] => Beijing [1] => Shanghai]
+print_r(array_merge(
+    ['Name' => 'henry', 5 => 'Beijing'],
+    ['Name' => 'Lily', 5 => 'Shanghai']
+)); # [ [Name] => Lily [0] => Beijing [1] => Shanghai]
 print_r(array_merge([5 => 'name', 7 => 'address'])); # [[0] => name [1] => address]
 # 保留原有数组并只想新的数组附加到后面
 # 第一个数组的键名将会被保留。在两个数组中存在相同的键名时，第一个数组中的同键名的元素将会被保留，第二个数组中的元素将会被忽略
@@ -268,8 +277,10 @@ print_r([0 => 'zero_a', 2 => 'two_a', 3 => 'three_a'] + [
     ]); # [  [0] => zero_a [2] => two_a [3] => three_a [1] => one_b [4] => four_b]
 # 输入的数组中有相同的字符串键名，则这些值会被合并到一个数组中去，这将递归下去
 # 如果数组具有相同的数组键名，后一个值将不会覆盖原来的值，而是附加到后面
-print_r(array_merge_recursive(['name' => ['first' => 'Lee', 'last' => 'Henry']],
-    ['name' => ['first' => 'King']])); # [ 'name' => ['first' => ['Lee', 'King'], 'last' => 'Henry']]
+print_r(array_merge_recursive(
+    ['name' => ['first' => 'Lee', 'last' => 'Henry']],
+    ['name' => ['first' => 'King']]
+)); # [ 'name' => ['first' => ['Lee', 'King'], 'last' => 'Henry']]
 
 # 用给定的值填充数组 array_fill ( int $start_index , int $num , mixed $value )
 # start_index 是负数， 那么返回的数组的第一个索引将会是 start_index ，而后面索引则从0开始
@@ -309,13 +320,13 @@ print_r(array_unshift($stack, "orange", "pear")); # 4
 print_r($stack); # [ [0] => orange [1] => pear [2] => orange [3] => banana]
 print_r(array_product([2, 4, 5])); # 40
 
-echo "############## array_cunt_values ################".PHP_EOL;
+echo "############## array_count_values ################".PHP_EOL;
 // 数组的键是 array 里单元的值； 数组的值是 array 单元的值出现的次数
 print_r(array_count_values([1, 'hello', 1, 'world', 1])); # [ [1] => 3 [hello] => 1 [world] => 1]
 // #  移除数组中重复的值
-array_unique();
+//array_unique();
 // # 返回字符串所用字符的信息
-count_chars();
+//count_chars();
 
 echo "############## array sort ################".PHP_EOL;
 # sort 索引数组排序
@@ -372,7 +383,7 @@ $arr = array(
         'norder' => 11
     )
 );
-array_multisort(array_column($arr, 'norder'), SORT_ASC, $arr);
+//array_multisort(array_column($arr, 'norder'), SORT_ASC, $arr);
 
 echo "############## array diff && insert ################".PHP_EOL;
 // 支持多个数组比较
@@ -392,12 +403,16 @@ print_r(array_intersect($name1, $name2)); # 交集
 # 带索引检查计算数组的交集, 和 array_intersect() 不同的是键名也用于比较
 print_r(array_intersect_assoc($array1, $array2)); # [[a] => green]
 # 带索引检查计算数组的交集，用回调函数比较索引
-print_r(array_intersect_uassoc($array1, array("a" => "GREEN", "B" => "brown", "yellow", "red"),
-    "strcasecmp")); # [[b] => brown]
+print_r(array_intersect_uassoc(
+    $array1,
+    array("a" => "GREEN", "B" => "brown", "yellow", "red"),
+    "strcasecmp"
+)); # [[b] => brown]
 # 所有出现在 array3 中并同时出现在所有其它参数数组中的键名的值 键名比较 使用键名比较计算数组的交集
 print_r(array_intersect_key($array3, $array4)); # [ [blue] => 1 [green] => 3]
 # 所有出现在 array3 中并同时出现在所有其它参数数组中的键名的值 用回调函数比较键名 用回调函数比较键名来计算数组的交集
-print_r(array_intersect_ukey($array3, $array4, function ($key1, $key2) { # [ [blue] => 1 [green] => 3]
+print_r(array_intersect_ukey($array3, $array4, function ($key1, $key2) {
+    # [ [blue] => 1 [green] => 3]
     if ($key1 == $key2) {
         return 0;
     } elseif ($key1 > $key2) {
@@ -416,21 +431,23 @@ print_r(array_diff($array1, $array2)); # [[b] => brown[c] => blue]
 print_r(array_diff_assoc($array1, $array2)); # [[b] => brown[c] => blue [0] => red]
 # 值仅在 (string) $elem1 === (string) $elem2 时被认为相等
 print_r(array_diff_assoc([0, 1, 2], ["00", "01", "2"])); # [ [0] => 0 [1] => 1]
-print_r(array_diff_uassoc($array1, $array2, function ($a, $b) { # [[b] => brown [c] => blue [0] => red]
+print_r(array_diff_uassoc($array1, $array2, function ($a, $b) {
+    # [[b] => brown [c] => blue [0] => red]
     if ($a === $b) {
         return 0;
     }
     return ($a > $b) ? 1 : -1;
 }));
 // # 带索引检查计算数组的差集，用回调函数比较数据
-array_udiff_assoc();
+//array_udiff_assoc();
 // # 带索引检查计算数组的差集，用回调函数比较数据和索引
-array_udiff_uassoc();
+//array_udiff_uassoc();
 
 # 所有出现在 array1 中但是未出现在任何其它参数数组中的键名的值, 键名仅在 (string) $key1 === (string) $key2 时被认为相等
 print_r(array_diff_key($array3, $array4)); # [[red] => 2 [purple] => 4]
 # 用回调函数对键名比较计算数组的差集
-print_r(array_diff_ukey($array3, $array4, function ($key1, $key2) { # [[red] => 2 [purple] => 4]
+print_r(array_diff_ukey($array3, $array4, function ($key1, $key2) {
+    # [[red] => 2 [purple] => 4]
     if ($key1 == $key2) {
         return 0;
     } elseif ($key1 > $key2) {
@@ -459,10 +476,12 @@ print_r(array_map(function ($a, $b) {
 }, ['Henry', 'Lily'], [15, 17])); # [ [0] => Henry:15 [1] => Lily:17]
 print_r(array_map(null, [1, 2, 3], ['one', 'two', 'three'])); # [[1,one], [2,two], [3,three]]
 # 仅传入一个数组，键（key）会保留；传入多个数组，键（key）是整型数字的序列
-print_r(array_map(function ($key) { # ['key'] => ['value']
+print_r(array_map(function ($key) {
+    # ['key'] => ['value']
     return [$key];
 }, ['key' => 'value']));
-print_r(array_map(function ($key, $value) { # [['value', 'value']]
+print_r(array_map(function ($key, $value) {
+    # [['value', 'value']]
     return [$key, $value];
 }, ['key' => 'value'], ['key' => 'value']));
 
@@ -474,24 +493,35 @@ array_map(function ($element) {
 print_r(array_filter([0 => 'foo', 1 => false, 2 => -1, 3 => null, 4 => ''])); # [ [0] => foo [2] => -1]
 $array6 = array("a" => 1, "b" => 2, "c" => 3, "d" => 4, "e" => 5);
 $array7 = array(6, 7, 8, 9, 10, 11, 12);
-print_r(array_filter($array6, function ($var) { # [[a] => 1 [c] => 3 [e] => 5]
+print_r(array_filter($array6, function ($var) {
+    # [[a] => 1 [c] => 3 [e] => 5]
     // returns whether the input integer is odd
     return ($var & 1);
 }));
-print_r(array_filter($array7, function ($var) { # [ [1] => 7 [3] => 9 [5] => 11]
+print_r(array_filter($array7, function ($var) {
+    # [ [1] => 7 [3] => 9 [5] => 11]
     // returns whether the input integer is odd
     return ($var & 1);
 }));
 $array8 = ['a' => 1, 'b' => 2, 'c' => 3, 'd' => 4];
 #ARRAY_FILTER_USE_KEY - callback接受键名作为的唯一参数
 #ARRAY_FILTER_USE_BOTH - callback同时接受键名和键值
-print_r(array_filter($array8, function ($k) { # [["b"]=> 2]
+print_r(array_filter($array8, function ($k) {
+    # [["b"]=> 2]
     return $k == 'b';
 }, ARRAY_FILTER_USE_KEY));
-print_r(array_filter($array8, function ($v, $k) { # [[b] => 2 [d] => 4]
+print_r(array_filter($array8, function ($v, $k) {
+    # [[b] => 2 [d] => 4]
     return $k == 'b' || $v == 4;
 }, ARRAY_FILTER_USE_BOTH));
 
+function myfun1($value, $key, $p)
+{
+    echo "$key $p $value". PHP_EOL;
+}
+array_walk($array8, "myfun1", "has the value");
+echo 4555;
+die;
 array_reduce();
 
 $salary = array("Maxsu" => "550000", "Vimal" => "250000", "Ratan" => "200000");

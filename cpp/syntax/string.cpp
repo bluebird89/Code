@@ -2,6 +2,7 @@ using namespace std;
 
 #include <cstring>
 #include <iostream>
+#include <stdio.h>
 
 //  字符串与字符数组
 int main(int argc, char const *argv[])
@@ -27,11 +28,13 @@ int main(int argc, char const *argv[])
         << a[0] << endl;
 
     cout << "<-----strring poointer------>" << endl;
+    // 字符指针
     char *p = s, ss[80];
     // cout << "Input string:";
     // gets(ss);
     strcpy(p, "Japan");
 
+    // 字符指针数组
     char ac[5][8] = {"COBO", "ORTRRN", "PSSCAl", " BASIC", " C++"};
     char *sp[] = {ac[0], ac[1], ac[3], ac[4]};
     for (int i = 0; i < 4; i++)

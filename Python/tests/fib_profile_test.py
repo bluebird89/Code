@@ -17,7 +17,7 @@ import cProfile
 #     res.append(fib(n))
 #     return res
 
-## 优化代码
+# 优化代码
 def memoize(f):
     memo = {}
 

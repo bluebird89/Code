@@ -1,5 +1,9 @@
+import uuid  # Required for unique book instances
+from datetime import date
+
 from django.contrib.auth.models import User
 from django.db import models
+from django.urls import reverse  # Used to generate URLs by reversing the URL patterns
 
 
 class MyModelName(models.Model):
@@ -43,9 +47,6 @@ class Genre(models.Model):
         return self.name
 
 
-from django.urls import reverse  # Used to generate URLs by reversing the URL patterns
-
-
 class Book(models.Model):
     """
     Model representing a book (but not a specific copy of a book).
@@ -83,9 +84,6 @@ class Book(models.Model):
     display_genre.short_description = 'Genre'
 
 
-import uuid  # Required for unique book instances
-from datetime import date
-
 class BookInstance(models.Model):
     """
     Model representing a specific copy of a book (i.e. that can be borrowed from the library).
@@ -121,6 +119,7 @@ class BookInstance(models.Model):
         if self.due_back and date.today() > self.due_back:
             return True
         return False
+
 
 class Author(models.Model):
     """

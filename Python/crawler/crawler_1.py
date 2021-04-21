@@ -1,8 +1,9 @@
+import random
+import time
+
+import pandas as pd
 import requests
 from lxml import etree
-import pandas as pd
-import time
-import random
 from tqdm import tqdm
 
 name, score, comment = [], [], []

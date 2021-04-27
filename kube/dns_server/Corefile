@@ -1,0 +1,50 @@
+
+# 定义可复用 Block
+(common) {
+    log
+    errors
+    cache
+    loop    # 检测并停止死循环解析
+}
+
+# 本地开发环境的 DNS 解析
+dev-env.local:53 {
+    import common  # 导入 Block
+    file dev-env.local { # 从文件 `dev-env.local` 中读取 DNS 数据
+        reload 30s  # 每 30s 检查一次配置的 Serial，若该值有变更则重载整个 Zone 的配置。
+    }
+}
+
+# 本地测试环境
+test-env.local:53 {
+    import common
+    file test-env.local {
+        reload 30s
+    }
+}
+
+# 其他
+.:53 {
+    log
+    errors  # 启用错误日志
+    health  # 启用健康检查 api
+    ready  # 启用 readiness 就绪 api
+
+    # 启用 kubernetes 集群支持，详见 https://coredns.io/plugins/kubernetes/
+    # 此插件只处理 cluster.local 域，以及 PTR 解析
+    kubernetes cluster.local in-addr.arpa ip6.arpa {
+      pods insecure
+      upstream  #
+      fallthrough in-addr.arpa ip6.arpa  # 向下传递 DNS 反向查询
+      ttl 30  # 过期时间
+    }
+    prometheus :9153  # 启用 prometheus metrics 支持
+    forward . 114.114.114.114 19.29.29.29 # 将非集群域名的 DNS 请求，转发给公网 DNS 服务器。
+    cache 30  # 启用前端缓存，缓存的 TTL 设为 30
+    loop    # 检测并停止死循环解析
+    reload  # 支持动态更新 Corefile
+
+    # 随机化 A/AAAA/MX 记录的顺序以实现负载均衡。
+    #   因为 DNS resolver 通常使用第一条记录，而第一条记录是随机的。这样客户端的请求就能被随机分配到多个后端。
+    loadbalance
+}

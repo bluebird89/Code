@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+}
+
+group 'org.codingdojo.kata'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.11
+
+repositories {
+    mavenCentral()
+}
+
+//sourceSets {
+//    main {
+//        java {
+//            srcDirs = ['src/main']
+//        }
+//    }
+//
+//    test {
+//        java {
+//            srcDirs = ['src/test']
+//        }
+//    }
+//}
+
+dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
+    implementation 'junit:junit:4.12'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    testImplementation('org.junit.jupiter:junit-jupiter:5.7.0')
+}
+task helloworld{
+    doLast{
+        println'Hello World!'
+    }
+}

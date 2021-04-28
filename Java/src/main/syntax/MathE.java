@@ -1,4 +1,4 @@
-package syntax;
+package main.syntax;
 
 public class MathE {
     public static void main(String[] args) {

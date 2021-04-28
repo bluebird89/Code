@@ -168,7 +168,7 @@
 
 /* HERO */
 .crf-hero {
-    background-image: url('https://www.pluralsight.com/content/dam/pluralsight2/teach/author-tools/carved-rock-fitness/hero_bkgd_v1.jpg');
+    background-image: url('hero_bkgd_v1.jpg');
     background-repeat: no-repeat;
     height: 400px;
     background-size: cover;
@@ -626,27 +626,27 @@ footer .crf-footer-m--social ul li a {
 
 footer .crf-footer--social .twitter,
 footer .crf-footer-m--social .twitter {
-    background-image: url('https://www.pluralsight.com/content/dam/pluralsight2/teach/author-tools/carved-rock-fitness/social_icons/Twitter_Icon.svg');
+    background-image: url('Twitter_Icon.svg');
 }
 
 footer .crf-footer--social .facebook,
 footer .crf-footer-m--social .facebook {
-    background-image: url('https://www.pluralsight.com/content/dam/pluralsight2/teach/author-tools/carved-rock-fitness/social_icons/Facebook_Icon.svg');
+    background-image: url('Facebook_Icon.svg');
 }
 
 footer .crf-footer--social .instagram,
 footer .crf-footer-m--social .instagram {
-    background-image: url('https://www.pluralsight.com/content/dam/pluralsight2/teach/author-tools/carved-rock-fitness/social_icons/Instagram_Icon.svg');
+    background-image: url('Instagram_Icon.svg');
 }
 
 footer .crf-footer--social .pinterest,
 footer .crf-footer-m--social .pinterest {
-    background-image: url('https://www.pluralsight.com/content/dam/pluralsight2/teach/author-tools/carved-rock-fitness/social_icons/Pinterest_Icon.svg');
+    background-image: url('Pinterest_Icon.svg');
 }
 
 footer .crf-footer--social .googleplus,
 footer .crf-footer-m--social .googleplus {
-    background-image: url('https://www.pluralsight.com/content/dam/pluralsight2/teach/author-tools/carved-rock-fitness/social_icons/GooglePlus_Icon.svg');
+    background-image: url('GooglePlus_Icon.svg');
 }
 
 footer .crf-footer--logo {

@@ -1,4 +1,4 @@
-package design_pattern.abstract_factory.factory;
+package main.design_pattern.abstract_factory.factory;
 
 import java.io.FileWriter;
 import java.io.IOException;

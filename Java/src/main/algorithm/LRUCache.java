@@ -1,7 +1,7 @@
-package main.algrithom;
+package main.algorithm;
 
-import main.algrithom.data_structure.DoubleList;
-import main.algrithom.data_structure.LinkNode;
+import main.algorithm.data_structure.DoubleList;
+import main.algorithm.data_structure.LinkNode;
 
 import java.util.HashMap;
 

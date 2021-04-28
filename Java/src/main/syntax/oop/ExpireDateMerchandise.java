@@ -1,4 +1,4 @@
-package oop;
+package main.syntax.oop;
 
 import java.util.Date;
 

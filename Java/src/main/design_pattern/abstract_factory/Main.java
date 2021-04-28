@@ -1,9 +1,9 @@
-package design_pattern.abstract_factory;
+package main.design_pattern.abstract_factory;
 
-import design_pattern.abstract_factory.factory.Factory;
-import design_pattern.abstract_factory.factory.Link;
-import design_pattern.abstract_factory.factory.Page;
-import design_pattern.abstract_factory.factory.Tray;
+import main.design_pattern.abstract_factory.factory.Factory;
+import main.design_pattern.abstract_factory.factory.Link;
+import main.design_pattern.abstract_factory.factory.Page;
+import main.design_pattern.abstract_factory.factory.Tray;
 
 public class Main {
     public static void main(String[] args) {

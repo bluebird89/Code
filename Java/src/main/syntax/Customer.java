@@ -1,6 +1,4 @@
-package syntax;
-
-import java.util.Vector;
+package main.syntax;
 
 /**
  * Customer

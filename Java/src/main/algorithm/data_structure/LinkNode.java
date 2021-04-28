@@ -1,4 +1,4 @@
-package main.algrithom.data_structure;
+package main.algorithm.data_structure;
 
 public class LinkNode {
 

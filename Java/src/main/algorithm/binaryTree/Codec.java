@@ -1,4 +1,4 @@
-package algorithm.binaryTree;
+package main.algorithm.binaryTree;
 
 import algorithm.data_structure.TreeNode;
 

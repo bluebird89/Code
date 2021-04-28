@@ -1,4 +1,4 @@
-package org.algrithom;
+package main.algorithm.data_structure;
 
 public class Stack {
 

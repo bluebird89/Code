@@ -1,4 +1,4 @@
-package main.algrithom;
+package main.algorithm;
 
 public class Factor {
     private static final long LONG_MAX = 9999;

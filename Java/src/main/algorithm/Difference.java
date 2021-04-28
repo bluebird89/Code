@@ -1,4 +1,4 @@
-package main.algrithom;
+package main.algorithm;
 
 /**
  * 差分数组/前缀和

@@ -1,4 +1,4 @@
-package tdd;
+package main.tdd;
 
 public class MathTools {
     public static double convertToDecimal(int i, int i1) {

@@ -1,4 +1,4 @@
-package algorithm;
+package main.algorithm;
 
 import algorithm.data_structure.TreeNode;
 

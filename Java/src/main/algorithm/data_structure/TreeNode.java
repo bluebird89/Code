@@ -1,4 +1,4 @@
-package algorithm.data_structure;
+package main.algorithm.data_structure;
 
 public class TreeNode {
 

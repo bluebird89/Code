@@ -1,6 +1,4 @@
-package syntax;
-
-import java.util.List;
+package main.syntax;
 
 public class DataType {
     public static void main(String[] args) {

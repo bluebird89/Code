@@ -1,4 +1,4 @@
-package org.codingjoko.data;
+package main.algorithm;
 
 public class Fibonacci {
     public static int Fib(int n) {

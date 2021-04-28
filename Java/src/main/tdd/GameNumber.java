@@ -1,4 +1,4 @@
-package tdd;
+package main.tdd;
 
 public class GameNumber {
     private int i;

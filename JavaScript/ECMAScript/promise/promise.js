@@ -24,7 +24,7 @@
         }
 
         then(onFulfilled, onRejected) {
-            const promise = new Promise(() => {});
+            const promise = new Promise(() => { });
             this.pending.push([promise, onFulfilled, onRejected]);
             if (this.state != State.Pending) schedule(this);
             return promise;
@@ -46,7 +46,7 @@
     };
 
     Promise.deferred = () => {
-        const promise = new Promise(() => {});
+        const promise = new Promise(() => { });
 
         return {
             resolve: (val) => resolve(promise, val),
@@ -231,6 +231,7 @@ function* gen() {
     var result = yield fetch(url);
     console.log(result.bio);
 }
+
 var g = gen();
 var result = g.next();
 

@@ -5,7 +5,7 @@ public abstract class Factory {
     public static Factory getFactory(String classname) {
         Factory factory = null;
         try {
-            factory = (Factory) Class.forName(classname).newInstance();
+            factory = (Factory) Class.forName(classname).getDeclaredConstructor().newInstance();
         } catch (ClassNotFoundException e) {
             System.err.println(classname + " can't found!");
         } catch (Exception e) {

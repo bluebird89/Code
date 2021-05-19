@@ -1,6 +1,8 @@
 package com.example.syntax;
 
-public class DataType {
+import java.util.List;
+
+public class PrimitiveDataType {
     public static void main(String[] args) {
 
         // primary data type  基本数据
@@ -58,16 +60,5 @@ public class DataType {
         // A << 2 // 240，即 1111 0000
         // A >> 2 // 15 1111
         // A>>>2 // 15即0000 1111
-
-// 引用类型
-        String s = "hello";
-        int[] intArray = new int[9];
-        double[][] doubleArray = new double[100][20];
-        System.out.println(intArray[2]);
-        System.out.println(doubleArray[20][10]);
-
-        // List lst = new List {
-        //     3, 5, 6, 8
-        // }
     }
 }

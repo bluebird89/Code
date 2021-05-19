@@ -1,12 +1,11 @@
 <?php
 
 
-namespace Popp\behavior\structure;
+namespace Popp\struture\composite;
 
 class Archer extends Unit
 {
-
-    function bombardStrength()
+    public function bombardStrength()
     {
         return 4;
     }

@@ -1,8 +1,7 @@
 <?php
 
 
-namespace Popp\behavior\structure;
-
+namespace Popp\struture\composite;
 
 class Army extends CompositeUnit
 {

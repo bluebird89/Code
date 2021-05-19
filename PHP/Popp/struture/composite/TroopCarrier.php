@@ -1,8 +1,7 @@
 <?php
 
 
-namespace Popp\behavior\composite;
-
+namespace Popp\struture\composite;
 
 class TroopCarrier extends CompositeUnit
 {
@@ -10,5 +9,4 @@ class TroopCarrier extends CompositeUnit
     {
         return parent::bombardStrength() + 200;
     }
-
 }

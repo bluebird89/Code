@@ -3,12 +3,12 @@
 
 namespace Popp\struture\composite;
 
-use Popp\struture\composite\Unit;
 
-class LaserCanon extends Unit
+class Cavalry extends Unit
 {
+
     public function bombardStrength()
     {
-        return 8;
+        return 6;
     }
 }

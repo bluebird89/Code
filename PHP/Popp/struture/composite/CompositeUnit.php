@@ -1,14 +1,14 @@
 <?php
 
 
-namespace Popp\behavior\composite;
+namespace Popp\struture\composite;
 
 
 abstract class CompositeUnit extends Unit
 {
     private $units = [];
 
-    function getComposite()
+    public function getComposite()
     {
         return $this;
     }
@@ -18,22 +18,22 @@ abstract class CompositeUnit extends Unit
         return $this->units;
     }
 
-    function removeUnit(Unit $unit)
+    public function removeUnit(Unit $unit)
     {
         $this->units = array_udiff($this->units, [$unit], function ($a, $b) {
             return ($a == $b) ? 0 : 1;
         });
     }
 
-    function addUnit(Unit $unit)
+    public function addUnit(Unit $unit)
     {
         if (!in_array($unit, $this->units)) {
             $this->units[] = $unit;
+            $this->setDepth($this->getDepth() + 1);
         }
-        return;
     }
 
-    function bombardStrength()
+    public function bombardStrength()
     {
         $ret = 0;
         foreach ($this->units as $unit) {
@@ -41,5 +41,13 @@ abstract class CompositeUnit extends Unit
         }
 
         return $ret;
+    }
+
+    public function accept(ArmyVisitor $visitor)
+    {
+        parent::accept($visitor);
+        foreach ($this->units() as $unit) {
+            $unit->accept($visitor);
+        }
     }
 }

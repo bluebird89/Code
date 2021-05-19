@@ -3,7 +3,6 @@
 
 namespace Popp\behavior\decorator;
 
-
 use DesignPatterns\Creational\Pool\Processor;
 
 class MainProcess extends ProcessRequest

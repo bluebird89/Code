@@ -3,12 +3,11 @@
 
 namespace Popp\behavior\decorator;
 
-
 abstract class DecorateProcess extends ProcessRequest
 {
-    protected $processrequest;
+    protected ProcessRequest $processrequest;
 
-    function __construct(ProcessRequest $pr)
+    public function __construct(ProcessRequest $pr)
     {
         $this->processrequest = $pr;
     }

@@ -1,8 +1,7 @@
 <?php
 
 
-namespace Popp\behavior\composite;
-
+namespace Popp\behavior\structure;
 
 class Archer extends Unit
 {

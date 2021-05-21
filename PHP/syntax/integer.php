@@ -21,7 +21,7 @@ echo ord("Shanghai"); # 83
 print # 一个语法结构(language constructs), 并不是一个函数, 参数的list并不要求有括号
 
 // 涉及数字比较，优先转化为数字
-	var_dump('abcd' == 0);
+    var_dump('abcd' == 0);
 var_dump(0 == 'abcd');
 var_dump('0' == 'abcd');
 
@@ -41,7 +41,7 @@ echo 1 ^ 0; // 输出结果：1
 
 //判断权限
 if (READ & $permission) {
-	echo 'OK';
+    echo 'OK';
 }
 
 # 异或运算同样的值两次能还原为原理的值
@@ -57,7 +57,7 @@ echo 1 <=> 1; // 0
 echo 1 <=> 2; // -1
 echo 2 <=> 1; // 1
 
-$my_file = @file('non_existent_file') or die ("Failed opening file: error was '$php_errormsg'");
+$my_file = @file('non_existent_file') or die("Failed opening file: error was '$php_errormsg'");
 
 $output = `ls -al`;
 echo "<pre>$output</pre>";

@@ -27,11 +27,11 @@ if ($num % 2 == 0) {
 
 $a = 0;
 $b = 0;
-if ($a > $b):
+if ($a > $b) :
     echo $a." is greater than ".$b;
-elseif ($a == $b): // 注意使用了一个单词的 elseif
+elseif ($a == $b) : // 注意使用了一个单词的 elseif
     echo $a." equals ".$b;
-else:
+else :
     echo $a." is neither greater than or equal to ".$b;
 endif;
 
@@ -77,26 +77,6 @@ echo 'Foo';
 a:
 echo 'Bar';
 
-/**
- *  大小写转换
- **/
-echo 'A' | ' ';
-echo 'a' & '_';
-echo 'a' ^ ' ';
-echo 'A' ^ ' '.PHP_EOL;
-
-// 是否异号
-echo (bool) ((-1 ^ 2) < 0).PHP_EOL;
-echo ((1 ^ 2) < 0).PHP_EOL;
-
-// switch variable
-$a = 1;
-$b = 3;
-$a ^= $b;
-$b ^= $a;
-$a ^= $b;
-echo $a.' '.$b;
-
 // 通过二维数组生成九九乘法表
 $multi = [];
 for ($j = 0; $j < 9; $j++) {
@@ -118,5 +98,5 @@ foreach ($multi as $row) {
     printf("\n");
 }
 
-//step into
+// step into
 // add watch

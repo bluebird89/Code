@@ -30,7 +30,7 @@ class Post
     private $author;
 
     /**
-     * @var \DateTime
+     * @var \datetime
      */
     private $created;
 
@@ -67,7 +67,7 @@ class Post
     }
 
     /**
-     * @param  \DateTime  $created
+     * @param  \datetime  $created
      */
     public function setCreated($created)
     {
@@ -75,7 +75,7 @@ class Post
     }
 
     /**
-     * @return \DateTime
+     * @return \datetime
      */
     public function getCreated()
     {

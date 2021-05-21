@@ -19,8 +19,8 @@ header('Location: '.$url, true, 302);
 <?php
 session_start();
 if (!isset($_SESSION['authorized-user'])) {
-	header('location:../');
-	exit();
+    header('location:../');
+    exit();
 }
 ?>
 

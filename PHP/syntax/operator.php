@@ -1,6 +1,6 @@
 <?php
 
-# 算术运算符:加、减、乘、除、求余
+# 算术运算符
 $a = 32;
 $b = 8;
 $a += $b;
@@ -22,6 +22,7 @@ $b = 8;
 $c = $a++;
 $d = $b--;
 printf("a,b,c,d = %d,%d,%d,%d\n", $a, $b, $c, $d);
+
 ## 前置：先运算后复制
 $a = 32;
 $b = 8;
@@ -80,19 +81,41 @@ $b = 2;
 $c = 3;
 function add()
 {
-	$d = 4;
-	$c += isset($a) ? 0 : $a++;
-	if ($c > 3) {
-		$d++;
-	}
-	echo $a;
-	return $d;
+    $d = 4;
+    $c += isset($a) ? 0 : $a++;
+    if ($c > 3) {
+        $d++;
+    }
+    echo $a;
+    return $d;
 }
 
 $d = add();
 $x = $a++ + ++$b;
 $y = --$c + $d--;
 echo $x.'_'.$y;
+
+
+/**
+ *  大小写转换
+ **/
+echo 'A' | ' ';
+echo 'a' & '_';
+echo 'a' ^ ' ';
+echo 'A' ^ ' '.PHP_EOL;
+
+// 是否异号
+echo (bool) ((-1 ^ 2) < 0).PHP_EOL;
+echo ((1 ^ 2) < 0).PHP_EOL;
+
+// switch variable
+$a = 1;
+$b = 3;
+$a ^= $b;
+$b ^= $a;
+$a ^= $b;
+echo $a.' '.$b;
+
 
 $a < $b; # ($a <=> $b) === -1
 $a <= $b;   # ($a <=> $b) === -1 || ($a <=> $b) === 0

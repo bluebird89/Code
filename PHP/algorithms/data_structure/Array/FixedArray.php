@@ -87,12 +87,10 @@ $team = [
 
 class Player
 {
-
     public $name;
     public $country;
     public $age;
     public $currentTeam;
-
 }
 
 $ronaldo = new Player;

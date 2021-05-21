@@ -1,6 +1,6 @@
 <?php
 
-$dateStart = new \DateTime();
+$dateStart = new \datetime();
 $dateInterval = \DateInterval::createFromDateString('-1 day');
 $datePeriod = new \DatePeriod($dateStart, $dateInterval, 30);
 foreach ($datePeriod as $date) {

@@ -12,8 +12,8 @@ class DateComparator implements ComparatorInterface
      */
     public function compare($a, $b)
     {
-        $aDate = new \DateTime($a['date']);
-        $bDate = new \DateTime($b['date']);
+        $aDate = new \datetime($a['date']);
+        $bDate = new \datetime($b['date']);
 
         if ($aDate == $bDate) {
             return 0;

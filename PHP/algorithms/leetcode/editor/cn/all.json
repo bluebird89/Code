@@ -1,15 +1,15 @@
 [
   {
     "articleLive": 2,
-    "formTitle": "[1035]不相交的线",
-    "frontendQuestionId": "1035",
+    "formTitle": "[1787]使所有区间的异或结果为零",
+    "frontendQuestionId": "1787",
     "leaf": true,
-    "level": 2,
+    "level": 3,
     "nodeType": "def",
-    "questionId": "1105",
+    "questionId": "1913",
     "status": "",
-    "title": "不相交的线",
-    "titleSlug": "uncrossed-lines"
+    "title": "使所有区间的异或结果为零",
+    "titleSlug": "make-the-xor-of-all-segments-equal-to-zero"
   },
   {
     "articleLive": 2,
@@ -31,7 +31,7 @@
     "level": 2,
     "nodeType": "def",
     "questionId": "2",
-    "status": "",
+    "status": "ac",
     "title": "两数相加",
     "titleSlug": "add-two-numbers"
   },
@@ -460,7 +460,7 @@
     "formTitle": "[38]外观数列",
     "frontendQuestionId": "38",
     "leaf": true,
-    "level": 1,
+    "level": 2,
     "nodeType": "def",
     "questionId": "38",
     "status": "",
@@ -583,7 +583,7 @@
     "level": 2,
     "nodeType": "def",
     "questionId": "48",
-    "status": "",
+    "status": "ac",
     "title": "旋转图像",
     "titleSlug": "rotate-image"
   },
@@ -667,7 +667,7 @@
     "level": 2,
     "nodeType": "def",
     "questionId": "55",
-    "status": "",
+    "status": "ac",
     "title": "跳跃游戏",
     "titleSlug": "jump-game"
   },
@@ -1003,7 +1003,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "83",
-    "status": "",
+    "status": "ac",
     "title": "删除排序链表中的重复元素",
     "titleSlug": "remove-duplicates-from-sorted-list"
   },
@@ -1540,7 +1540,7 @@
     "formTitle": "[128]最长连续序列",
     "frontendQuestionId": "128",
     "leaf": true,
-    "level": 3,
+    "level": 2,
     "nodeType": "def",
     "questionId": "128",
     "status": "",
@@ -1732,7 +1732,7 @@
     "formTitle": "[144]二叉树的前序遍历",
     "frontendQuestionId": "144",
     "leaf": true,
-    "level": 2,
+    "level": 1,
     "nodeType": "def",
     "questionId": "144",
     "status": "",
@@ -2443,7 +2443,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "203",
-    "status": "",
+    "status": "ac",
     "title": "移除链表元素",
     "titleSlug": "remove-linked-list-elements"
   },
@@ -2479,7 +2479,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "206",
-    "status": "",
+    "status": "ac",
     "title": "反转链表",
     "titleSlug": "reverse-linked-list"
   },
@@ -2707,7 +2707,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "225",
-    "status": "",
+    "status": "ac",
     "title": "用队列实现栈",
     "titleSlug": "implement-stack-using-queues"
   },
@@ -2815,7 +2815,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "234",
-    "status": "",
+    "status": "ac",
     "title": "回文链表",
     "titleSlug": "palindrome-linked-list"
   },
@@ -3943,7 +3943,7 @@
     "level": 2,
     "nodeType": "def",
     "questionId": "328",
-    "status": "",
+    "status": "ac",
     "title": "奇偶链表",
     "titleSlug": "odd-even-linked-list"
   },
@@ -4060,7 +4060,7 @@
     "formTitle": "[338]比特位计数",
     "frontendQuestionId": "338",
     "leaf": true,
-    "level": 2,
+    "level": 1,
     "nodeType": "def",
     "questionId": "338",
     "status": "",
@@ -10519,7 +10519,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "908",
-    "status": "",
+    "status": "ac",
     "title": "链表的中间结点",
     "titleSlug": "middle-of-the-linked-list"
   },
@@ -12418,6 +12418,18 @@
     "status": "",
     "title": "边框着色",
     "titleSlug": "coloring-a-border"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1035]不相交的线",
+    "frontendQuestionId": "1035",
+    "leaf": true,
+    "level": 2,
+    "nodeType": "def",
+    "questionId": "1105",
+    "status": "",
+    "title": "不相交的线",
+    "titleSlug": "uncrossed-lines"
   },
   {
     "articleLive": 2,
@@ -21433,18 +21445,6 @@
   },
   {
     "articleLive": 2,
-    "formTitle": "[1787]使所有区间的异或结果为零",
-    "frontendQuestionId": "1787",
-    "leaf": true,
-    "level": 3,
-    "nodeType": "def",
-    "questionId": "1913",
-    "status": "",
-    "title": "使所有区间的异或结果为零",
-    "titleSlug": "make-the-xor-of-all-segments-equal-to-zero"
-  },
-  {
-    "articleLive": 2,
     "formTitle": "[1788]Maximize the Beauty of the Garden",
     "frontendQuestionId": "1788",
     "leaf": true,
@@ -22417,6 +22417,66 @@
   },
   {
     "articleLive": 2,
+    "formTitle": "[1869]哪种连续子字符串更长",
+    "frontendQuestionId": "1869",
+    "leaf": true,
+    "level": 1,
+    "nodeType": "def",
+    "questionId": "1999",
+    "status": "",
+    "title": "哪种连续子字符串更长",
+    "titleSlug": "longer-contiguous-segments-of-ones-than-zeros"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1870]准时到达的列车最小时速",
+    "frontendQuestionId": "1870",
+    "leaf": true,
+    "level": 2,
+    "nodeType": "def",
+    "questionId": "2000",
+    "status": "",
+    "title": "准时到达的列车最小时速",
+    "titleSlug": "minimum-speed-to-arrive-on-time"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1871]跳跃游戏 VII",
+    "frontendQuestionId": "1871",
+    "leaf": true,
+    "level": 2,
+    "nodeType": "def",
+    "questionId": "2001",
+    "status": "",
+    "title": "跳跃游戏 VII",
+    "titleSlug": "jump-game-vii"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1872]石子游戏 VIII",
+    "frontendQuestionId": "1872",
+    "leaf": true,
+    "level": 3,
+    "nodeType": "def",
+    "questionId": "2002",
+    "status": "",
+    "title": "石子游戏 VIII",
+    "titleSlug": "stone-game-viii"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1873]Calculate Special Bonus",
+    "frontendQuestionId": "1873",
+    "leaf": true,
+    "level": 1,
+    "nodeType": "def",
+    "questionId": "2024",
+    "status": "",
+    "title": "Calculate Special Bonus",
+    "titleSlug": "calculate-special-bonus"
+  },
+  {
+    "articleLive": 2,
     "formTitle": "[LCP 01]猜数字",
     "frontendQuestionId": "LCP 01",
     "leaf": true,
@@ -22939,7 +22999,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "100273",
-    "status": "",
+    "status": "ac",
     "title": "用两个栈实现队列",
     "titleSlug": "yong-liang-ge-zhan-shi-xian-dui-lie-lcof"
   },
@@ -23143,7 +23203,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "100286",
-    "status": "",
+    "status": "ac",
     "title": "合并两个排序的链表",
     "titleSlug": "he-bing-liang-ge-pai-xu-de-lian-biao-lcof"
   },
@@ -23671,7 +23731,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "100341",
-    "status": "",
+    "status": "ac",
     "title": "扑克牌中的顺子",
     "titleSlug": "bu-ke-pai-zhong-de-shun-zi-lcof"
   },
@@ -23827,7 +23887,7 @@
     "level": 2,
     "nodeType": "def",
     "questionId": "1000006",
-    "status": "",
+    "status": "ac",
     "title": "一次编辑",
     "titleSlug": "one-away-lcci"
   },
@@ -24631,7 +24691,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "100352",
-    "status": "",
+    "status": "ac",
     "title": "跳水板",
     "titleSlug": "diving-board-lcci"
   },
@@ -24667,7 +24727,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "100355",
-    "status": "",
+    "status": "notac",
     "title": "珠玑妙算",
     "titleSlug": "master-mind-lcci"
   },

@@ -38,7 +38,7 @@ class RedisConnection
         }
     }
 
-    public function getRedis($pconnect=false)
+    public function getRedis($pconnect = false)
     {
         if ($pconnect) {
             $this->pconnect();

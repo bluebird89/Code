@@ -9232,6 +9232,16 @@
         "__typename": "AppliedTranslationNode"
       },
       {
+        "questionId": "1999",
+        "title": "\u54ea\u79cd\u8fde\u7eed\u5b50\u5b57\u7b26\u4e32\u66f4\u957f",
+        "__typename": "AppliedTranslationNode"
+      },
+      {
+        "questionId": "2000",
+        "title": "\u51c6\u65f6\u5230\u8fbe\u7684\u5217\u8f66\u6700\u5c0f\u65f6\u901f",
+        "__typename": "AppliedTranslationNode"
+      },
+      {
         "questionId": "2001",
         "title": "\u8df3\u8dc3\u6e38\u620f VII",
         "__typename": "AppliedTranslationNode"

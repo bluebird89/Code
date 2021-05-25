@@ -1,6 +1,6 @@
 <?php
 
-namespace syntax\Closure;
+namespace syntax\closure;
 
 // Closure {
 //     __construct ( void )
@@ -8,13 +8,14 @@ namespace syntax\Closure;
 //     public Closure bindTo (object $newthis [, mixed $newscope = 'static' ])
 // }
 
+use Closure;
 use syntax\Closure\Animal;
 
 $cat = function () {
     return $this->cat;
 };
-$bindCat = \Closure::bind($cat, new Animal(), 'Animal');
-$bindCat2 = \Closure::bind($cat, new Animal(), new Animal());
+$bindCat = Closure::bind($cat, new Animal(), 'Animal');
+$bindCat2 = Closure::bind($cat, new Animal(), new Animal());
 echo $bindCat().PHP_EOL;
 echo $bindCat2().PHP_EOL;
 
@@ -22,16 +23,16 @@ echo $bindCat2().PHP_EOL;
 $dog = static function () {
     return Animal::$dog;
 };
-$bindDog = \Closure::bind($dog, null, 'Animal');
-$bindDog2 = \Closure::bind($dog, null, new Animal());
+$bindDog = Closure::bind($dog, null, 'Animal');
+$bindDog2 = Closure::bind($dog, null, new Animal());
 echo $bindDog().PHP_EOL;
 echo $bindDog2().PHP_EOL;
 
 $pig = function () {
     return $this->pig;
 };
-$bindPig = \Closure::bind($pig, new Animal(), 'Animal');
-$bindPig2 = \Closure::bind($pig, new Animal(), new Animal());
+$bindPig = Closure::bind($pig, new Animal(), 'Animal');
+$bindPig2 = Closure::bind($pig, new Animal(), new Animal());
 echo $bindPig().PHP_EOL;
 echo $bindPig2().PHP_EOL;
 
@@ -39,8 +40,8 @@ echo $bindPig2().PHP_EOL;
 $duck = static function () {
     return self::$duck; // return static::$duck
 };
-$bindDuck = \Closure::bind($duck, null, 'Animal');
-$bindDuck2 = \Closure::bind($duck, null, new Animal());
+$bindDuck = Closure::bind($duck, null, 'Animal');
+$bindDuck2 = Closure::bind($duck, null, new Animal());
 echo $bindDuck().PHP_EOL;
 echo $bindDuck2().PHP_EOL;
 
@@ -52,12 +53,12 @@ echo $closure('闭包');
 
 class invoke
 {
-    function __construct()
+    public function __construct()
     {
         echo '初始化'.PHP_EOL;
     }
 
-    function __invoke($a)
+    public function __invoke($a)
     {
         $this->param = '我想改变param的值';
         return $this;
@@ -86,7 +87,7 @@ function my_callback_function()
 // An example callback method
 class MyClass
 {
-    static function myCallbackMethod()
+    public static function myCallbackMethod()
     {
         echo 'Hello World!';
     }

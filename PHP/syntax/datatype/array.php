@@ -5,6 +5,9 @@ require '../vendor/autoload.php';
 # 可以包含任何数据类型，支持无限扩容,将传统数组和字典类型合二为一, 底层通过哈希表实现数组功能
 use Oop\Users;
 
+print_r(str_split('werty'));
+die;
+
 # 索引数组
 $season = ["summer", "winter", "spring", "autumn"];
 

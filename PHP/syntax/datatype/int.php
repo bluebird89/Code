@@ -72,3 +72,28 @@ class MyClass
 
 $a = new MyClass;
 var_dump(!($a instanceof stdClass)); # true
+
+## 判断字符数字
+$num = 1;
+$num1 = '1';
+$str = 'abc';
+
+if (is_numeric($num)) {
+    echo $num.'是数字型';
+}
+if (is_numeric($num1)) {
+    echo $num1.'是数字型';
+} else {
+    echo $num1.'不是数字型';
+}
+
+if (intval($str)) {
+    echo $str.'是数字';
+} else {
+    echo $str.'不是数字';
+}
+if (intval($num1)) {
+    echo $num1.'是数字';
+} else {
+    echo $num1.'不是数字';
+}

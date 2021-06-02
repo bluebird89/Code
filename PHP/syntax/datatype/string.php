@@ -7,6 +7,16 @@ if (is_string($name)) {
     echo '$name 是字符串'.PHP_EOL;
 }
 
+$str = 'Hello text within single quote';
+$str2 = "Using double \"quote\" with backslash inside double quoted string";
+echo 'You can also have embedded newlines in
+strings this way as it is
+okay to do';
+
+$bar = "bar
+asfasfd
+    dgdfgsdfgdfgf ";
+
 // echo  print echo 最主要的区别： print 仅支持一个参数，并总是返回 1
 
 // flush() - 刷新输出缓冲
@@ -46,16 +56,16 @@ while ($tok !== false) {
 echo wordwrap("The quick brown fox jumped over the lazy dog.", 20, "<br />\n").PHP_EOL; // 打断字符串为指定数量的字串
 
 echo strcasecmp(
-        "Hello",
-        "aello"
-    ).PHP_EOL;// 二进制安全比较字符串(不区分大小写） 如果 str1 小于 str2 返回 < 0； 如果 str1 大于 str2 返回 > 0；如果两者相等，返回 0。
+    "Hello",
+    "aello"
+).PHP_EOL;// 二进制安全比较字符串(不区分大小写） 如果 str1 小于 str2 返回 < 0； 如果 str1 大于 str2 返回 > 0；如果两者相等，返回 0。
 // strcmp()// 二进制安全字符串比较
 echo substr_compare(
-        "abcde",
-        "bc",
-        1,
-        2
-    ).PHP_EOL; // 0  二进制安全比较字符串（从偏移位置比较指定长度） 如果 main_str 从偏移位置 offset 起的子字符串小于 str，则返回小于 0 的数；如果大于 str，则返回大于 0 的数；如果二者相等，则返回 0。
+    "abcde",
+    "bc",
+    1,
+    2
+).PHP_EOL; // 0  二进制安全比较字符串（从偏移位置比较指定长度） 如果 main_str 从偏移位置 offset 起的子字符串小于 str，则返回小于 0 的数；如果大于 str，则返回大于 0 的数；如果二者相等，则返回 0。
 echo substr_compare("abcde", "BC", 1, 2, true).PHP_EOL; // 0
 echo substr_compare("abcde", "bc", 1, 3).PHP_EOL; // 1
 echo substr_compare("abcde", "cd", 1, 2).PHP_EOL; // -1
@@ -167,10 +177,10 @@ echo str_repeat("-=", 3).PHP_EOL; // -=-=-= 重复一个字符串
 
 echo str_ireplace("%body%", "black", "<body text=%BODY%>").PHP_EOL; //  str_replace() 的忽略大小写版本 <body text=black>
 echo str_replace(
-        ["fruits", "vegetables", "fiber"],
-        ["pizza", "beer", "ice cream"],
-        "You should eat fruits, vegetables, and fiber every day."
-    ).PHP_EOL; // 子字符串替换
+    ["fruits", "vegetables", "fiber"],
+    ["pizza", "beer", "ice cream"],
+    "You should eat fruits, vegetables, and fiber every day."
+).PHP_EOL; // 子字符串替换
 echo str_replace(["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"], "", "Hello World of PHP").PHP_EOL;
 
 echo substr_replace('ABCDEFGH:/MNRPQR/', 'bob', 0, 0).PHP_EOL;
@@ -207,10 +217,10 @@ echo str_pad($input, 6, "___");               // 输出 "Alien_"
 // x - treated as an integer and presented as a hexadecimal number (with lowercase letters).
 // X - treated as an integer and presented as a hexadecimal number (with uppercase letters).
 echo sprintf(
-        'There are %d monkeys in the %s',
-        5,
-        'tree'
-    ).PHP_EOL; // Return a formatted string There are 5 monkeys in the tree
+    'There are %d monkeys in the %s',
+    5,
+    'tree'
+).PHP_EOL; // Return a formatted string There are 5 monkeys in the tree
 echo sprintf('The %2$s contains %1$d monkeys', 5, 'tree').PHP_EOL; // The tree contains 5 monkeys
 echo sprintf('The %2$s contains %1$04d monkeys', 5, 'tree').PHP_EOL; // The tree contains 0005 monkeys
 echo sprintf("%'.9d\n", 123); // ......123
@@ -245,9 +255,9 @@ print_r(str_getcsv('henry,lee,Shanhai'));
 // ENT_NOQUOTES    Will leave both double and single quotes unconverted. 单引号和双引号都不转换
 // &  "  ' < >
 echo htmlspecialchars(
-        "<a href='test'>Test</a>",
-        ENT_QUOTES
-    ).PHP_EOL; // &lt;a href=&#039;test&#039;&gt;Test&lt;/a&gt; 将特殊字符转换为 HTML 实体
+    "<a href='test'>Test</a>",
+    ENT_QUOTES
+).PHP_EOL; // &lt;a href=&#039;test&#039;&gt;Test&lt;/a&gt; 将特殊字符转换为 HTML 实体
 echo htmlspecialchars_decode("<p>this -&gt; &quot;</p>\n").PHP_EOL;// 将特殊的 HTML 实体转换回普通字符
 
 $orig = "I'll \"walk\" the <b>dog</b> now";

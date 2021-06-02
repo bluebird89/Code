@@ -18,8 +18,3 @@ echo $foo . PHP_EOL;
 $greeting = "你好";
 $varName = "greeting";
 echo $$varName. PHP_EOL;
-
-## 常量
-define("LANGUAGE", "PHP");
-const FRAMEWORK = "Laravel";
-echo LANGUAGE . " " . FRAMEWORK;

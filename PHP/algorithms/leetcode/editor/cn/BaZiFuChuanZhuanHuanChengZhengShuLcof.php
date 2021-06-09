@@ -75,6 +75,39 @@ class Solution
      */
     public static function strToInt($str)
     {
+        $arr = str_split(trim($str));
+
+        $label = 1;
+        $res = 0;
+
+        if ($arr[0] == '-') {
+            $label = -1;
+        } elseif ($arr[0] == '+') {
+            $label = 1;
+        } elseif (is_numeric($arr[0])) {
+            $res = $arr[0];
+        } else {
+            return 0;
+        }
+
+        $count = count($arr);
+        for ($i = 1; $i < $count; $i++) {
+            if (!is_numeric($arr[$i])) {
+                break;
+            }
+            $res = $res * 10 + $arr[$i];
+        }
+        $max_int = $label == 1 ? 2147483647 : 2147483648;
+        $res = $res > $max_int ? $max_int : $res;
+
+        return $res * $label;
     }
 }
+
 //leetcode submit region end(Prohibit modification and deletion)
+
+echo Solution::strToInt('42').PHP_EOL;
+echo Solution::strToInt('   -42').PHP_EOL;
+echo Solution::strToInt('   -91283472332').PHP_EOL;
+# 64 Bit max int
+echo PHP_INT_MAX.PHP_EOL;

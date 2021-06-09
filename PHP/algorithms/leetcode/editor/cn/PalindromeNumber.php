@@ -55,18 +55,38 @@ namespace Algorithms\leetcode\editor\cn;
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution
 {
-
-    // 1. 转变字符处理
-    // 2 余数
-    //    - 翻转
-    //    - 处理掉数据
-    // TODO
     /**
+     * 转变字符处理
+     *
      * @param  Integer  $x
      *
      * @return Boolean
      */
     public static function isPalindrome($x)
+    {
+        $str = (string) $x;
+        $count = strlen($str);
+
+        for ($i = 0; $i < $count / 2; $i++) {
+            if ($str[$i] != $str[$count - $i - 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     *
+     * // TODO:余数
+     * //    - 翻转
+     * //    - 处理数据
+     * //
+     *
+     * @param  Integer  $x
+     *
+     * @return Boolean
+     */
+    public static function isPalindrome1($x)
     {
         $str = (string) ($x + 0);
         $count = strlen($str);
@@ -79,15 +99,20 @@ class Solution
         }
 
         for ($i = 0; $i < max(1, $count / 2); $i++) {
+            // left digit
             $divide = pow(10, $count - $i - 1);
             $left = (int) ($x / $divide);
             $x %= $divide;
+
+            // left digit
             $divide = pow(10, $i + 1);
             $right = $x % $divide;
+
             echo $left.'_'.$right.'_'.$x.PHP_EOL;
             if ($left != $right) {
                 return false;
             }
+
             $x = (int) ($x / $divide);
             if ($x >= 0 && $x < 10) {
                 return true;
@@ -98,9 +123,9 @@ class Solution
 
 //leetcode submit region end(Prohibit modification and deletion)
 
-//var_dump(Solution::isPalindrome(-121));
-//var_dump(Solution::isPalindrome(121));
-//var_dump(Solution::isPalindrome(10));
-//var_dump(Solution::isPalindrome(11));
-//var_dump(Solution::isPalindrome(21));
+var_dump(Solution::isPalindrome(-121));
+var_dump(Solution::isPalindrome(121));
+var_dump(Solution::isPalindrome(10));
+var_dump(Solution::isPalindrome(11));
+var_dump(Solution::isPalindrome(21));
 var_dump(Solution::isPalindrome(1000021));

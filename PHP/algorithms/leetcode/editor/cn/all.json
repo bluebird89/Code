@@ -1,15 +1,15 @@
 [
   {
     "articleLive": 2,
-    "formTitle": "[1787]使所有区间的异或结果为零",
-    "frontendQuestionId": "1787",
+    "formTitle": "[1049]最后一块石头的重量 II",
+    "frontendQuestionId": "1049",
     "leaf": true,
-    "level": 3,
+    "level": 2,
     "nodeType": "def",
-    "questionId": "1913",
+    "questionId": "1130",
     "status": "",
-    "title": "使所有区间的异或结果为零",
-    "titleSlug": "make-the-xor-of-all-segments-equal-to-zero"
+    "title": "最后一块石头的重量 II",
+    "titleSlug": "last-stone-weight-ii"
   },
   {
     "articleLive": 2,
@@ -115,7 +115,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "9",
-    "status": "notac",
+    "status": "ac",
     "title": "回文数",
     "titleSlug": "palindrome-number"
   },
@@ -235,7 +235,7 @@
     "level": 2,
     "nodeType": "def",
     "questionId": "19",
-    "status": "",
+    "status": "notac",
     "title": "删除链表的倒数第 N 个结点",
     "titleSlug": "remove-nth-node-from-end-of-list"
   },
@@ -247,7 +247,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "20",
-    "status": "",
+    "status": "ac",
     "title": "有效的括号",
     "titleSlug": "valid-parentheses"
   },
@@ -259,7 +259,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "21",
-    "status": "",
+    "status": "ac",
     "title": "合并两个有序链表",
     "titleSlug": "merge-two-sorted-lists"
   },
@@ -307,7 +307,7 @@
     "level": 3,
     "nodeType": "def",
     "questionId": "25",
-    "status": "",
+    "status": "notac",
     "title": "K 个一组翻转链表",
     "titleSlug": "reverse-nodes-in-k-group"
   },
@@ -319,7 +319,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "26",
-    "status": "",
+    "status": "ac",
     "title": "删除有序数组中的重复项",
     "titleSlug": "remove-duplicates-from-sorted-array"
   },
@@ -511,7 +511,7 @@
     "level": 3,
     "nodeType": "def",
     "questionId": "42",
-    "status": "",
+    "status": "notac",
     "title": "接雨水",
     "titleSlug": "trapping-rain-water"
   },
@@ -523,7 +523,7 @@
     "level": 2,
     "nodeType": "def",
     "questionId": "43",
-    "status": "",
+    "status": "notac",
     "title": "字符串相乘",
     "titleSlug": "multiply-strings"
   },
@@ -655,7 +655,7 @@
     "level": 2,
     "nodeType": "def",
     "questionId": "54",
-    "status": "",
+    "status": "ac",
     "title": "螺旋矩阵",
     "titleSlug": "spiral-matrix"
   },
@@ -679,7 +679,7 @@
     "level": 2,
     "nodeType": "def",
     "questionId": "56",
-    "status": "",
+    "status": "notac",
     "title": "合并区间",
     "titleSlug": "merge-intervals"
   },
@@ -907,7 +907,7 @@
     "level": 2,
     "nodeType": "def",
     "questionId": "75",
-    "status": "",
+    "status": "ac",
     "title": "颜色分类",
     "titleSlug": "sort-colors"
   },
@@ -1699,7 +1699,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "141",
-    "status": "",
+    "status": "ac",
     "title": "环形链表",
     "titleSlug": "linked-list-cycle"
   },
@@ -1867,7 +1867,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "155",
-    "status": "",
+    "status": "notac",
     "title": "最小栈",
     "titleSlug": "min-stack"
   },
@@ -1927,7 +1927,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "160",
-    "status": "",
+    "status": "notac",
     "title": "相交链表",
     "titleSlug": "intersection-of-two-linked-lists"
   },
@@ -2773,14 +2773,14 @@
   },
   {
     "articleLive": 2,
-    "formTitle": "[231]2的幂",
+    "formTitle": "[231]2 的幂",
     "frontendQuestionId": "231",
     "leaf": true,
     "level": 1,
     "nodeType": "def",
     "questionId": "231",
     "status": "",
-    "title": "2的幂",
+    "title": "2 的幂",
     "titleSlug": "power-of-two"
   },
   {
@@ -5944,7 +5944,7 @@
     "formTitle": "[495]提莫攻击",
     "frontendQuestionId": "495",
     "leaf": true,
-    "level": 2,
+    "level": 1,
     "nodeType": "def",
     "questionId": "495",
     "status": "",
@@ -8875,7 +8875,7 @@
     "level": 2,
     "nodeType": "def",
     "questionId": "739",
-    "status": "",
+    "status": "ac",
     "title": "每日温度",
     "titleSlug": "daily-temperatures"
   },
@@ -9016,7 +9016,7 @@
     "formTitle": "[751]IP 到 CIDR",
     "frontendQuestionId": "751",
     "leaf": true,
-    "level": 1,
+    "level": 2,
     "nodeType": "def",
     "questionId": "752",
     "status": "lock",
@@ -9100,7 +9100,7 @@
     "formTitle": "[758]字符串中的加粗单词",
     "frontendQuestionId": "758",
     "leaf": true,
-    "level": 1,
+    "level": 2,
     "nodeType": "def",
     "questionId": "760",
     "status": "lock",
@@ -12571,7 +12571,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "1128",
-    "status": "",
+    "status": "ac",
     "title": "删除字符串中的所有相邻重复项",
     "titleSlug": "remove-all-adjacent-duplicates-in-string"
   },
@@ -12586,18 +12586,6 @@
     "status": "",
     "title": "最长字符串链",
     "titleSlug": "longest-string-chain"
-  },
-  {
-    "articleLive": 2,
-    "formTitle": "[1049]最后一块石头的重量 II",
-    "frontendQuestionId": "1049",
-    "leaf": true,
-    "level": 2,
-    "nodeType": "def",
-    "questionId": "1130",
-    "status": "",
-    "title": "最后一块石头的重量 II",
-    "titleSlug": "last-stone-weight-ii"
   },
   {
     "articleLive": 2,
@@ -18031,7 +18019,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "1626",
-    "status": "",
+    "status": "ac",
     "title": "判断能否形成等差数列",
     "titleSlug": "can-make-arithmetic-progression-from-sequence"
   },
@@ -21205,14 +21193,14 @@
   },
   {
     "articleLive": 2,
-    "formTitle": "[1767]Find the Subtasks That Did Not Execute",
+    "formTitle": "[1767]寻找没有被执行的任务对",
     "frontendQuestionId": "1767",
     "leaf": true,
     "level": 3,
     "nodeType": "def",
     "questionId": "1914",
     "status": "lock",
-    "title": "Find the Subtasks That Did Not Execute",
+    "title": "寻找没有被执行的任务对",
     "titleSlug": "find-the-subtasks-that-did-not-execute"
   },
   {
@@ -21445,26 +21433,38 @@
   },
   {
     "articleLive": 2,
-    "formTitle": "[1788]Maximize the Beauty of the Garden",
+    "formTitle": "[1787]使所有区间的异或结果为零",
+    "frontendQuestionId": "1787",
+    "leaf": true,
+    "level": 3,
+    "nodeType": "def",
+    "questionId": "1913",
+    "status": "",
+    "title": "使所有区间的异或结果为零",
+    "titleSlug": "make-the-xor-of-all-segments-equal-to-zero"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1788]最大化花园的美观度",
     "frontendQuestionId": "1788",
     "leaf": true,
     "level": 3,
     "nodeType": "def",
     "questionId": "1937",
     "status": "lock",
-    "title": "Maximize the Beauty of the Garden",
+    "title": "最大化花园的美观度",
     "titleSlug": "maximize-the-beauty-of-the-garden"
   },
   {
     "articleLive": 2,
-    "formTitle": "[1789]Primary Department for Each Employee",
+    "formTitle": "[1789]员工的直属部门",
     "frontendQuestionId": "1789",
     "leaf": true,
     "level": 1,
     "nodeType": "def",
     "questionId": "1942",
     "status": "lock",
-    "title": "Primary Department for Each Employee",
+    "title": "员工的直属部门",
     "titleSlug": "primary-department-for-each-employee"
   },
   {
@@ -21529,14 +21529,14 @@
   },
   {
     "articleLive": 2,
-    "formTitle": "[1795]Rearrange Products Table",
+    "formTitle": "[1795]每个产品在不同商店的价格",
     "frontendQuestionId": "1795",
     "leaf": true,
     "level": 1,
     "nodeType": "def",
     "questionId": "1948",
     "status": "lock",
-    "title": "Rearrange Products Table",
+    "title": "每个产品在不同商店的价格",
     "titleSlug": "rearrange-products-table"
   },
   {
@@ -21697,14 +21697,14 @@
   },
   {
     "articleLive": 2,
-    "formTitle": "[1809]Ad-Free Sessions",
+    "formTitle": "[1809]没有广告的剧集",
     "frontendQuestionId": "1809",
     "leaf": true,
     "level": 1,
     "nodeType": "def",
     "questionId": "1958",
     "status": "lock",
-    "title": "Ad-Free Sessions",
+    "title": "没有广告的剧集",
     "titleSlug": "ad-free-sessions"
   },
   {
@@ -21841,14 +21841,14 @@
   },
   {
     "articleLive": 2,
-    "formTitle": "[1821]Find Customers With Positive Revenue this Year",
+    "formTitle": "[1821]寻找今年具有正收入的客户",
     "frontendQuestionId": "1821",
     "leaf": true,
     "level": 1,
     "nodeType": "def",
     "questionId": "1974",
     "status": "lock",
-    "title": "Find Customers With Positive Revenue this Year",
+    "title": "寻找今年具有正收入的客户",
     "titleSlug": "find-customers-with-positive-revenue-this-year"
   },
   {
@@ -21901,14 +21901,14 @@
   },
   {
     "articleLive": 2,
-    "formTitle": "[1826]Faulty Sensor",
+    "formTitle": "[1826]有缺陷的传感器",
     "frontendQuestionId": "1826",
     "leaf": true,
     "level": 1,
     "nodeType": "def",
     "questionId": "1980",
     "status": "lock",
-    "title": "Faulty Sensor",
+    "title": "有缺陷的传感器",
     "titleSlug": "faulty-sensor"
   },
   {
@@ -21961,14 +21961,14 @@
   },
   {
     "articleLive": 2,
-    "formTitle": "[1831]Maximum Transaction Each Day",
+    "formTitle": "[1831]每天的最大交易",
     "frontendQuestionId": "1831",
     "leaf": true,
     "level": 2,
     "nodeType": "def",
     "questionId": "1981",
     "status": "lock",
-    "title": "Maximum Transaction Each Day",
+    "title": "每天的最大交易",
     "titleSlug": "maximum-transaction-each-day"
   },
   {
@@ -22411,7 +22411,7 @@
     "level": 2,
     "nodeType": "def",
     "questionId": "2019",
-    "status": "",
+    "status": "lock",
     "title": "Product of Two Run-Length Encoded Arrays",
     "titleSlug": "product-of-two-run-length-encoded-arrays"
   },
@@ -22474,6 +22474,198 @@
     "status": "",
     "title": "Calculate Special Bonus",
     "titleSlug": "calculate-special-bonus"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1874]Minimize Product Sum of Two Arrays",
+    "frontendQuestionId": "1874",
+    "leaf": true,
+    "level": 2,
+    "nodeType": "def",
+    "questionId": "2029",
+    "status": "lock",
+    "title": "Minimize Product Sum of Two Arrays",
+    "titleSlug": "minimize-product-sum-of-two-arrays"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1875]Group Employees of the Same Salary",
+    "frontendQuestionId": "1875",
+    "leaf": true,
+    "level": 2,
+    "nodeType": "def",
+    "questionId": "2030",
+    "status": "",
+    "title": "Group Employees of the Same Salary",
+    "titleSlug": "group-employees-of-the-same-salary"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1876]长度为三且各字符不同的子字符串",
+    "frontendQuestionId": "1876",
+    "leaf": true,
+    "level": 1,
+    "nodeType": "def",
+    "questionId": "1987",
+    "status": "",
+    "title": "长度为三且各字符不同的子字符串",
+    "titleSlug": "substrings-of-size-three-with-distinct-characters"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1877]数组中最大数对和的最小值",
+    "frontendQuestionId": "1877",
+    "leaf": true,
+    "level": 2,
+    "nodeType": "def",
+    "questionId": "1988",
+    "status": "",
+    "title": "数组中最大数对和的最小值",
+    "titleSlug": "minimize-maximum-pair-sum-in-array"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1878]矩阵中最大的三个菱形和",
+    "frontendQuestionId": "1878",
+    "leaf": true,
+    "level": 2,
+    "nodeType": "def",
+    "questionId": "1990",
+    "status": "",
+    "title": "矩阵中最大的三个菱形和",
+    "titleSlug": "get-biggest-three-rhombus-sums-in-a-grid"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1879]两个数组最小的异或值之和",
+    "frontendQuestionId": "1879",
+    "leaf": true,
+    "level": 3,
+    "nodeType": "def",
+    "questionId": "1989",
+    "status": "",
+    "title": "两个数组最小的异或值之和",
+    "titleSlug": "minimum-xor-sum-of-two-arrays"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1880]检查某单词是否等于两单词之和",
+    "frontendQuestionId": "1880",
+    "leaf": true,
+    "level": 1,
+    "nodeType": "def",
+    "questionId": "2010",
+    "status": "",
+    "title": "检查某单词是否等于两单词之和",
+    "titleSlug": "check-if-word-equals-summation-of-two-words"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1881]插入后的最大值",
+    "frontendQuestionId": "1881",
+    "leaf": true,
+    "level": 2,
+    "nodeType": "def",
+    "questionId": "2011",
+    "status": "",
+    "title": "插入后的最大值",
+    "titleSlug": "maximum-value-after-insertion"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1882]使用服务器处理任务",
+    "frontendQuestionId": "1882",
+    "leaf": true,
+    "level": 2,
+    "nodeType": "def",
+    "questionId": "2012",
+    "status": "",
+    "title": "使用服务器处理任务",
+    "titleSlug": "process-tasks-using-servers"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1883]准时抵达会议现场的最小跳过休息次数",
+    "frontendQuestionId": "1883",
+    "leaf": true,
+    "level": 3,
+    "nodeType": "def",
+    "questionId": "2013",
+    "status": "",
+    "title": "准时抵达会议现场的最小跳过休息次数",
+    "titleSlug": "minimum-skips-to-arrive-at-meeting-on-time"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1884]鸡蛋掉落-两枚鸡蛋",
+    "frontendQuestionId": "1884",
+    "leaf": true,
+    "level": 2,
+    "nodeType": "def",
+    "questionId": "2031",
+    "status": "",
+    "title": "鸡蛋掉落-两枚鸡蛋",
+    "titleSlug": "egg-drop-with-2-eggs-and-n-floors"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1885]Count Pairs in Two Arrays",
+    "frontendQuestionId": "1885",
+    "leaf": true,
+    "level": 2,
+    "nodeType": "def",
+    "questionId": "2036",
+    "status": "",
+    "title": "Count Pairs in Two Arrays",
+    "titleSlug": "count-pairs-in-two-arrays"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1886]判断矩阵经轮转后是否一致",
+    "frontendQuestionId": "1886",
+    "leaf": true,
+    "level": 1,
+    "nodeType": "def",
+    "questionId": "2015",
+    "status": "",
+    "title": "判断矩阵经轮转后是否一致",
+    "titleSlug": "determine-whether-matrix-can-be-obtained-by-rotation"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1887]使数组元素相等的减少操作次数",
+    "frontendQuestionId": "1887",
+    "leaf": true,
+    "level": 2,
+    "nodeType": "def",
+    "questionId": "2016",
+    "status": "",
+    "title": "使数组元素相等的减少操作次数",
+    "titleSlug": "reduction-operations-to-make-the-array-elements-equal"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1888]使二进制字符串字符交替的最少反转次数",
+    "frontendQuestionId": "1888",
+    "leaf": true,
+    "level": 2,
+    "nodeType": "def",
+    "questionId": "2017",
+    "status": "",
+    "title": "使二进制字符串字符交替的最少反转次数",
+    "titleSlug": "minimum-number-of-flips-to-make-the-binary-string-alternating"
+  },
+  {
+    "articleLive": 2,
+    "formTitle": "[1889]装包裹的最小浪费空间",
+    "frontendQuestionId": "1889",
+    "leaf": true,
+    "level": 3,
+    "nodeType": "def",
+    "questionId": "2018",
+    "status": "",
+    "title": "装包裹的最小浪费空间",
+    "titleSlug": "minimum-space-wasted-from-packaging"
   },
   {
     "articleLive": 2,
@@ -22975,7 +23167,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "100282",
-    "status": "",
+    "status": "ac",
     "title": "从尾到头打印链表",
     "titleSlug": "cong-wei-dao-tou-da-yin-lian-biao-lcof"
   },
@@ -23011,7 +23203,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "100274",
-    "status": "",
+    "status": "ac",
     "title": "斐波那契数列",
     "titleSlug": "fei-bo-na-qi-shu-lie-lcof"
   },
@@ -23023,7 +23215,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "100277",
-    "status": "",
+    "status": "notac",
     "title": "青蛙跳台阶问题",
     "titleSlug": "qing-wa-tiao-tai-jie-wen-ti-lcof"
   },
@@ -23107,7 +23299,7 @@
     "level": 2,
     "nodeType": "def",
     "questionId": "100295",
-    "status": "",
+    "status": "ac",
     "title": "数值的整数次方",
     "titleSlug": "shu-zhi-de-zheng-shu-ci-fang-lcof"
   },
@@ -23167,7 +23359,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "100291",
-    "status": "",
+    "status": "ac",
     "title": "调整数组顺序使奇数位于偶数前面",
     "titleSlug": "diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof"
   },
@@ -23179,7 +23371,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "100294",
-    "status": "",
+    "status": "ac",
     "title": "链表中倒数第k个节点",
     "titleSlug": "lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof"
   },
@@ -23191,7 +23383,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "100298",
-    "status": "",
+    "status": "ac",
     "title": "反转链表",
     "titleSlug": "fan-zhuan-lian-biao-lcof"
   },
@@ -23275,7 +23467,7 @@
     "level": 2,
     "nodeType": "def",
     "questionId": "100306",
-    "status": "",
+    "status": "notac",
     "title": "栈的压入、弹出序列",
     "titleSlug": "zhan-de-ya-ru-dan-chu-xu-lie-lcof"
   },
@@ -23539,7 +23731,7 @@
     "level": 3,
     "nodeType": "def",
     "questionId": "100318",
-    "status": "",
+    "status": "notac",
     "title": "数组中的逆序对",
     "titleSlug": "shu-zu-zhong-de-ni-xu-dui-lcof"
   },
@@ -23695,7 +23887,7 @@
     "level": 3,
     "nodeType": "def",
     "questionId": "100336",
-    "status": "",
+    "status": "notac",
     "title": "滑动窗口的最大值",
     "titleSlug": "hua-dong-chuang-kou-de-zui-da-zhi-lcof"
   },
@@ -23803,7 +23995,7 @@
     "level": 2,
     "nodeType": "def",
     "questionId": "100340",
-    "status": "",
+    "status": "ac",
     "title": "把字符串转换成整数",
     "titleSlug": "ba-zi-fu-chuan-zhuan-huan-cheng-zheng-shu-lcof"
   },
@@ -24043,7 +24235,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "100172",
-    "status": "",
+    "status": "ac",
     "title": "三合一",
     "titleSlug": "three-in-one-lcci"
   },
@@ -24091,7 +24283,7 @@
     "level": 2,
     "nodeType": "def",
     "questionId": "100173",
-    "status": "",
+    "status": "ac",
     "title": "栈排序",
     "titleSlug": "sort-of-stacks-lcci"
   },
@@ -24319,7 +24511,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "100197",
-    "status": "",
+    "status": "ac",
     "title": "三步问题",
     "titleSlug": "three-steps-problem-lcci"
   },
@@ -24367,7 +24559,7 @@
     "level": 2,
     "nodeType": "def",
     "questionId": "100199",
-    "status": "",
+    "status": "ac",
     "title": "递归乘法",
     "titleSlug": "recursive-mulitply-lcci"
   },
@@ -24487,7 +24679,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "1000012",
-    "status": "",
+    "status": "ac",
     "title": "合并排序的数组",
     "titleSlug": "sorted-merge-lcci"
   },
@@ -24727,7 +24919,7 @@
     "level": 1,
     "nodeType": "def",
     "questionId": "100355",
-    "status": "notac",
+    "status": "ac",
     "title": "珠玑妙算",
     "titleSlug": "master-mind-lcci"
   },
@@ -24847,7 +25039,7 @@
     "level": 2,
     "nodeType": "def",
     "questionId": "1000027",
-    "status": "",
+    "status": "notac",
     "title": "计算器",
     "titleSlug": "calculator-lcci"
   },

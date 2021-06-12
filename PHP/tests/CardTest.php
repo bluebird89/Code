@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use Oop\Card;
+use oop\Card;
 use PHPUnit\Framework\TestCase;
 
 class CardTest extends TestCase

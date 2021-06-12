@@ -17,7 +17,6 @@ class ListNode
 
 class LRU
 {
-
     public $maxSize;
     public $size = 0;
     public $_firstNode;
@@ -46,7 +45,7 @@ class LRU
         return true;
     }
 
-    function get($key)
+    public function get($key)
     {
         $node = $this->_firstNode;
         while ($node = $node->next) {

@@ -46,16 +46,19 @@ namespace Algorithms\leetcode\editor\cn;
 // 👍 11127 👎 0
 
 //leetcode submit region begin(Prohibit modification and deletion)
+
 class Solution
 {
 
     /**
-     * @param  Integer[]  $nums
-     * @param  Integer    $target
+     * 遍历
+     *
+     * @param Integer[] $nums
+     * @param Integer $target
      *
      * @return Integer[]
      */
-    public function twoSum(array $nums, int $target): array
+    public function twoSum1(array $nums, int $target): array
     {
         $len = count($nums);
         for ($i = 0; $i < $len; $i++) {
@@ -68,5 +71,75 @@ class Solution
 
         return [0, 0];
     }
+
+    public function twoSum2(array $nums, int $target): array
+    {
+        $map = [];
+        foreach ($nums as $k => $v) {
+            $map[$v][] = $k;
+        }
+
+        $len = count($nums);
+        for ($i = 0; $i < $len; $i++) {
+            $res = $target - $nums[$i];
+            if (isset($map[$res]) && $res != $nums[$i]) {
+                return [$map[$nums[$i]][0], $map[$res][0]];
+            } else {
+                if (sizeof($map[$res]) > 1) {
+                    return [$map[$res][0], $map[$res][1]];
+                }
+            }
+        }
+        return [0, 0];
+    }
+
+    /**
+     * @param Integer[] $nums
+     * @param Integer $target
+     *
+     * @return Integer[]
+     */
+    public function twoSum3($nums, $target)
+    {
+        $found = [];
+        $count = count($nums);
+
+        for ($i = 0; $i < $count; $i++) {
+            $diff = $target - $nums[$i];
+
+            if (array_key_exists($diff, $found)) {
+                return [$found[$diff], $i];
+            }
+
+            $found[$nums[$i]] = $i;
+        }
+    }
+
+    /**
+     * hash table:fix value cooruption
+     *
+     * @param array $nums
+     * @param int $target
+     *
+     * @return array|int[]
+     */
+    public function twoSum(array $nums, int $target): array
+    {
+        $map = [];
+        foreach ($nums as $k => $v) {
+            $res = $target - $nums[$k];
+            if (isset($map[$res])) {
+                return [$k, $map[$res][0]];
+            }
+            $map[$v][] = $k;
+        }
+
+        return [0, 0];
+    }
 }
+
 //leetcode submit region end(Prohibit modification and deletion)
+
+echo array_search(3, [3, 3], true) . PHP_EOL;
+print_r((new Solution())->twoSum([3, 2, 3], 6));
+print_r((new Solution())->twoSum([2, 7, 11, 15], 9));

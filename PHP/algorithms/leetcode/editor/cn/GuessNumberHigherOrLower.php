@@ -99,7 +99,6 @@ class Solution extends GuessGame
 
         return -1;
     }
-
 }
 
 //leetcode submit region end(Prohibit modification and deletion)

@@ -47,12 +47,40 @@ class Solution
 {
 
     /**
-     * @param  ListNode  $head
-     * @param  Integer   $k
+     * iterator
+     * @param ListNode $head
+     * @param Integer $k
      *
      * @return ListNode
      */
     public function reverseKGroup($head, $k)
+    {
+        $newHead = null;
+        $newP = $newHead->next;
+        $tail = null;
+        $count = 0;
+
+        while ($head) {
+            if ($count % $k == 0) {
+                $newP->next = $p;
+                $count = 0;
+                $newP = $tail;
+                $p = null;
+            } else {
+                $tmp = $head->next;
+                $tmp->next = $p;
+                $p = $tmp;
+                $tail = $tmp;
+                $count++;
+                $head = $head->next;
+            }
+        }
+
+        return $newHead->next;
+    }
+
+    // recursive
+    public function reverseKGroup1($head, $k)
     {
         $newHead = null;
         $newP = $newHead->next;

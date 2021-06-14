@@ -53,13 +53,13 @@ class Solution
         }
 
         $index = $count - $n;
+        if ($index == 0) {
+            return $head->next;
+        }
         $p = $head;
-        $j = 1;
+        $j = 0;
         while ($p) {
-            if ($index == 0) {
-                return $head->next;
-            }
-            if ($j == $index - 1) {
+            if ($j == $index) {
                 $p->next = $p->next->next;
                 break;
             }

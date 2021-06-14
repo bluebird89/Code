@@ -67,6 +67,7 @@ class Solution
     {
         $low = 0;
         $high = count($nums) - 1;
+
         while ($low <= $high) {
             if ($high == $low) {
                 return $nums[$low];

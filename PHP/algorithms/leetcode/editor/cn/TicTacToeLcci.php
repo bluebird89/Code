@@ -61,8 +61,8 @@ class Solution
         $count = count($board);
         $label = true;
         $reslut = '';
-        for ($i=0; $i<$count-1; $i++) {
-            if ($board[$i][$i] != $board[$i+1][$i+1]) {
+        for ($i = 0; $i < $count - 1; $i++) {
+            if ($board[$i][$i] != $board[$i + 1][$i + 1]) {
                 $label = false;
                 break;
             }
@@ -70,8 +70,8 @@ class Solution
         }
 
 
-        for ($i=0; $i<$count-1; $i++) {
-            for ($j=0; $j<$count-1; $j++) {
+        for ($i = 0; $i < $count - 1; $i++) {
+            for ($j = 0; $j < $count - 1; $j++) {
             }
         }
         return $reslut;

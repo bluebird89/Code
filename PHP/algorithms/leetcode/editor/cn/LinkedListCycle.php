@@ -52,22 +52,24 @@ class Solution
 {
 
     /**
-     * 方法一：添加到哈希表，判断是否存在|添加成功
+     * 方法一：哈希表实现
      *
      * @param $head
      *
      * @return bool
      */
-    public static function hasCycle1($head)
+    public static function hasCycle($head)
     {
         $res = [];
         while ($head) {
             if (in_array($head, $res)) {
                 return true;
             }
+
             $res[] = $head;
             $head = $head->next;
         }
+
         return false;
     }
 
@@ -79,7 +81,7 @@ class Solution
      * @return Boolean
      * @deprecated:无法实现
      */
-    public static function hasCycle($head)
+    public static function hasCycle1($head)
     {
         $slow = $head;
         while ($slow) {
@@ -104,7 +106,7 @@ class Solution
     }
 
     /**
-     * 快慢指针都会进入到环
+     * 双指针：快慢指针都会进入到环
      *
      * @param $head
      *
@@ -112,11 +114,12 @@ class Solution
      */
     public static function hasCycle3($head)
     {
-        $slow = $head;
-        $fast = $head->next;
         if ($head == null || $head->next == null) {
             return false;
         }
+
+        $slow = $head;
+        $fast = $head->next;
         while ($slow != $fast) {
             if ($fast == null || $fast->next == null) {
                 return false;

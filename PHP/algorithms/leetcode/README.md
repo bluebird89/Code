@@ -1,6 +1,7 @@
 ## 测试
 
 * 超出时间限制
+    - 方法是有问题的
 
 ## 纯编程题|模拟题|翻译题
 
@@ -21,12 +22,11 @@
 * [x] [面试题 01.08. 零矩阵](https://leetcode-cn.com/problems/zero-matrix-lcci/) （简单）
 * [x] [面试题 16.11. 跳水板](https://leetcode-cn.com/problems/diving-board-lcci/)（简单）
 * [x] [面试题 01.05. 一次编辑](https://leetcode-cn.com/problems/one-away-lcci/)（中等）
-* [] [面试题 16.15. 珠玑妙算](https://leetcode-cn.com/problems/master-mind-lcci/) （简单）
-    - [代码](./editor/cn/.php)
-* [ ] [面试题 16.04. 井字游戏](https://leetcode-cn.com/problems/tic-tac-toe-lcci/)（中等）
+* [x] [面试题 16.15. 珠玑妙算](https://leetcode-cn.com/problems/master-mind-lcci/) （简单）
+* [] [面试题 16.04. 井字游戏](https://leetcode-cn.com/problems/tic-tac-toe-lcci/)（中等）
 * [x] [55. 跳跃游戏](https://leetcode-cn.com/problems/jump-game/) （中等）
 * [x] [48. 旋转图像](https://leetcode-cn.com/problems/rotate-image/) （中等）经典
-* [ ] [54. 螺旋矩阵](https://leetcode-cn.com/problems/spiral-matrix/)（中等）经典
+* [] [54. 螺旋矩阵](https://leetcode-cn.com/problems/spiral-matrix/)（中等）经典
     - 确定四条边位置
     - 顺时针螺旋取值
     - 修改边界位置
@@ -128,9 +128,11 @@
 * [x] [704. 二分查找](https://leetcode-cn.com/problems/binary-search/)（简单） 标准二分查找
 * [x] [374. 猜数字大小](https://leetcode-cn.com/problems/guess-number-higher-or-lower/)（简单）
     - 题意：猜的数字是代码生成
+    - [](editor/cn/GuessNumberHigherOrLower.php)
 * [x] [744. 寻找比目标字母大的最小字母](https://leetcode-cn.com/problems/find-smallest-letter-greater-than-target/)（简单）
+    - [](editor/cn/FindSmallestLetterGreaterThanTarget.php)
 * [x] [35. 搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/)（简单）
-* [] [34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/) （中等）
+* [x] [34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/) （中等）
 * [] [面试题 10.05. 稀疏数组搜索](https://leetcode-cn.com/problems/sparse-array-search-lcci/)（简单）
 * [] [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)（中等）无重复数据
 * [x] [153. 寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)（中等） 无重复数据
@@ -141,29 +143,58 @@
 * [x] [69. x 的平方根](https://leetcode-cn.com/problems/sqrtx/)（简单）二分答案
 * [0] [74. 搜索二维矩阵](https://leetcode-cn.com/problems/search-a-2d-matrix/)（中等） 二维转一维，二分查找
 * 以下为选做：
-* [] [658. 找到 K 个最接近的元素](https://leetcode-cn.com/problems/find-k-closest-elements/)（中等）
-* [] [875. 爱吃香蕉的珂珂](https://leetcode-cn.com/problems/koko-eating-bananas/)（中等）二分答案
-* [] [81. 搜索旋转排序数组 II](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/)（中等）有重复数据
-* [] [154. 寻找旋转排序数组中的最小值 II](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/) （困难） 有重复数据
+    * [x] [658. 找到 K 个最接近的元素](https://leetcode-cn.com/problems/find-k-closest-elements/)（中等）
+    * [x] [875. 爱吃香蕉的珂珂](https://leetcode-cn.com/problems/koko-eating-bananas/)（中等）二分答案
+        - [](editor/cn/KokoEatingBananas.php)
+    * [] [81. 搜索旋转排序数组 II](https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/)（中等）有重复数据
+    * [x] [154. 寻找旋转排序数组中的最小值 II](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/) （困难） 有重复数据
 
 ## 哈希表
 
-* [] [两数之和](https://leetcode-cn.com/problems/two-sum/) （简单）
-* [] [15. 三数之和](https://leetcode-cn.com/problems/3sum/)（中等）
+* [x] [两数之和](https://leetcode-cn.com/problems/two-sum/) （简单）
+    - 构造映射关系，如何去重
+* [o] [15. 三数之和](https://leetcode-cn.com/problems/3sum/)（中等）
 * [] [160. 相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)（简单）
-* [] [141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)（简单）
+* [x] [141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/)（简单）
 * [] [面试题 02.01. 移除重复节点](https://leetcode-cn.com/problems/remove-duplicate-node-lcci/)（中等）
-* [] [面试题 16.02. 单词频率](https://leetcode-cn.com/problems/words-frequency-lcci/) （简单）
+* [x] [面试题 16.02. 单词频率](https://leetcode-cn.com/problems/words-frequency-lcci/) （简单）
 * [] [面试题 01.02. 判定是否互为字符重排](https://leetcode-cn.com/problems/check-permutation-lcci/)（简单）
 * [] [剑指 Offer 03. 数组中重复的数字](https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/) （简单）
 * [] [242. 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/)（简单）
 * [] [49. 字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/)（中等）
 * [] [136. 只出现一次的数字](https://leetcode-cn.com/problems/single-number/)（简单）
-* [] [349. 两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/) （简单）
-* [] [1122. 数组的相对排序](https://leetcode-cn.com/problems/relative-sort-array/)（中等）
-* [] [706. 设计哈希映射](https://leetcode-cn.com/problems/design-hashmap/)（简单）
+* [x] [349. 两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/) （简单）
+* [x] [1122. 数组的相对排序](https://leetcode-cn.com/problems/relative-sort-array/)（中等）
+* [x] [706. 设计哈希映射](https://leetcode-cn.com/problems/design-hashmap/)（简单）
 * [] [146. LRU 缓存机制](https://leetcode-cn.com/problems/lru-cache/) （中等）标准的LRU
 * [] [面试题 16.21. 交换和](https://leetcode-cn.com/problems/sum-swap-lcci/)（中等）
+
+## 二叉树
+
+* **二叉树前中后序遍历**
+    * [] [144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/)（简单）
+    * [] [94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/) （简单）
+    * [] [145. 二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/)（简单）
+    * [] [589. N 叉树的前序遍历](https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/)（简单）**例题**
+    * [] [590. N 叉树的后序遍历](https://leetcode-cn.com/problems/n-ary-tree-postorder-traversal/)（简单）
+* **二叉树按层遍历**
+    * [] [剑指 Offer 32 - I. 从上到下打印二叉树](https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-lcof/)（中等）**例题**
+    * [] [102. 二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)（中等）
+    * [] [剑指 Offer 32 - III. 从上到下打印二叉树 III](https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-iii-lcof/) （中等）
+    * [] [429. N 叉树的层序遍历](https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/)（中等）
+    * [] [513. 找树左下角的值](https://leetcode-cn.com/problems/find-bottom-left-tree-value/)（中等）
+* **二叉树上的递归**
+    * [] [104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)（简单）**例题**
+    * [] [559. N 叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-n-ary-tree/)（简单）
+    * [] [剑指 Offer 55 - II. 平衡二叉树](https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof/)（中等）**例题**
+    * [] [617. 合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees/)（简单）
+    * [] [226. 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/) （简单）
+    * [] [101. 对称二叉树](https://leetcode-cn.com/problems/symmetric-tree/)（中等）
+    * [] [98. 验证二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)（中等）
+* **二叉查找树**
+    * [] [剑指 Offer 54. 二叉搜索树的第k大节点](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/)（中等）
+    * [] [538. 把二叉搜索树转换为累加树](https://leetcode-cn.com/problems/convert-bst-to-greater-tree/) （中等）
+    * [] [面试题 04.06. 后继者](https://leetcode-cn.com/problems/successor-lcci/)（中等）
 
 ## 额外
 

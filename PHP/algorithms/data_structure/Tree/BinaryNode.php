@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Algorithms\Tree;
+namespace Algorithms\data_structure\Tree;
 
-include '../../vendor/autoload.php';
+include '../../../vendor/autoload.php';
 
 class BinaryNode
 {

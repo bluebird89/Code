@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Algorithms\Tree;
+namespace Algorithms\data_structure\Tree;
 
-include '../../vendor/autoload.php';
+include '../../../vendor/autoload.php';
 
 class BinaryTree
 {
@@ -165,5 +165,12 @@ $semiFinal1->addChildren($quarterFinal1, $quarterFinal2);
 $semiFinal2->addChildren($quarterFinal3, $quarterFinal4);
 $final->addChildren($semiFinal1, $semiFinal2);
 
+echo "/-----遍历--------/ " . PHP_EOL;
 $tree = new BinaryTree($final);
-$tree->traverse($tree->root);
+echo "/-----前序遍历--------/ " . PHP_EOL;
+$tree->preTraverse($tree->root);
+echo "/-----中序遍历--------/ " . PHP_EOL;
+$tree->midTraverse($tree->root);
+echo "/-----后序遍历--------/ " . PHP_EOL;
+$tree->afterTraverse($tree->root);
+echo "/-----遍历 over--------/ " . PHP_EOL;

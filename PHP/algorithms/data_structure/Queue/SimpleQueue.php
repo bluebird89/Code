@@ -1,40 +1,40 @@
 <?php
 
-namespace Algorithms\DataStructure;
+namespace Algorithms\data_structure\Queue;
 
 /**
  * 通过 PHP 数组实现队列
  */
 class SimpleQueue
 {
-    private $_queue = [];
-    private $_size = 0;
+    private $queue = [];
+    private $size = 0;
 
     public function __construct($size = 10)
     {
-        $this->_size = $size;
+        $this->size = $size;
     }
 
     // 入队
     public function enqueue($value)
     {
-        if (count($this->_queue) > $this->_size) {
+        if (count($this->queue) > $this->size) {
             return false;
         }
-        array_push($this->_queue, $value);
+        array_push($this->queue, $value);
     }
 
     // 出队
     public function dequeue()
     {
-        if (count($this->_queue) == 0) {
+        if (count($this->queue) == 0) {
             return false;
         }
-        return array_shift($this->_queue);
+        return array_shift($this->queue);
     }
 
     public function size()
     {
-        return count($this->_queue);
+        return count($this->queue);
     }
 }

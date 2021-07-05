@@ -1,8 +1,6 @@
 <?php
 
-namespace Algorithms\LinearList;
-
-include '../../vendor/autoload.php';
+namespace Algorithms\data_structure\LinearList;
 
 use Iterator;
 
@@ -355,7 +353,6 @@ class LinkedList implements Iterator
     {
         return $this->_currentNode !== null;
     }
-
 }
 
 $linkedList = new LinkedList();

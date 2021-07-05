@@ -1,8 +1,8 @@
 <?php
 
-namespace oop;
+namespace syntax\oop;
 
-class Gas implements Power
+class Gas implements iPower
 {
     public function power()
     {

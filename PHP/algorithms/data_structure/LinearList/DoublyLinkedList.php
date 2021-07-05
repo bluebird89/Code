@@ -1,66 +1,64 @@
 <?php
 
 
-namespace Algorithms\LinearList;
-
-include '../../vendor/autoload.php';
+namespace Algorithms\data_structure\LinearList;
 
 use SplDoublyLinkedList;
 
 class DoublyLinkedList
 {
 
-    private $_firstNode = null;
-    private $_lastNode = null;
-    private $_totalNode = 0;
+    private $firstNode = null;
+    private $lastNode = null;
+    private $totalNode = 0;
 
     public function insertAtFirst(string $data = null)
     {
         $newNode = new ListNode($data);
-        if ($this->_firstNode === null) {
-            $this->_firstNode = &$newNode;
-            $this->_lastNode = $newNode;
+        if ($this->firstNode === null) {
+            $this->firstNode = &$newNode;
+            $this->lastNode = $newNode;
         } else {
-            $currentFirstNode = $this->_firstNode;
-            $this->_firstNode = &$newNode;
+            $currentFirstNode = $this->firstNode;
+            $this->firstNode = &$newNode;
             $newNode->next = $currentFirstNode;
             $currentFirstNode->prev = $newNode;
         }
-        $this->_totalNode++;
+        $this->totalNode++;
         return true;
     }
 
     public function insertAtLast(string $data = null)
     {
-        $newNode = new ListNode($data);
+        $newNode = new ListKVNode($data);
 
-        if ($this->_firstNode === null) {
-            $this->_firstNode = &$newNode;
-            $this->_lastNode = $newNode;
+        if ($this->firstNode === null) {
+            $this->firstNode = &$newNode;
+            $this->lastNode = $newNode;
         } else {
-            $currentNode = $this->_lastNode;
+            $currentNode = $this->lastNode;
             $currentNode->next = $newNode;
             $newNode->prev = $currentNode;
-            $this->_lastNode = $newNode;
+            $this->lastNode = $newNode;
         }
-        $this->_totalNode++;
+        $this->totalNode++;
         return true;
     }
 
     public function insertBefore(string $data = null, string $query = null)
     {
-        $newNode = new ListNode($data);
+        $newNode = new ListKVNode($data);
 
-        if ($this->_firstNode) {
+        if ($this->firstNode) {
             $previous = null;
-            $currentNode = $this->_firstNode;
+            $currentNode = $this->firstNode;
             while ($currentNode !== null) {
                 if ($currentNode->data === $query) {
                     $newNode->next = $currentNode;
                     $currentNode->prev = $newNode;
                     $previous->next = $newNode;
                     $newNode->prev = $previous;
-                    $this->_totalNode++;
+                    $this->totalNode++;
                     break;
                 }
                 $previous = $currentNode;
@@ -71,23 +69,23 @@ class DoublyLinkedList
 
     public function insertAfter(string $data = null, string $query = null)
     {
-        $newNode = new ListNode($data);
+        $newNode = new ListKVNode($data);
 
-        if ($this->_firstNode) {
+        if ($this->firstNode) {
             $nextNode = null;
-            $currentNode = $this->_firstNode;
+            $currentNode = $this->firstNode;
             while ($currentNode !== null) {
                 if ($currentNode->data === $query) {
                     if ($nextNode !== null) {
                         $newNode->next = $nextNode;
                     }
-                    if ($currentNode === $this->_lastNode) {
-                        $this->_lastNode = $newNode;
+                    if ($currentNode === $this->lastNode) {
+                        $this->lastNode = $newNode;
                     }
                     $currentNode->next = $newNode;
                     $nextNode->prev = $newNode;
                     $newNode->prev = $currentNode;
-                    $this->_totalNode++;
+                    $this->totalNode++;
                     break;
                 }
                 $currentNode = $currentNode->next;
@@ -98,14 +96,14 @@ class DoublyLinkedList
 
     public function deleteFirst()
     {
-        if ($this->_firstNode !== null) {
-            if ($this->_firstNode->next !== null) {
-                $this->_firstNode = $this->_firstNode->next;
-                $this->_firstNode->prev = null;
+        if ($this->firstNode !== null) {
+            if ($this->firstNode->next !== null) {
+                $this->firstNode = $this->firstNode->next;
+                $this->firstNode->prev = null;
             } else {
-                $this->_firstNode = null;
+                $this->firstNode = null;
             }
-            $this->_totalNode--;
+            $this->totalNode--;
             return true;
         }
         return false;
@@ -113,17 +111,16 @@ class DoublyLinkedList
 
     public function deleteLast()
     {
-        if ($this->_lastNode !== null) {
-
-            $currentNode = $this->_lastNode;
+        if ($this->lastNode !== null) {
+            $currentNode = $this->lastNode;
             if ($currentNode->prev === null) {
-                $this->_firstNode = null;
-                $this->_lastNode = null;
+                $this->firstNode = null;
+                $this->lastNode = null;
             } else {
                 $previousNode = $currentNode->prev;
-                $this->_lastNode = $previousNode;
+                $this->lastNode = $previousNode;
                 $previousNode->next = null;
-                $this->_totalNode--;
+                $this->totalNode--;
                 return true;
             }
         }
@@ -132,9 +129,9 @@ class DoublyLinkedList
 
     public function delete(string $query = null)
     {
-        if ($this->_firstNode) {
+        if ($this->firstNode) {
             $previous = null;
-            $currentNode = $this->_firstNode;
+            $currentNode = $this->firstNode;
             while ($currentNode !== null) {
                 if ($currentNode->data === $query) {
                     if ($currentNode->next === null) {
@@ -144,7 +141,7 @@ class DoublyLinkedList
                         $currentNode->next->prev = $previous;
                     }
 
-                    $this->_totalNode--;
+                    $this->totalNode--;
                     break;
                 }
                 $previous = $currentNode;
@@ -155,29 +152,28 @@ class DoublyLinkedList
 
     public function displayForward()
     {
-        echo "Total book titles: ".$this->_totalNode."\n";
-        $currentNode = $this->_firstNode;
+        echo "Total book titles: " . $this->totalNode . "\n";
+        $currentNode = $this->firstNode;
         while ($currentNode !== null) {
-            echo $currentNode->data."\n";
+            echo $currentNode->data . "\n";
             $currentNode = $currentNode->next;
         }
     }
 
     public function displayBackward()
     {
-        echo "Total book titles: ".$this->_totalNode."\n";
-        $currentNode = $this->_lastNode;
+        echo "Total book titles: " . $this->totalNode . "\n";
+        $currentNode = $this->lastNode;
         while ($currentNode !== null) {
-            echo $currentNode->data."\n";
+            echo $currentNode->data . "\n";
             $currentNode = $currentNode->prev;
         }
     }
 
     public function getSize()
     {
-        return $this->_totalNode;
+        return $this->totalNode;
     }
-
 }
 
 $BookTitles = new DoublyLinkedList();
@@ -205,5 +201,5 @@ $BookTitles->add(1, "Introduction to Calculus");
 $BookTitles->add(3, "Introduction to Graph Theory");
 
 for ($BookTitles->rewind(); $BookTitles->valid(); $BookTitles->next()) {
-    echo $BookTitles->current()."\n";
+    echo $BookTitles->current() . "\n";
 }

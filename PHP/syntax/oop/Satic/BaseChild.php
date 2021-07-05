@@ -1,6 +1,6 @@
 <?php
 
-namespace oop;
+namespace syntax\oop\Satic;
 
 class BaseChild
 {

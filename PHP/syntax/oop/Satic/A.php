@@ -1,7 +1,7 @@
 <?php
 
 
-namespace oop\Trit\Satic;
+namespace syntax\oop\Satic;
 
 class A
 {

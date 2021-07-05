@@ -31,7 +31,6 @@ function expressionChecker(string $expression): bool
                     if (($char == ")" && $last != "(")
                         || ($char == "}" && $last != "{")
                         || ($char == "]" && $last != "[")) {
-
                         $valid = false;
                     }
                 }

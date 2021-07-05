@@ -1,6 +1,6 @@
 {
   "name": "henry/code",
-  "description": "PHP code tests",
+  "description": "PHP code test",
   "authors": [
     {
       "name": "Henry",
@@ -31,8 +31,10 @@
     "apache/thrift": "^0.13.0",
     "ext-bcmath": "*",
     "ext-memcache": "*",
-    "phpunit/phpunit": "^9.5",
-    "ext-posix": "*"
+    "ext-posix": "*",
+    "ext-pcntl": "*",
+    "symfony/service-contracts": "2.2.0",
+    "ext-pdo": "*"
   },
   "autoload": {
     "files": [
@@ -41,24 +43,29 @@
     ],
     "psr-4": {
       "": "./",
-      "Tests\\": "tests/",
+      "Tests\\": "test/",
       "Algorithms\\": "algorithms/",
       "Application\\": "application/",
-      "Oop\\": "Oop/",
       "popp\\": "Popp"
     },
     "classmap": [
       "./",
       "application",
-      "Oop",
       "helper"
+    ],
+    "exclude-from-classmap": [
+      "algorithms/leetcode"
     ]
   },
   "require-dev": {
-    "behat/behat": "^3.7",
     "filp/whoops": "^2.7",
-    "facebook/webdriver": "^1.7",
     "phpspec/phpspec": "^6.2",
-    "phing/phing": "^2.16"
+    "phing/phing": "^2.16",
+    "phpunit/phpunit": "^9.5",
+    "php-webdriver/webdriver": "^1.11",
+    "behat/behat": "^3.8",
+    "phpunit/php-code-coverage": "^9.2",
+    "phpstan/phpstan": "^0.12.92",
+    "pcov/clobber": "^2.0"
   }
 }

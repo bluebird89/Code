@@ -1,6 +1,6 @@
 <?php
 
-namespace oop;
+namespace syntax\oop;
 
 // Object Oriented Programming
 // 核心的概念就是类（Class）和对象（Object），类是对象的抽象模板，而对象是类的具体实例

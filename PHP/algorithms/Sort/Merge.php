@@ -2,8 +2,6 @@
 
 namespace Algorithms\Sort;
 
-include '../../vendor/autoload.php';
-
 class Merge extends AbstractSort
 {
     public static function sort($arr)
@@ -101,7 +99,7 @@ class Merge extends AbstractSort
         }
     }
 
-    static function mergeSort(array $arr): array
+    public static function mergeSort(array $arr): array
     {
         $len = count($arr);
         $mid = (int) $len / 2;
@@ -115,7 +113,7 @@ class Merge extends AbstractSort
         return self::merge1($left, $right);
     }
 
-    static function merge1(array $left, array $right): array
+    public static function merge1(array $left, array $right): array
     {
         $combined = [];
         $countLeft = count($left);

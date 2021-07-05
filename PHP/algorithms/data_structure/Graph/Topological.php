@@ -1,14 +1,13 @@
 <?php
 
 
-namespace Algorithms\Graph;
-
+namespace Algorithms\data_structure\Graph;
 
 use SplQueue;
 
 class Topological
 {
-    static function topologicalSort(array $matrix): SplQueue
+    public static function topologicalSort(array $matrix): SplQueue
     {
         $order = new SplQueue;
         $queue = new SplQueue;
@@ -37,8 +36,7 @@ class Topological
             }
             $order->enqueue($node);
         }
-        if ($order->count() != $size) // cycle detected return new SplQueue;
-        {
+        if ($order->count() != $size) { // cycle detected return new SplQueue;
             return $order;
         }
     }

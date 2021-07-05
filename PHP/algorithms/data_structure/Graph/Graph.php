@@ -1,20 +1,18 @@
 <?php
 
 
-namespace Algorithms\Graph;
-
+namespace Algorithms\data_structure\Graph;
 
 use SplQueue;
 use SplStack;
 
 class Graph
 {
-
     public $graph = [];
     public $visited = [];
     public $vertexCount;
 
-    function __construct($vertexCount)
+    public function __construct($vertexCount)
     {
         $this->$vertexCount = $vertexCount;
         for ($i = 1; $i <= $vertexCount; $i++) {
@@ -23,7 +21,7 @@ class Graph
         }
     }
 
-    static function BFS(array &$graph, int $start, array $visited): SplQueue
+    public static function BFS(array &$graph, int $start, array $visited): SplQueue
     {
         $queue = new SplQueue;
         $path = new SplQueue;
@@ -44,7 +42,7 @@ class Graph
         return $path;
     }
 
-    static function DFS(array &$graph, int $start, array $visited): SplQueue
+    public static function DFS(array &$graph, int $start, array $visited): SplQueue
     {
         $stack = new SplStack;
         $path = new SplQueue;

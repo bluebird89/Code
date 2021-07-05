@@ -275,7 +275,7 @@ $fn(3);//109
 echo $a;//Notice: Undefined variable
 
 
-$dog = new \oop\Dog("Rover", "red");
+$dog = new \syntax\oop\Dog("Rover", "red");
 $dog->greet("Hello")();
 $dog->swim()();
 $dog();

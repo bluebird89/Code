@@ -1,6 +1,6 @@
 <?php
 
-namespace oop;
+namespace syntax\oop;
 
 ## 抽象 继承 多态
 use ReflectionMethod;

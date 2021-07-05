@@ -7,8 +7,8 @@ use PhpSpec\ObjectBehavior;
 
 class MarkdownSpec extends ObjectBehavior
 {
-    function it_is_initializable()
+    public function it_is_initializable()
     {
-		$this->toHtml("Hi, there")->shouldReturn("<p>Hi, there</p>");
+        $this->toHtml("Hi, there")->shouldReturn("<p>Hi, there</p>");
     }
 }

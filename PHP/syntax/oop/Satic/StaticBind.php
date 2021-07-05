@@ -1,5 +1,7 @@
 <?php
 
+namespace syntax\oop\Satic;
+
 class Car
 {
     public static $WHEELS = 4;
@@ -11,7 +13,7 @@ class Car
 
     public static function getClass()
     {
-        echo static::class.PHP_EOL;
+        echo static::class . PHP_EOL;
     }
 
     public static function test()
@@ -23,7 +25,7 @@ class Car
 
     public function getLine()
     {
-        echo __LINE__.PHP_EOL;
+        echo __LINE__ . PHP_EOL;
     }
 }
 
@@ -31,7 +33,7 @@ class Benz extends Car
 {
     public function getLine()
     {
-        echo __LINE__.PHP_EOL;
+        echo __LINE__ . PHP_EOL;
     }
 }
 

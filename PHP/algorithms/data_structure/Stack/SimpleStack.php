@@ -1,6 +1,6 @@
 <?php
 
-namespace Algorithms\DataStructure;
+namespace Algorithms\data_structure\Stack;
 
 /**
  * 通过 PHP 数组实现简单的顺序栈

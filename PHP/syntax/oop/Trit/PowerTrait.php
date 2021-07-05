@@ -1,6 +1,6 @@
 <?php
 
-namespace oop;
+namespace syntax\oop\Trit;
 
 trait PowerTrait
 {
@@ -11,9 +11,9 @@ trait PowerTrait
         $this->power = '电池';
     }
 
-    public function print()
+    public function printText()
     {
-        echo "动力来源：".$this->power.PHP_EOL;
+        echo "动力来源：" . $this->power . PHP_EOL;
     }
 
     protected function gas()

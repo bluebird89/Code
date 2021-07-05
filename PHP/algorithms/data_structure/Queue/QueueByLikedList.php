@@ -7,62 +7,53 @@
  *
  */
 
+namespace Algorithms\data_structure\Queue;
 
-class ListNode
+use Algorithms\data_structure\LinearList\ListNode;
+use Iterator;
+
+class QueueByLikedList implements Iterator
 {
 
-    public $data = null;
-    public $next = null;
-
-    public function __construct(string $data = null)
-    {
-        $this->data = $data;
-    }
-
-}
-
-class LinkedList implements Iterator
-{
-
-    private $_firstNode = null;
-    private $_totalNode = 0;
-    private $_currentNode = null;
-    private $_currentPosition = 0;
+    private $firstNode = null;
+    private $totalNode = 0;
+    private $currentNode = null;
+    private $currentPosition = 0;
 
     public function insert(string $data = null)
     {
         $newNode = new ListNode($data);
-        if ($this->_firstNode === null) {
-            $this->_firstNode = &$newNode;
+        if ($this->firstNode === null) {
+            $this->firstNode = &$newNode;
         } else {
-            $currentNode = $this->_firstNode;
+            $currentNode = $this->firstNode;
             while ($currentNode->next !== null) {
                 $currentNode = $currentNode->next;
             }
             $currentNode->next = $newNode;
         }
-        $this->_totalNode++;
+        $this->totalNode++;
         return true;
     }
 
     public function insertAtFirst(string $data = null)
     {
         $newNode = new ListNode($data);
-        if ($this->_firstNode === null) {
-            $this->_firstNode = &$newNode;
+        if ($this->firstNode === null) {
+            $this->firstNode = &$newNode;
         } else {
-            $currentFirstNode = $this->_firstNode;
-            $this->_firstNode = &$newNode;
+            $currentFirstNode = $this->firstNode;
+            $this->firstNode = &$newNode;
             $newNode->next = $currentFirstNode;
         }
-        $this->_totalNode++;
+        $this->totalNode++;
         return true;
     }
 
     public function search(string $data = null)
     {
-        if ($this->_totalNode) {
-            $currentNode = $this->_firstNode;
+        if ($this->totalNode) {
+            $currentNode = $this->firstNode;
             while ($currentNode !== null) {
                 if ($currentNode->data === $data) {
                     return $currentNode;
@@ -77,14 +68,14 @@ class LinkedList implements Iterator
     {
         $newNode = new ListNode($data);
 
-        if ($this->_firstNode) {
+        if ($this->firstNode) {
             $previous = null;
-            $currentNode = $this->_firstNode;
+            $currentNode = $this->firstNode;
             while ($currentNode !== null) {
                 if ($currentNode->data === $query) {
                     $newNode->next = $currentNode;
                     $previous->next = $newNode;
-                    $this->_totalNode++;
+                    $this->totalNode++;
                     break;
                 }
                 $previous = $currentNode;
@@ -97,16 +88,16 @@ class LinkedList implements Iterator
     {
         $newNode = new ListNode($data);
 
-        if ($this->_firstNode) {
+        if ($this->firstNode) {
             $nextNode = null;
-            $currentNode = $this->_firstNode;
+            $currentNode = $this->firstNode;
             while ($currentNode !== null) {
                 if ($currentNode->data === $query) {
                     if ($nextNode !== null) {
                         $newNode->next = $nextNode;
                     }
                     $currentNode->next = $newNode;
-                    $this->_totalNode++;
+                    $this->totalNode++;
                     break;
                 }
                 $currentNode = $currentNode->next;
@@ -117,13 +108,13 @@ class LinkedList implements Iterator
 
     public function deleteFirst()
     {
-        if ($this->_firstNode !== null) {
-            if ($this->_firstNode->next !== null) {
-                $this->_firstNode = $this->_firstNode->next;
+        if ($this->firstNode !== null) {
+            if ($this->firstNode->next !== null) {
+                $this->firstNode = $this->firstNode->next;
             } else {
-                $this->_firstNode = null;
+                $this->firstNode = null;
             }
-            $this->_totalNode--;
+            $this->totalNode--;
             return true;
         }
         return false;
@@ -131,10 +122,10 @@ class LinkedList implements Iterator
 
     public function deleteLast()
     {
-        if ($this->_firstNode !== null) {
-            $currentNode = $this->_firstNode;
+        if ($this->firstNode !== null) {
+            $currentNode = $this->firstNode;
             if ($currentNode->next === null) {
-                $this->_firstNode = null;
+                $this->firstNode = null;
             } else {
                 $previousNode = null;
 
@@ -144,7 +135,7 @@ class LinkedList implements Iterator
                 }
 
                 $previousNode->next = null;
-                $this->_totalNode--;
+                $this->totalNode--;
                 return true;
             }
         }
@@ -153,9 +144,9 @@ class LinkedList implements Iterator
 
     public function delete(string $query = null)
     {
-        if ($this->_firstNode) {
+        if ($this->firstNode) {
             $previous = null;
-            $currentNode = $this->_firstNode;
+            $currentNode = $this->firstNode;
             while ($currentNode !== null) {
                 if ($currentNode->data === $query) {
                     if ($currentNode->next === null) {
@@ -164,7 +155,7 @@ class LinkedList implements Iterator
                         $previous->next = $currentNode->next;
                     }
 
-                    $this->_totalNode--;
+                    $this->totalNode--;
                     break;
                 }
                 $previous = $currentNode;
@@ -175,18 +166,18 @@ class LinkedList implements Iterator
 
     public function reverse()
     {
-        if ($this->_firstNode !== null) {
-            if ($this->_firstNode->next !== null) {
+        if ($this->firstNode !== null) {
+            if ($this->firstNode->next !== null) {
                 $reversedList = null;
                 $next = null;
-                $currentNode = $this->_firstNode;
+                $currentNode = $this->firstNode;
                 while ($currentNode !== null) {
                     $next = $currentNode->next;
                     $currentNode->next = $reversedList;
                     $reversedList = $currentNode;
                     $currentNode = $next;
                 }
-                $this->_firstNode = $reversedList;
+                $this->firstNode = $reversedList;
             }
         }
     }
@@ -194,8 +185,8 @@ class LinkedList implements Iterator
     public function getNthNode(int $n = 0)
     {
         $count = 1;
-        if ($this->_firstNode !== null && $n <= $this->_totalNode) {
-            $currentNode = $this->_firstNode;
+        if ($this->firstNode !== null && $n <= $this->totalNode) {
+            $currentNode = $this->firstNode;
             while ($currentNode !== null) {
                 if ($count === $n) {
                     return $currentNode;
@@ -204,121 +195,48 @@ class LinkedList implements Iterator
                 $currentNode = $currentNode->next;
             }
         }
+        return null;
     }
 
     public function display()
     {
-        echo "Total book titles: ".$this->_totalNode."\n";
-        $currentNode = $this->_firstNode;
+        echo "Total book titles: " . $this->totalNode . "\n";
+        $currentNode = $this->firstNode;
         while ($currentNode !== null) {
-            echo $currentNode->data."\n";
+            echo $currentNode->data . "\n";
             $currentNode = $currentNode->next;
         }
     }
 
     public function getSize()
     {
-        return $this->_totalNode;
+        return $this->totalNode;
     }
 
     public function current()
     {
-        return $this->_currentNode->data;
+        return $this->currentNode->data;
     }
 
     public function next()
     {
-        $this->_currentPosition++;
-        $this->_currentNode = $this->_currentNode->next;
+        $this->currentPosition++;
+        $this->currentNode = $this->currentNode->next;
     }
 
     public function key()
     {
-        return $this->_currentPosition;
+        return $this->currentPosition;
     }
 
     public function rewind()
     {
-        $this->_currentPosition = 0;
-        $this->_currentNode = $this->_firstNode;
+        $this->currentPosition = 0;
+        $this->currentNode = $this->firstNode;
     }
 
     public function valid()
     {
-        return $this->_currentNode !== null;
+        return $this->currentNode !== null;
     }
-
-}
-
-
-interface Queue
-{
-
-    public function enqueue(string $item);
-
-    public function dequeue();
-
-    public function peek();
-
-    public function isEmpty();
-}
-
-class AgentQueue implements Queue
-{
-
-    private $limit;
-    private $queue;
-
-    public function __construct(int $limit = 20)
-    {
-        $this->limit = $limit;
-        $this->queue = new LinkedList();
-    }
-
-    public function dequeue(): string
-    {
-
-        if ($this->isEmpty()) {
-            throw new UnderflowException('Queue is empty');
-        } else {
-            $lastItem = $this->peek();
-            $this->queue->deleteFirst();
-            return $lastItem;
-        }
-    }
-
-    public function enqueue(string $newItem)
-    {
-
-        if ($this->queue->getSize() < $this->limit) {
-            $this->queue->insert($newItem);
-        } else {
-            throw new OverflowException('Queue is full');
-        }
-    }
-
-    public function peek(): string
-    {
-        return $this->queue->getNthNode(1)->data;
-    }
-
-    public function isEmpty(): bool
-    {
-        return $this->queue->getSize() == 0;
-    }
-
-}
-
-try {
-    $agents = new AgentQueue(10);
-    $agents->enqueue("Fred");
-    $agents->enqueue("John");
-    $agents->enqueue("Keith");
-    $agents->enqueue("Adiyan");
-    $agents->enqueue("Mikhael");
-    echo $agents->dequeue()."\n";
-    echo $agents->dequeue()."\n";
-    echo $agents->peek()."\n";
-} catch (Exception $e) {
-    echo $e->getMessage();
 }

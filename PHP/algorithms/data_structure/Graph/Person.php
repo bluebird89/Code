@@ -1,8 +1,7 @@
 <?php
 
 
-namespace Algorithms\Graph;
-
+namespace Algorithms\data_structure\Graph;
 
 class Person
 {
@@ -61,13 +60,12 @@ class Person
         $stack = [$this];
         $this->visited = true;
 
-        if ($this->friends){
+        if ($this->friends) {
             foreach ($this->friends as $friend) {
                 array_push($friend, $stack);
             }
         }
     }
-
 }
 
 $mary = new Person("Mary");

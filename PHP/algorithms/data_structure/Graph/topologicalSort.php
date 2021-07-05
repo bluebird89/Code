@@ -20,7 +20,6 @@ function topologicalSortKahnV2(array $matrix): array
     }
 
     while ($nodes) {
-
         $node = array_shift($nodes);
         array_push($sorted, $node);
 
@@ -77,8 +76,7 @@ function topologicalSort(array $matrix): SplQueue
         $order->enqueue($node);
     }
 
-    if ($order->count() != $size) // cycle detected
-    {
+    if ($order->count() != $size) { // cycle detected
         return new SplQueue;
     }
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace oop;
+namespace syntax\oop;
 
 class LynkCo01 extends BaseCar
 {
-    public function __construct(Power $power)
+    public function __construct(iPower $power)
     {
         $this->brand = '领克01';
         parent::__construct($power, $this->brand);

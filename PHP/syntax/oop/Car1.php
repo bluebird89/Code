@@ -1,11 +1,14 @@
 <?php
 
-namespace oop;
+namespace syntax\oop;
 
-class Car1
+use syntax\oop\Trit\EngineTrait;
+use syntax\oop\Trit\PowerTrait;
+
+class Car1 extends Engine
 {
     // TODO:to fix
-    use PowerTrait, Engine {
+    use PowerTrait, EngineTrait {
         Engine::printText insteadof PowerTrait;
         PowerTrait::printText as printPower;
         Engine::printText as printEngine;
@@ -23,7 +26,7 @@ class Car1
 
         $this->four();
         $this->printEngine();
-        echo "汽车启动...".PHP_EOL;
+        echo "汽车启动..." . PHP_EOL;
     }
 
     protected function gas()

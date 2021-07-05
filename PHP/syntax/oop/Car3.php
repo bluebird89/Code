@@ -1,7 +1,7 @@
 <?php
 
 
-namespace oop;
+namespace syntax\oop;
 
 class Car3
 {

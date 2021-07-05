@@ -1,7 +1,7 @@
 <?php
 
 
-namespace oop\Trit;
+namespace syntax\oop\Trit;
 
 trait SayWorld
 {

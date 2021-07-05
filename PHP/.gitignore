@@ -1,8 +1,8 @@
-logs/*
 .php_cs.cache
+.phpunit.result.cache
 syntax/debug.log
 vendor
-.phpunit.result.cache
 node_modules
-/logs
+logs
 /algorithms/leetcode/editor/cn/doc/
+/application/storage/logs

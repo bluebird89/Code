@@ -1,11 +1,7 @@
 <?php
 
 
-namespace Algorithms\LinearList;
-
-use function Tarsana\Functional\length;
-
-include '../../vendor/autoload.php';
+namespace Algorithms\data_structure\LinearList;
 
 class LinkedList1
 {
@@ -14,7 +10,7 @@ class LinkedList1
 
     public function __construct()
     {
-        $this->head = new Node(0);
+        $this->head = new ListNode(0);
     }
 
     public function addNode(int $val)
@@ -23,18 +19,18 @@ class LinkedList1
         while ($tmp->next_node != null) {
             $tmp = $tmp->next_node;
         }
-        $tmp->next_node = new Node($val);
+        $tmp->next_node = new ListNode($val);
         $this->length++;
     }
 
     public function headInsert($data)
     {
-        $newNode = new Node($data);
+        $newNode = new ListNode($data);
         $newNode->next_node = $this->head->next_node;
         $this->head->next_node = $newNode;
     }
 
-    public function delete(Node $deleteNode)
+    public function delete(ListNode $deleteNode)
     {
         if ($deleteNode->next_node == null) {
             $tmp = $this->head;
@@ -52,7 +48,7 @@ class LinkedList1
     }
 
     // 递归
-    public static function invert(Node $node)
+    public static function invert(ListNode $node)
     {
         if ($node->next_node == null) {
             return $node;

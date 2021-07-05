@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit bootstrap="vendor/autoload.php" colors="true" verbose="true">
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         verbose="true"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+    <coverage/>
 
     <testsuites>
         <testsuite name="Unit">
-            <directory>./tests/Unit</directory>
+            <!--            <directory>test/demo/Unit</directory>-->
+            <directory suffix="Test.php">test/demo/Unit</directory>
+            <!--            <directory>.</directory>-->
+            <!--            <directory>tests/tdd</directory>-->
+            <!--            <directory>tests/popp</directory>-->
+            <file>test/demo/CardTest.php</file>
+        </testsuite>
+
+        <testsuite name="money">
+            <directory>test</directory>
         </testsuite>
     </testsuites>
+
     <logging>
-        <log type="testdox-html" target="logs/log.html"/>
+        <testdoxHtml outputFile="logs/log.html"/>
+        <!--        <log type="coverage-html" target="build/html-coverage" charset="UTF-8" highlight="true" />-->
     </logging>
+
+    <!--    <filter>-->
+    <!--        <whitelist processUncoveredFilesFromWhitelist="true">-->
+    <!--            <directory suffix=".php">syntax</directory>-->
+    <!--        </whitelist>-->
+    <!--    </filter>-->
+
     <php>
         <includePath>syntax</includePath>
+        <const name="DB_DSN" value="sqlite:data/game-test.db"/>
     </php>
 </phpunit>

@@ -1,5 +1,7 @@
 <?php
 
+namespace syntax\oop\Trit;
+
 class MyHelloWorld extends Base
 {
     use SayWorld, SayHello;

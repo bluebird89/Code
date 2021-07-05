@@ -1,7 +1,6 @@
 <?php
 
-
-namespace oop\Trit;
+namespace syntax\oop\Trit;
 
 class Base
 {

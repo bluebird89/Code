@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<dataset>
+    <table name="game">
+        <column>id</column>
+        <column>date_created</column>
+        <column>current_player_id</column>
+        <row>
+            <value>1</value>
+            <value>2013-03-01 00:00:00</value>
+            <value>1</value>
+        </row>
+    </table>
+    <table name="player">
+        <column>id</column>
+        <column>game_id</column>
+        <column>name</column>
+        <column>hand</column>
+        <row>
+            <value>1</value>
+            <value>1</value>
+            <value>Player1</value>
+            <value>A Hearts,2 Clubs,3 Diamonds,4 Spades,5 Hearts</value>
+        </row>
+        <row>
+            <value>2</value>
+            <value>1</value>
+            <value>Player2</value>
+            <value>6 Hearts,7 Clubs,8 Diamonds,9 Spades,10 Hearts
+            </
+                    value>
+        </row>
+    </table>
+</dataset>

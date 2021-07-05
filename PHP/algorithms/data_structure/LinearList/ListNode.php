@@ -1,19 +1,16 @@
 <?php
 
-namespace Algorithms\LinearList;
 
-/*
- * 双向节点
- */
+namespace Algorithms\data_structure\LinearList;
 
 class ListNode
 {
-    public $data = null;
-    public $next = null;
-    public $prev = null;
+    public $data;
+    public $next_node;
 
-    public function __construct(string $data = null)
+    public function __construct($data)
     {
         $this->data = $data;
+        $this->next_node = null;
     }
 }

@@ -2,8 +2,6 @@
 
 namespace Algorithms\Search;
 
-include '../../vendor/autoload.php';
-
 class BinarySearch
 {
     public static function binary_search($nums, $num)
@@ -173,7 +171,6 @@ class BinarySearch
             } else {
                 return true;
             }
-
         }
 
         return false;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Algorithms\LinearList;
+namespace Algorithms\data_structure\LinearList;
 
 class ListTable
 {
@@ -8,9 +8,9 @@ class ListTable
 
     public function __construct($arr)
     {
-        $curr = new ListNode(null);
+        $curr = new ListKVNode(null);
         foreach ($arr as $val) {
-            $next = new ListNode($val);
+            $next = new ListKVNode($val);
             $curr->next = $next;
             $curr = $next;
             $this->list[] = $curr;

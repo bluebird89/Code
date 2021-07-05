@@ -1,8 +1,7 @@
 <?php
 
 
-namespace Algorithms\Heap;
-
+namespace Algorithms\data_structure\Heap;
 
 class Heap
 {
@@ -42,7 +41,6 @@ class Heap
     public function display()
     {
         return implode(" ", array_slice($this->heap, 0));
-
     }
 
     public function siftUp()

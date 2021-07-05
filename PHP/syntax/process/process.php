@@ -1,7 +1,7 @@
 <?php
 
 $parentId = posix_getpid();
-fwrite(STDOUT, "my pid: $parentId".PHP_EOL);
+fwrite(STDOUT, "my pid: $parentId" . PHP_EOL);
 $childNum = 10;
 foreach (range(1, $childNum) as $index) {
     $pid = pcntl_fork();

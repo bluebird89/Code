@@ -30,7 +30,7 @@ class Insertion extends AbstractSort
         return $arr;
     }
 
-    static function insertionSort(array &$arr)
+    public static function insertionSort(array &$arr)
     {
         $len = count($arr);
         for ($i = 1; $i < $len; $i++) {

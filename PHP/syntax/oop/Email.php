@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-namespace oop;
+namespace syntax\oop;
+
+use InvalidArgumentException;
 
 final class Email
 {

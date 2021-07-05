@@ -1,44 +1,43 @@
 <?php
 
 
-namespace Algorithms\LinearList;
+namespace Algorithms\data_structure\LinearList;
 
 class CircularLinkedList
 {
-    private $_firstNode = null;
-    private $_totalNode = 0;
+    private $firstNode = null;
+    private $totalNode = 0;
 
     public function insertAtEnd(string $data = null)
     {
         $newNode = new ListNode($data);
-        if ($this->_firstNode === null) {
-            $this->_firstNode = &$newNode;
+        if ($this->firstNode === null) {
+            $this->firstNode = &$newNode;
         } else {
-            $currentNode = $this->_firstNode;
-            while ($currentNode->next !== $this->_firstNode) {
+            $currentNode = $this->firstNode;
+            while ($currentNode->next !== $this->firstNode) {
                 $currentNode = $currentNode->next;
             }
             $currentNode->next = $newNode;
         }
-        $newNode->next = $this->_firstNode;
-        $this->_totalNode++;
+        $newNode->next = $this->firstNode;
+        $this->totalNode++;
         return true;
     }
 
     public function display()
     {
-        echo "Total book titles: ".$this->_totalNode."\n";
-        $currentNode = $this->_firstNode;
-        while ($currentNode->next !== $this->_firstNode) {
-            echo $currentNode->data."\n";
+        echo "Total book titles: " . $this->totalNode . "\n";
+        $currentNode = $this->firstNode;
+        while ($currentNode->next !== $this->firstNode) {
+            echo $currentNode->data . "\n";
             $currentNode = $currentNode->next;
         }
 
         if ($currentNode) {
-            echo $currentNode->data."\n";
+            echo $currentNode->data . "\n";
         }
     }
-
 }
 
 $BookTitles = new CircularLinkedList();

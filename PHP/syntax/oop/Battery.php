@@ -1,8 +1,8 @@
 <?php
 
-namespace oop;
+namespace syntax\oop;
 
-class Battery implements Power
+class Battery implements iPower
 {
     public function power()
     {

@@ -1,6 +1,6 @@
 <?php
 
-class Outer
+class OuterP
 {
     protected $a = 1;
 
@@ -23,5 +23,3 @@ class Outer
 }
 
 echo (new Outer)->inner()->getFromOuter();
-?>
-

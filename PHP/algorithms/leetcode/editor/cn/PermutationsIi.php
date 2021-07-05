@@ -34,28 +34,43 @@ class Solution
 
     public function permuteUnique($nums)
     {
+        if (empty($nums)) {
+            return [];
+        }
         sort($nums);
-        $this->backTrack($nums, 0, [], []);
+        $visited = array_fill(0, count($nums), false);
+        $this->backTrack($nums, [], $visited);
 
         return $this->result;
     }
 
-    public function backTrack($nums, $phase, $sub, $lables)
+    /**
+     * @param $nums
+     * @param $path
+     * @param $visited
+     */
+    public function backTrack($nums, $path, $visited)
     {
-        $count = count($nums);
-        if ($phase == $count) {
-            $this->result[] = $sub;
+        if (count($path) == count($nums)) {
+            $this->result[] = $path;
             return;
         }
 
-        for ($i = 0; $i < $count; $i++) {
-            if ($i > 0 && $nums[$i] == $nums[$i - 1] && !$lables[$i - 1]) {
+        for ($i = 0; $i < count($nums); ++$i) {
+            // 第一次剪枝:去掉已经访问过的
+            if ($visited[$i]) {
                 continue;
             }
-            $sub[] = $nums[$i];
-            $lables[$i] = true;
-            $this->backTrack($nums, $i + 1, $sub, $lables);
-            $lables[$i] = false;
+            // 第二次剪枝:该元素与前一个元素相等，且前一个元素访问过
+            if ($i > 0 && $nums[$i] == $nums[$i - 1] && $visited[$i - 1]) {
+                continue;
+            }
+
+            $path[] = $nums[$i];
+            $visited[$i] = true;
+            $this->backTrack($nums, $path, $visited);
+            array_pop($path);
+            $visited[$i] = false;
         }
     }
 }

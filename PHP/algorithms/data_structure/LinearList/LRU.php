@@ -1,25 +1,12 @@
 <?php
 
-
-namespace Algorithms\LinearList;
-
-class ListNode
-{
-    public $key = null;
-    public $value = null;
-    public ListNode $next;
-
-    public function __construct($key = null)
-    {
-        $this->key = $key;
-    }
-}
+namespace Algorithms\data_structure\LinearList;
 
 class LRU
 {
     public $maxSize;
     public $size = 0;
-    public $_firstNode;
+    public $firstNode;
 
     public function __construct($maxSize)
     {
@@ -31,10 +18,10 @@ class LRU
         $newNode = new ListNode($key);
         $newNode->value = $value;
 
-        if ($this->_firstNode === null) {
-            $this->_firstNode = &$newNode;
+        if ($this->firstNode === null) {
+            $this->firstNode = &$newNode;
         } else {
-            $currentNode = $this->_firstNode;
+            $currentNode = $this->firstNode;
             while (isset($currentNode->next)) {
                 $currentNode = $currentNode->next;
             }
@@ -47,7 +34,7 @@ class LRU
 
     public function get($key)
     {
-        $node = $this->_firstNode;
+        $node = $this->firstNode;
         while ($node = $node->next) {
             if ($node->key == $key) {
                 return $node->value;

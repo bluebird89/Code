@@ -42,7 +42,9 @@ class Solution
     public function canPartition($nums)
     {
         $count = count($nums);
-        $total = array_sum($nums) / 2;
+        $total = array_sum($nums) /2;
+
+
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

@@ -22,4 +22,3 @@ class MultiCatch
 
 $multiCatch = new MultiCatch;
 $multiCatch->test();
-?>

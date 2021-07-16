@@ -2,6 +2,8 @@
 
 namespace syntax\Reflect;
 
+use ReflectionClass;
+
 class Resolve
 {
     //构建类的对象

@@ -3,11 +3,10 @@
 
 namespace syntax\oop\Trit;
 
-trait SayHello
+trait Hello
 {
     public function sayHello()
     {
-        parent::sayHello();
-        echo 'World!';
+        echo 'Hello ';
     }
 }

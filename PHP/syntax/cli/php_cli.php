@@ -28,8 +28,7 @@ class PHPCli
 
     public function __construct()
     {
-        if (!isset($_SERVER['argv'])) // || strncasecmp(php_sapi_name(),'cli',3))
-        {
+        if (!isset($_SERVER['argv'])) { // || strncasecmp(php_sapi_name(),'cli',3))
             die('This script must be run from the command line.');
         }
 

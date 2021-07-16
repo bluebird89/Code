@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../../vendor/autoload.php';
 
 use Tarsana\Functional as F;
 
@@ -14,14 +14,14 @@ $stack = $push(1, $stack);
 $stack = $push(2, $stack);
 $stack = $push(3, $stack);
 
-echo "Stack is ".F\toString($stack)."\n";
+echo "Stack is " . F\toString($stack) . "\n";
 
 $item = $top($stack);
 $stack = $pop($stack);
 
-echo "Pop-ed item: ".$item."\n";
-echo "Stack is ".F\toString($stack)."\n";
+echo "Pop-ed item: " . $item . "\n";
+echo "Stack is " . F\toString($stack) . "\n";
 
 $stack = $push(4, $stack);
 
-echo "Stack is ".F\toString($stack)."\n";
+echo "Stack is " . F\toString($stack) . "\n";

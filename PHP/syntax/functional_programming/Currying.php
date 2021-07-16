@@ -1,7 +1,7 @@
 <?php
 
 $languages = ["php", "python", "java", "c", "erlang"];
-var_dump(array_map('ucfirst', $languages));
+print_r(array_map('ucfirst', $languages));
 
 function currySum($a)
 {
@@ -12,7 +12,7 @@ function currySum($a)
     };
 }
 
-echo currySum(10)(20)(30).PHP_EOL;
+echo currySum(10)(20)(30) . PHP_EOL;
 
 function partial($funcName, ...$args)
 {
@@ -27,5 +27,4 @@ function sum($a, $b, $c)
     return $a + $b + $c;
 }
 
-$sum = partial("sum", 10, 20);
-echo $sum(30);
+echo partial("sum", 10, 20)(30);

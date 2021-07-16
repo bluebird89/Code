@@ -1,23 +1,19 @@
 <?php
-namespace Syntax;
 
-# 函数调用的另一种方式
+namespace syntax\closure;
+
+require '../../vendor/autoload.php';
+
+# 函数调用另一种方式
 function barber($type)
 {
-    echo "You wanted a $type haircut, no problem\n";
+    echo "You wanted a $type haircut, no problem" . PHP_EOL;
 }
 
 call_user_func('barber', "mushroom");
 call_user_func('barber', "shave");
 
-class MyClass
-{
-    public static function myCallbackMethod()
-    {
-        echo 'Hello World!'.PHP_EOL;
-    }
-}
-
+# class
 call_user_func(array('MyClass', 'myCallbackMethod'));
 call_user_func('MyClass::myCallbackMethod');
 
@@ -28,7 +24,7 @@ class A
 {
     public static function who()
     {
-        echo "A".PHP_EOL;
+        echo "A" . PHP_EOL;
     }
 }
 
@@ -36,7 +32,7 @@ class B extends A
 {
     public static function who()
     {
-        echo "B".PHP_EOL;
+        echo "B" . PHP_EOL;
     }
 }
 
@@ -63,17 +59,18 @@ $double = function ($a) {
 };
 $numbers = range(1, 5);
 $new_numbers = array_map($double, $numbers);
-print implode(' ', $new_numbers).PHP_EOL;
+print implode(' ', $new_numbers) . PHP_EOL;
 
 function foobar($arg, $arg2)
 {
-    echo __FUNCTION__, " got $arg and $arg2".PHP_EOL;
+    echo __FUNCTION__, " got $arg and $arg2" . PHP_EOL;
 }
+
 class foo
 {
     public function bar($arg, $arg2)
     {
-        echo __METHOD__, " got $arg and $arg2".PHP_EOL;
+        echo __METHOD__, " got $arg and $arg2" . PHP_EOL;
     }
 }
 
@@ -86,7 +83,7 @@ class Foo2
 {
     public static function test($name)
     {
-        print "Hello {$name}!".PHP_EOL;
+        print "Hello {$name}!" . PHP_EOL;
     }
 }
 

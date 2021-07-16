@@ -1,10 +1,16 @@
 <?php
 
-namespace \syntax;
+namespace syntax;
 
-class datetime
+use DateInterval;
+use DatePeriod;
+use DateTimeImmutable;
+use DateTimeZone;
+use IntlDateFormatter;
+
+class dateTime
 {
-    private function getConfigTimezone()
+    public function getConfigTimezone()
     {
     }
 
@@ -17,18 +23,18 @@ class datetime
 
         switch (true) {
             case (empty($date)):
-                return new \datetime('now', new \DateTimeZone($timezone));
+                return new \datetime('now', new DateTimeZone($timezone));
             case ($date instanceof \datetime):
-                return $date->setTimezone(new \DateTimeZone($timezone));
-            case ($date instanceof \DateTimeImmutable):
+                return $date->setTimezone(new DateTimeZone($timezone));
+            case ($date instanceof DateTimeImmutable):
                 return new \datetime($date->format('Y-m-d H:i:s'), $date->getTimezone());
             case (!is_numeric($date)):
-                $timeType = $includeTime ? \IntlDateFormatter::SHORT : \IntlDateFormatter::NONE;
-                $formatter = new \IntlDateFormatter(
+                $timeType = $includeTime ? IntlDateFormatter::SHORT : IntlDateFormatter::NONE;
+                $formatter = new IntlDateFormatter(
                     $locale,
-                    \IntlDateFormatter::SHORT,
+                    IntlDateFormatter::SHORT,
                     $timeType,
-                    new \DateTimeZone($timezone)
+                    new DateTimeZone($timezone)
                 );
 
                 $date = $this->appendTimeIfNeeded($date, $includeTime);
@@ -36,7 +42,7 @@ class datetime
                 break;
         }
 
-        return (new \datetime(null, new \DateTimeZone($timezone)))->setTimestamp($date);
+        return (new \datetime(null, new DateTimeZone($timezone)))->setTimestamp($date);
     }
 
     private function appendTimeIfNeeded($date, $includeTime)
@@ -48,8 +54,9 @@ class datetime
     }
 }
 
-$datetime = new datetime('2016-06-06 10:00 pm');
-$datetime1 = datetime::createFromFormat('M j, Y H:i:s', 'June 6, 2016 22:00:00');
+$datetime = new \DateTime('2016-06-06 10:00 pm');
+$datetime1 = date_create_from_format('M j, Y H:i:s', 'June 6, 2016 22:00:00');
+
 
 //创建长度为两天的间隔
 $interval = new DateInterval('P2D');
@@ -58,7 +65,7 @@ $interval = new DateInterval('P2D');
 $datetime->add($interval);
 echo $datetime->format('Y-m-d H:i:s');
 
-$datetime = new datetime();
+$datetime = new \DateTime();
 $interval = DateInterval::createFromDateString('-1 day');
 $period = new DatePeriod($datetime, $interval, 3);
 
@@ -67,10 +74,10 @@ foreach ($period as $date) {
 }
 
 $timezone = new DateTimeZone('Asia/Shanghai');
-$datetime = new datetime('2016-06-06', $timezone);
+$datetime = new \DateTime('2016-06-06', $timezone);
 $datetime->setTimezone(new DateTimeZone('Asia/Hong_kong'));
 
-$datetime = new datetime();
+$datetime = new \DateTime();
 $interval = new DateInterval('P2D');
 $period = new DatePeriod($datetime, $interval, 3, DatePeriod::EXCLUDE_START_DATE);
 foreach ($period as $date) {

@@ -3,7 +3,7 @@ namespace Catalog;
 
 class ClassA
 {
-    function hello()
+    public function hello()
     {
         return "Hello from classA";
     }
@@ -11,7 +11,7 @@ class ClassA
 
 class ClassB
 {
-    function hello()
+    public function hello()
     {
         return "Hello from classB";
     }
@@ -19,7 +19,7 @@ class ClassB
 
 class ClassC
 {
-    function hello()
+    public function hello()
     {
         return "Hello from classC";
     }
@@ -43,4 +43,3 @@ function fn_c()
 define("Catalog\ConstA", 1);
 define("Catalog\ConstB", 2);
 define("Catalog\ConstC", 3);
-?>

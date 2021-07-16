@@ -3,7 +3,6 @@
 
 namespace syntax\process;
 
-
 class LoggerP extends Logger
 {
     //public static $signal = null;

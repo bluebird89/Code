@@ -75,16 +75,14 @@ var_dump($obj1);
 echo "<br/>";
 var_dump($obj2);
 echo "<br/>";
-echo empty ($obj1);
+echo empty($obj1);
 echo "<br/>";
 $obj1 = null;
 $obj3 = (object) $obj1;// NULL转换为对象
 var_dump($obj3);
 echo "<br/>";
-echo empty ($A);
+echo empty($A);
 echo "<br/>";
-echo empty ($obj2);
+echo empty($obj2);
 echo "<br/>";
-echo empty ($obj3);
-
-
+echo empty($obj3);

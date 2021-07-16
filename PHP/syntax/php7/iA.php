@@ -1,6 +1,6 @@
 <?php
 
-namespace PHP7;
+namespace syntax\php7;
 
 abstract class iA
 {

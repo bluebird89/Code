@@ -1,6 +1,6 @@
 <?php
 
-$handle = opendir('.');
+$hale = opendir('.');
 while (false !== ($file = readdir($handle))) {
     $files[] = $file;
 }
@@ -29,7 +29,7 @@ while (!feof($file)) {    // 还没有到文件末尾，则继续读取
 fclose($file);
 var_dump($context);
 
-// 删除上述文件
+// 删除文件
 unlink('test1.txt');
 unlink('test2.txt');
 

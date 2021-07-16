@@ -51,6 +51,7 @@
     "classmap": [
       "./",
       "application",
+      "syntax",
       "helper"
     ],
     "exclude-from-classmap": [

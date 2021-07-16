@@ -12,6 +12,7 @@ class DataMapperTest extends TestCase
 {
     /**
      * @var UserMapper
+     * @skip
      */
     protected $mapper;
 
@@ -91,12 +92,10 @@ class DataMapperTest extends TestCase
         $this->assertEquals(array($existing), $user);
     }
 
-    /**
-     * @expectedException InvalidArgumentException
-     * @expectedExceptionMessage User #404 not found
-     */
     public function testNotFound()
     {
+        $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage("User #404 not found");
         $this->dbal->expects($this->once())
             ->method('find')
             ->with(404)

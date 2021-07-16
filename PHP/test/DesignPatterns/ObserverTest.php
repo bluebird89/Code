@@ -7,6 +7,7 @@ use DesignPatterns\Behavioral\Observer\UserObserver;
 use DesignPatterns\Behavioral\Observer\User;
 use ReflectionProperty;
 use SplObjectStorage;
+use SplObserver;
 
 class ObserverTest extends TestCase
 {
@@ -57,7 +58,7 @@ class ObserverTest extends TestCase
     public function testUpdateCalling()
     {
         $subject = new User();
-        $observer = $this->getMockBuilder('\SplObserver');
+        $observer = $this->getMockBuilder(SplObserver::class)->getMock();
         $subject->attach($observer);
 
         $observer->expects($this->once())

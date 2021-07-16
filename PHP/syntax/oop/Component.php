@@ -3,12 +3,13 @@
 
 namespace syntax\oop;
 
+use syntax\oop\Trit\EngineTrait;
 use syntax\oop\Trit\PowerTrait;
 
-trait Component
+class Component extends Engine
 {
-    use PowerTrait, Engine {
-        EngineTrait::printText insteadof PowerTrait;
+    use PowerTrait {
+        EngineTrait::print insteadof PowerTrait;
         PowerTrait::print as printPower;
         EngineTrait::print as printEngine;
     }

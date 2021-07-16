@@ -17,9 +17,9 @@ function super_debug($data, $log_path = '/var/log/', $log_name = 'debug.log')
     error_log('['.time().']:'.json_encode($data, JSON_UNESCAPED_UNICODE)."\n", 3, $log_path.$log_name);
 }
 
-// super_debug(['name' => 'henry', 'time' => time()], './');
+ super_debug(['name' => 'henry', 'time' => time()], './');
 
-// php实现下载图片
+// 下载
 $file_url = 'https://upload.chinaz.com/picmap/201811151633430899_60.jpg';
 header('context-Type: application/octet-stream');
 header("context-Transfer-Encoding: Binary");
@@ -32,6 +32,7 @@ use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\FirePHPHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
+use Monolog\Processor\MemoryPeakUsageProcessor;
 
 // 创建一个 Channel，参数 log 即为 Channel 的名字
 $log = new Logger('log');
@@ -40,17 +41,17 @@ $log = new Logger('log');
 $stream = new StreamHandler('runtime/logger/test.log', Logger::WARNING);
 $fire = new FirePHPHandler();
 
-// 定义时间格式为 "Y-m-d H:i:s"
+// 定义时间格式 "Y-m-d H:i:s"
 $dateFormat = "Y n j, g:i a";
-// 定义日志格式为 "[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n"
+// 定义日志格式 "[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n"
 $output = "%datetime%||%channel||%level_name%||%message%||%context%||%extra%\n";
-// 根据 时间格式 和 日志格式，创建一个 Formatter
+// 根据时间格式和日志格式，创建一个 Formatter
 $formatter = new LineFormatter($output, $dateFormat);
 
 // 将 Formatter 设置到 Handler 里面
 $stream->setFormatter($formatter);
 
-// 讲 Handler 推入到 Channel 的 Handler 队列内
+//  Handler 推入到 Channel 的 Handler 队列内
 $log->pushHandler($stream);
 $log->pushHandler($fire);
 
@@ -68,5 +69,5 @@ $log->pushProcessor(function ($record) {
     $record['extra']['dummy'] = 'hello';
     return $record;
 });
-$log->pushProcessor(new \Monolog\Processor\MemoryPeakUsageProcessor());
+$log->pushProcessor(new MemoryPeakUsageProcessor());
 $log->alert('czl');

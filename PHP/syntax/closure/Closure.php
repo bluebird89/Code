@@ -9,7 +9,6 @@ namespace syntax\closure;
 // }
 
 use Closure;
-use syntax\Closure\Animal;
 
 $cat = function () {
     return $this->cat;
@@ -82,15 +81,6 @@ var_dump($data->param);
 function my_callback_function()
 {
     echo 'hello world!';
-}
-
-// An example callback method
-class MyClass
-{
-    public static function myCallbackMethod()
-    {
-        echo 'Hello World!';
-    }
 }
 
 // Type 1: Simple callback

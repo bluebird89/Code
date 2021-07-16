@@ -1,6 +1,5 @@
 <?php
 
-
 namespace syntax\closure;
 
 class Animal

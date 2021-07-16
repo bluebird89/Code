@@ -8,7 +8,7 @@ class ListTable
 
     public function __construct($arr)
     {
-        $curr = new ListKVNode(null);
+        $curr = new ListNode(null);
         foreach ($arr as $val) {
             $next = new ListKVNode($val);
             $curr->next = $next;

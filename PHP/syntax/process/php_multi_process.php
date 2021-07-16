@@ -20,8 +20,6 @@ while (true) {
         $multiprocess->runToBackground('updateUserStatus', $queueId, $i, $max);
         $i++;
     }
-
-
 }
 
 /**
@@ -62,11 +60,11 @@ class QueueModel
             $this->pushQueue($lists);
             return array(count($lists), $this->_redis->lpop($this->key));
         }
-
     }
 
     public function getAllFromDB()
-    {//方便测试，随机返回数据或空
+    {
+//方便测试，随机返回数据或空
         $a = rand(1, 10) % 2;
         if ($a == 1) {
             return array(1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008);

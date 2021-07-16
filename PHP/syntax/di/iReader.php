@@ -1,5 +1,5 @@
 <?php
-
+namespace syntax\di;
 
 interface iReader
 {

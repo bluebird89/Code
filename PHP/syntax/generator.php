@@ -43,7 +43,7 @@ function getRows($file)
     fclose($handle);
 }
 
-foreach (getRows(__DIR__."/Array.php") as $row) {
+foreach (getRows(__DIR__ . "/Array.php") as $row) {
     print_r($row);
 }
 
@@ -54,11 +54,11 @@ var_dump(iterator_to_array($iterator, false));
 
 function gen()
 {
-    echo "hello gen".PHP_EOL."\r\n";//step1
+    echo "hello gen" . PHP_EOL . "\r\n";//step1
     $ret = (yield "gen1");   //step2
-    echo $ret."\n";  //step3
+    echo $ret . "\n";  //step3
     $ret = (yield "gen2");   //step4
-    echo $ret."\n";  //step3
+    echo $ret . "\n";  //step3
 }
 
 $my_gen = gen();
@@ -103,5 +103,36 @@ function fib($n)
 
 $fibs = fib(9);
 foreach ($fibs as $fib) {
-    echo " ".$fib;
+    echo " " . $fib;
+}
+
+$gen_return = (function ($var) {
+    $x = $var + 2;
+    yield $var;
+    yield $x;
+    $y = $x + 2;
+    return $y;
+})(1);
+foreach ($gen_return as $value) {
+    echo $value, PHP_EOL;
+}
+echo $gen_return->getReturn(), PHP_EOL;
+
+function gen($var)
+{
+    yield $var;
+    $x = $var + 2;
+    yield $x;
+    yield from gen2($var);
+}
+
+function gen2($var)
+{
+    $y = $var + 1;
+    yield $var;
+    yield $y;
+}
+
+foreach (gen(1) as $val) {
+    echo $val, PHP_EOL;
 }

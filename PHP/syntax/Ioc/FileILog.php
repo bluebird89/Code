@@ -3,10 +3,10 @@
 
 namespace syntax\Ioc;
 
-class DatabaseLog
+class FileILog implements iLog
 {
     public function write()
     {
-        echo 'database log write...';
+        echo 'file log write...';
     }
 }

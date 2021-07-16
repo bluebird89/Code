@@ -40,5 +40,3 @@ $serverLog->setLogMsg(new class implements LogMsg {
     }
 });
 var_dump($serverLog->getLogMsg());
-?>
-

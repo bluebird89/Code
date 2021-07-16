@@ -1,6 +1,6 @@
 <?php
 
-namespace Helper;
+namespace tool;
 
 use Iterator;
 
@@ -48,5 +48,3 @@ class CsvFileIterator implements Iterator
         $this->key++;
     }
 }
-
-?>

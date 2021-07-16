@@ -1,5 +1,5 @@
 <?php
-
+namespace syntax\di;
 
 class Book implements iReader
 {

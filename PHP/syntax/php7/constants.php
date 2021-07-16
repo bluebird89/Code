@@ -54,9 +54,9 @@ class ClassA
         echo "<br/>";
         echo constants::B;
         echo "<br/>";
-//echo constants::C; Uncaught Error: Cannot access protected const constants::C
+        //echo constants::C; Uncaught Error: Cannot access protected const constants::C
         echo "<br/>";
-//echo constants::D;Uncaught Error: Cannot access private const constants::D
+        //echo constants::D;Uncaught Error: Cannot access private const constants::D
         echo "<br/>";
     }
 }
@@ -71,7 +71,7 @@ class ClassB extends constants
         echo "<br/>";
         echo constants::C;
         echo "<br/>";
-//echo constants::D;Uncaught Error: Cannot access private const constants::D
+        //echo constants::D;Uncaught Error: Cannot access private const constants::D
         echo "<br/>";
     }
 }
@@ -82,4 +82,3 @@ $classA = new ClassA();
 $classA->fn_a();
 $classB = new ClassB();
 $classB->fn_d();
-?>

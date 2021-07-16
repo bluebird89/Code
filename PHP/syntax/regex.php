@@ -1,6 +1,6 @@
 <?php
 
-$string = "上飞机离开我<img border='0' alt='' src='/uploadfile/2009/0921/20090921091612567.jpg' border='0' />sdfsdf";
+$string = "上飞机离开我<img border='0' alt='' src='/uploadfile/2009/0921/20090921091612567.jpg'/>sdfsdf";
 
 $su = preg_match("/ \<[ ]*img.*src[ ]*\=[ ]*[\"|\'](.+?)[\"|\'] /", $string, $match); // 匹配src=的内容
 print_r($match[1]); // 输出 /uploadfile/2009/0921/20090921091612567.jpg

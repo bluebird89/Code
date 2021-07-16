@@ -1,9 +1,16 @@
 <?php
 require('catalog.php');
 
-use Catalog\{ClassA as A, ClassB as B, ClassC as C,};
-use function  Catalog\{fn_a, fn_b, fn_c,};
-use const Catalog\{ConstA, ConstB, ConstC, Const1};
+use Catalog\ClassA as A;
+use Catalog\ClassB as B;
+use Catalog\ClassC as C;
+use function  Catalog\fn_a;
+use function  Catalog\fn_b;
+use function  Catalog\fn_c;
+use const Catalog\ConstA;
+use const Catalog\ConstB;
+use const Catalog\ConstC;
+use const Catalog\Const1;
 
 $a = new A();
 echo $a->hello();
@@ -25,4 +32,3 @@ echo "<br/>";
 echo ConstB;
 echo "<br/>";
 echo ConstC;
-?>

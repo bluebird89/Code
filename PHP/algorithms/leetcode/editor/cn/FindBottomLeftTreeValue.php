@@ -80,13 +80,16 @@ class Solution
     {
         $queue = new SplQueue();
         $queue->enqueue($root);
+        $res = 0;
 
         while (!$queue->isEmpty()) {
             $count = $queue->count();
             for ($i = 0; $i < $count; $i++) {
-                $res = [];
                 $root = $queue->dequeue();
-                $res[] = $root->val;
+
+                if ($i == 1) {
+                    $res = $root->val;
+                }
                 if ($root->left) {
                     $queue->enqueue($root->left);
                 }
@@ -96,7 +99,7 @@ class Solution
             }
         }
 
-        return $res[0];
+        return $res;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

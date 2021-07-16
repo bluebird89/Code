@@ -284,7 +284,7 @@
         - [PHP 代码](editor/cn/)
         - 通过队列长度计算一层的个数
     * [ ] [513. 找树左下角的值](https://leetcode-cn.com/problems/find-bottom-left-tree-value/) （中等）
-        - [PHP 代码](editor/cn/)
+        - [PHP 代码](editor/cn/FindBottomLeftTreeValue.php)
 * 递归
     * [x] [104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/) （简单）**例题**
         - [PHP 代码](editor/cn/)
@@ -390,8 +390,9 @@
     - [PHP 代码](editor/cn/SubsetsIi.php)
 * [X] [46. 全排列](https://leetcode-cn.com/problems/permutations/) （中等） 所有排列
     - [PHP 代码](editor/cn/Permutations.php)
-* [ ] [47. 全排列 II](https://leetcode-cn.com/problems/permutations-ii/) （中等） 有重复数据
-    - [PHP 代码](editor/cn/)
+* [x] [47. 全排列 II](https://leetcode-cn.com/problems/permutations-ii/) （中等） 有重复数据
+    - [PHP 代码](editor/cn/PermutationsIi.php)
+    - rk used and same value branch
 * [x] [39. 组合总和](https://leetcode-cn.com/problems/combination-sum/) （中等） 选出某几个数相加为给定和，无重复数据，可以使用多次，不能有重复答案
     - [PHP 代码](editor/cn/CombinationSum.php)
     - duplicate cause:next level still use used node
@@ -413,6 +414,50 @@
 * 0-1 背包
 * 正则表达式
 * 全组合
+
+## DFS & BFS
+
+* 二叉树上的最长路径和
+    * [ ] [543. 二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/) （简单）
+    * [ ] [剑指 Offer 34. 二叉树中和为某一值的路径](https://leetcode-cn.com/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/) （中等）
+    * [ ] [124. 二叉树中的最大路径和](https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/) （困难）
+    * [ ] [437. 路径总和 III](https://leetcode-cn.com/problems/path-sum-iii/) （困难）
+
+* [ ] [剑指 Offer 13. 机器人的运动范围](https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/) （中等） DFS**（已讲）**
+* [ ] [面试题 08.10. 颜色填充](https://leetcode-cn.com/problems/color-fill-lcci/) （简单） DFS
+* [ ] [面试题 04.01. 节点间通路](https://leetcode-cn.com/problems/route-between-nodes-lcci/) （中等）DFS BFS搜索
+* [ ] [200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/) （中等） DFS求连通分量**（已讲）**
+* [ ] [面试题 16.19. 水域大小](https://leetcode-cn.com/problems/pond-sizes-lcci/) （中等） DFS连通性
+* [ ] [207. 课程表](https://leetcode-cn.com/problems/course-schedule/) （中等） 拓扑排序，看是否存在环，有两种算法Kahn/DFS
+* [ ] [79. 单词搜索](https://leetcode-cn.com/problems/word-search/) （中等）DFS的稍微升级
+* [ ] [1306. 跳跃游戏 III](https://leetcode-cn.com/problems/jump-game-iii/) （中等） DFS，看着不像，实际上是
+* [ ] [752. 打开转盘锁](https://leetcode-cn.com/problems/open-the-lock/) （中等） BFS**（已讲）**
+* 选做：
+    * [ ] [面试题 17.22. 单词转换](https://leetcode-cn.com/problems/word-transformer-lcci/) （困难） DFS 流程是标准DFS，但背景要抽象一下
+    * [ ] [面试题 17.07. 婴儿名字](https://leetcode-cn.com/problems/baby-names-lcci/) （困难） 关系是固定的，并查集或者DFS都能搞定！ 关键在于将数据转化成图结构，也就是建模烦！
+    * [ ] [529. 扫雷游戏](https://leetcode-cn.com/problems/minesweeper/) （困难）
+    * [ ] [127. 单词接龙](https://leetcode-cn.com/problems/word-ladder/) （困难）
+    * [ ] [126. 单词接龙 II](https://leetcode-cn.com/problems/word-ladder-ii/) （困难）
+
+## 态规划
+
+* 背包
+    * [ ] [416. 分割等和子集](https://leetcode-cn.com/problems/partition-equal-subset-sum/)
+    * [ ] [494. 目标和](https://leetcode-cn.com/problems/target-sum/)
+    * [ ] [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)
+    * [ ] [518. 零钱兑换 II](https://leetcode-cn.com/problems/coin-change-2/)
+* 路径问题
+    * [ ] [62. 不同路径](https://leetcode-cn.com/problems/unique-paths/)
+    * [ ] [63. 不同路径 II](https://leetcode-cn.com/problems/unique-paths-ii/)
+    * [ ] [64. 最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/)
+    * [ ] [剑指 Offer 47. 礼物的最大价值](https://leetcode-cn.com/problems/li-wu-de-zui-da-jie-zhi-lcof/)
+    * [ ] [120. 三角形最小路径和](https://leetcode-cn.com/problems/triangle/)
+* 打家劫舍 & 买卖股票
+    * [ ] [198. 打家劫舍](https://leetcode-cn.com/problems/house-robber/)
+    * [ ] [213. 打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/)
+    * [ ] [337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/)  (树形DP)
+    * [ ] [714. 买卖股票的最佳时机含手续](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
+    * [ ] [309. 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
 
 ## 其它
 

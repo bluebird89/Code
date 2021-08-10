@@ -1,4 +1,4 @@
-#! /usr/local/bin/guile -s
+#! /usr/bin/guile -s
 !#
 
 ; this is a scheme comment line.

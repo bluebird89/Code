@@ -1,4 +1,4 @@
-#! /usr/local/bin/guile -s
+#! /usr/bin/guile
 !#
 (define cmm (command-line))
 (display "应用程序名称：")

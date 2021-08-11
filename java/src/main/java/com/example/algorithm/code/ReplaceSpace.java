@@ -7,6 +7,6 @@ package com.example.algorithm.code;
  */
 public class ReplaceSpace {
     public String replaceSpace(String s) {
-
+    return "";
     }
 }

@@ -7,6 +7,6 @@ package com.example.algorithm.code;
  */
 public class IsPalindrome {
     public boolean isPalindrome(String s) {
-
+return false;
     }
 }

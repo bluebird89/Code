@@ -7,6 +7,6 @@ package com.example.algorithm.code;
  */
 public class DefangIPaddr {
     public String defangIPaddr(String address) {
-
+return "";
     }
 }

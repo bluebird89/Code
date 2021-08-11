@@ -14,6 +14,6 @@ package com.example.algorithm.code;
  */
 public class StrToInt {
     public int strToInt(String str) {
-
+        return 0;
     }
 }

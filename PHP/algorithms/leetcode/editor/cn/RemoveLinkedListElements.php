@@ -55,48 +55,12 @@ class Solution
 {
 
     /**
-     * @param  ListNode  $head
-     * @param  Integer   $val
+     * @param ListNode $head
+     * @param Integer $val
      *
      * @return ListNode
      */
-    public function removeElements1($head, $val)
-    {
-        if ($head == null) {
-            return null;
-        }
-        $head->next = $this->removeElements1($head->next, $val);
-
-        return $head->val == $val ? $head->next : $head;
-    }
-
-    /**
-     * @param  ListNode  $head
-     * @param  Integer   $val
-     *
-     * @return ListNode
-     *                 TODO:to fix
-     */
-    public function removeElements2($head, $val)
-    {
-        $newHead = new ListNode(0);
-        $newHead->next = $head;
-
-        $prev = $newHead;
-        $current = $head;
-        while ($current != null) {
-            if ($current->val == $val) {
-                $prev->next = $current->next;
-            } else {
-                $prev = $current;
-                $current = $current->next;
-            }
-        }
-
-        return $newHead->next;
-    }
-
-    public function removeElements($head, $val)
+    public function removeElements0($head, $val)
     {
         $newHead = new ListNode(0);
         $newHead->next = $head;
@@ -111,6 +75,48 @@ class Solution
         }
 
         return $newHead->next;
+    }
+
+    /**
+     * double pointer
+     * @param ListNode $head
+     * @param Integer $val
+     *
+     * @return ListNode
+     */
+    public function removeElements1($head, $val)
+    {
+        $newHead = new ListNode(0);
+        $newHead->next = $head;
+
+        $prev = $newHead;
+        $current = $head;
+        while ($current != null) {
+            if ($current->val == $val) {
+                $prev->next = $current->next;
+            } else {
+                $prev = $current;
+            }
+            $current = $current->next;
+        }
+
+        return $newHead->next;
+    }
+
+    /**
+     * @param $head
+     * @param $val
+     * @return ListNode|mixed|null
+     */
+    public function removeElements($head, $val)
+    {
+        if ($head == null) {
+            return null;
+        }
+
+        $head->next = $this->removeElements($head->next, $val);
+
+        return $head->val == $val ? $head->next : $head;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

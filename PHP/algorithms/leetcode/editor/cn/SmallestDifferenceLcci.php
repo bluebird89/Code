@@ -49,27 +49,17 @@ class Solution
             return $b[0] - $a[$a_len - 1];
         }
 
-        $i = 1;
+        $i = 0;
         $j = 0;
         $minPath = PHP_INT_MAX;
         while ($i < $a_len && $j < $b_len) {
-            $prev_path = $a[$i - 1] - $b[$j];
-            $curr_path = $a[$i] - $b[$j];
-//            echo $prev_path . '_' . $curr_path . PHP_EOL;
-            if ($curr_path * $prev_path < 0) {
-                $val = min(abs($curr_path), abs($prev_path));
-                $minPath = $minPath > $val ? $val : $minPath;
-                $i++;
+            $diff = $a[$i] - $b[$j];
+            $minPath = min(abs($diff), $minPath);
+
+            if ($a[$i] > $b[$j]) {
                 $j++;
-                continue;
-            } elseif ($curr_path * $prev_path === 0) {
-                return 0;
             } else {
-                if ($curr_path > 0) {
-                    $j++;
-                } else {
-                    $i++;
-                }
+                $i++;
             }
         }
 

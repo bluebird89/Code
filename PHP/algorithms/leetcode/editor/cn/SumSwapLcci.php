@@ -35,8 +35,9 @@ class Solution
      * @param Integer[] $array2
      *
      * @return Integer[]
+     * @deprecated
      */
-    public function findSwapValues($array1, $array2)
+    public function findSwapValues1($array1, $array2)
     {
         $arr1_sum = array_sum($array1);
         $arr2_sum = array_sum($array2);
@@ -44,8 +45,32 @@ class Solution
 
         foreach ($array2 as $k => $v) {
             if (in_array($v + $diff, $array1)) {
-                $resInx = array_search($v + $diff, $array1);
-                return [$array1[$resInx], $array2[$k]];
+                return [$v + $diff, $v];
+            }
+        }
+
+        return [];
+    }
+
+    public function findSwapValues($array1, $array2)
+    {
+        $arr1_sum = 0;
+        $hash = [];
+        foreach ($array1 as $value) {
+            $arr1_sum += $value;
+            if (!isset($hash[$value])) {
+                $hash[$value] = 1;
+            }
+        }
+        $arr2_sum = array_sum($array2);
+        $diff = ($arr1_sum - $arr2_sum) / 2;
+        if (floor($diff) != $diff) {
+            return [];
+        }
+
+        foreach ($array2 as $k => $v) {
+            if (isset($hash[$v + $diff])) {
+                return [$v + $diff, $v];
             }
         }
 
@@ -60,3 +85,4 @@ print_r((new Solution())->findSwapValues(
     [519, 886, 282, 382, 662, 4718, 258, 719, 494, 795],
     [52, 20, 78, 50, 38, 96, 81, 20]
 ));
+var_dump(in_array(5, [3, 5, 7, 9]));

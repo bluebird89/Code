@@ -42,6 +42,7 @@ namespace Algorithms\leetcode\editor\cn;
 // 👍 3407 👎 0
 
 //leetcode submit region begin(Prohibit modification and deletion)
+
 class Solution
 {
 
@@ -49,40 +50,70 @@ class Solution
      * @param Integer[] $nums
      *
      * @return Integer[][]
+     * @deprecated
      */
-    public function threeSum($nums)
+    public function threeSum1($nums)
     {
         sort($nums);
-        $res = [];
+        $reses = [];
         $count = count($nums);
+        if ($count === 0) {
+            return [];
+        }
+
         for ($i = 0; $i < $count - 2; $i++) {
-            if (isset($nums[$i - 1]) && ($nums[$i] == $nums[$i - 1])) {
+            for ($j = $i + 1; $j < $count - 1; $j++) {
+                for ($k = $j + 1; $k < $count; $k++) {
+                    if ($nums[$k] == -$nums[$i] - $nums[$j]) {
+                        $res = [$nums[$i], $nums[$j], $nums[$k]];
+                        sort($res);
+                        if (!in_array($res, $reses)) {
+                            $reses[] = $res;
+                        }
+                    }
+                }
+            }
+        }
+
+        return $reses;
+    }
+
+    public function threeSum($nums)
+    {
+        $res = [];
+        sort($nums);
+        $len = count($nums);
+
+        for ($i = 0; $i < $len - 2; $i++) {
+            if ($nums[$i] > 0) {
+                break;
+            }
+            if ($i > 0 && $nums[$i] === $nums[$i - 1]) {
                 continue;
             }
-            for ($j = $i + 1; $j < $count - 1; $j++) {
-                if ($nums[$j] == $nums[$i]) {
-                    continue;
-                }
-                for ($k = $j + 1; $k < $count; $k++) {
-//                    if ($nums[$k] == $nums[$k-1]) {
-//                        continue;
-//                    }
-                    if (($nums[$i] + $nums[$j] + $nums[$k]) == 0) {
-                        $res[] = [$nums[$i], $nums[$j], $nums[$k]];
-                    }
+
+            $start = $i + 1;
+            $end = $len - 1;
+            while ($start < $end) {
+                $sum = $nums[$i] + $nums[$start] + $nums[$end];
+
+                if ($sum > 0) {
+                    while ($start < $end && $nums[$end] == $nums[--$end]);
+                } elseif ($sum < 0) {
+                    while ($start < $end && $nums[$start] == $nums[++$start]);
+                } else {
+                    $res[] = [$nums[$i], $nums[$start], $nums[$end]];
+                    while ($start < $end && $nums[$start] == $nums[++$start]);
+                    while ($start < $end && $nums[$end] == $nums[--$end]);
                 }
             }
         }
 
         return $res;
     }
-
-//    public function threeSum($nums)
-//    {
-//
-//    }
 }
 
 //leetcode submit region end(Prohibit modification and deletion)
 print_r((new Solution())->threeSum([-1, 0, 1, 2, -1, -4]));
-print_r((new Solution())->threeSum([0, 0, 0, 0]));
+print_r((new Solution())->threeSum([1, 2, -2, -1]));
+print_r((new Solution())->threeSum([-1, 0, 1, 0]));

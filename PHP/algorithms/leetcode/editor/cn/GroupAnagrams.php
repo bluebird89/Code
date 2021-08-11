@@ -33,47 +33,47 @@ class Solution
      */
     public function groupAnagrams($strs)
     {
-        $count = count($strs);
-        $strsLabel = [];
-        // 标志位
-        foreach ($strs as $str) {
-            $strsLabel[$str] = false;
-        }
-        $res = [];
-
-        for ($i = 0; $i < $count - 1; $i++) {
-            if ($strsLabel[$strs[$i]] == true) {
+        $reses = [];
+        $len = count($strs);
+        $labels = array_fill(1, $len, false);
+        for ($i = 0; $i < $len; $i++) {
+            if ($labels[$i] == true) {
                 continue;
             }
-
-            $strArr[] = $strs[$i];
-            $strlen = strlen($strs[$i]);
-            for ($j = $i + 1; $j < $count; $j++) {
-                if (($strlen == strlen($strs[$j])) && ($this->strIsANagrams($strs[$i], $strs[$j]))) {
-                    if (($strsLabel[$strs[$j]] == false) || $strs[$i] == $strs[$j]) {
-                        $strArr[] = $strs[$j];
-                        $strsLabel[$strs[$j]] = true;
-                    }
+            $res = [$strs[$i]];
+            for ($j = $i + 1; $j < $len; $j++) {
+                if ($labels[$j] == true) {
+                    continue;
+                }
+                if ($this->strIsANagrams($strs[$i], $strs[$j])) {
+                    $res[] = $strs[$j];
+                    $labels[$j] = true;
                 }
             }
-
-            $res[] = $strArr;
-            unset($strArr);
-        }
-        if ($strsLabel[$strs[$count - 1]] == false) {
-            $res[] = [$strs[$count - 1]];
+            $reses[] = $res;
         }
 
-        return $res;
+        return $reses;
     }
 
-    public function strIsANagrams($str1, $str2)
+    public function strIsANagrams($s, $t)
     {
-        $strlen = strlen($str1);
-        for ($k = 0; $k < $strlen; $k++) {
-            if (strpos($str1, $str2[$k]) === false) {
+        $s_len = strlen($s);
+        $t_len = strlen($t);
+        if ($s_len != $t_len) {
+            return false;
+        }
+
+        $res = [];
+        for ($i = 0; $i < $s_len; $i++) {
+            $offset = isset($res[$s[$i]]) ? $res[$s[$i]] + 1 : 0;
+            $index = strpos($t, $s[$i], $offset);
+
+            if ($index === false) {
                 return false;
             }
+
+            $res[$s[$i]] = $index;
         }
 
         return true;

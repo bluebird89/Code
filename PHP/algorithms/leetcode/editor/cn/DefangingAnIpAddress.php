@@ -35,25 +35,38 @@ class Solution
 {
 
     /**
-     * @param  String  $address
+     * @param String $address
      *
      * @return String
      */
-    public static function defangIPaddr($address)
+    public function defangIPaddr0($address)
     {
-        $token = strtok(".", $address);
         $res = '';
         while ($pos = strpos($address, '.')) {
-            echo $pos.PHP_EOL;
-            $str = substr($address, 0, $pos);
-            echo $str.PHP_EOL;
-            $res .= $str.'[.]';
+            $res .= substr($address, 0, $pos) . '[.]';
             $address = substr($address, $pos + 1);
         }
-        $res .= $address;
-        return $res;
+
+        return $res . $address;
+    }
+
+    public function defangIPaddr($address)
+    {
+        $pos = 0;
+        $count = 0;
+
+        while ($count < 3) {
+            $pos = strpos($address, '.', $pos);
+            $address = substr($address, 0, $pos) . '[.]' . substr($address, $pos + 1);
+
+            $pos += 2;
+            $count++;
+        }
+        return $address;
     }
 }
 
 //leetcode submit region end(Prohibit modification and deletion)
-echo Solution::defangIPaddr('192.168.0.1');
+//echo (new Solution)->defangIPaddr('192.168.0.1') . PHP_EOL;
+//echo (new Solution)->defangIPaddr('1.1.1.1') . PHP_EOL;
+echo (new Solution)->defangIPaddr('227.222.40.237') . PHP_EOL;

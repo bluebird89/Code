@@ -34,6 +34,7 @@ class Solution
 
         while ($begin < $end) {
             while ($nums[$end] == 0 && $nums[--$end] == 0);
+
             if ($nums[$begin] == 0) {
                 $i = $begin;
                 while ($i < $end) {

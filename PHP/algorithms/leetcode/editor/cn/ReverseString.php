@@ -19,31 +19,47 @@ namespace Algorithms\leetcode\editor\cn;
 // 示例 2：
 //
 // 输入：["H","a","n","n","a","h"]
-//输出：["h","a","n","n","a","H"]
+// 输出：["h","a","n","n","a","H"]
 // Related Topics 双指针 字符串
-// 👍 405 👎 0
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution
 {
 
     /**
-     * @param  String[]  $s
+     * @param String[] $s
      *
      * @return NULL
      */
-    public static function reverseString(&$s)
+    public function reverseString1(&$s)
     {
         $count = count($s);
+
         for ($i = 0; $i < $count / 2; $i++) {
             $temp = $s[$i];
             $s[$i] = $s[$count - $i - 1];
             $s[$count - $i - 1] = $temp;
         }
     }
-}
 
+    /**
+     * @param String[] $s
+     *
+     * @return NULL
+     */
+    public function reverseString(&$s)
+    {
+        $len = count($s);
+        $begin = 0;
+        $end = $len - 1;
+
+        while ($begin < $end) {
+            $temp = $s[$begin];
+            $s[$begin] = $s[$end];
+            $s[$end] = $temp;
+            $begin++;
+            $end--;
+        }
+    }
+}
 //leetcode submit region end(Prohibit modification and deletion)
-$s = ["h", "e", "l", "l", "o"];
-Solution::reverseString($s);
-print_r($s);

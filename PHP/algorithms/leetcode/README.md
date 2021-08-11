@@ -1,42 +1,48 @@
 ## 测试
 
-* 超出时间限制
-    - 方法是有问题的
+* 超出时间限制:方法有问题的
 
 ## 纯编程|模拟|翻译
 
-* [x] [1. 两数之和](https://leetcode-cn.com/problems/two-sum/) （简单） 两层for循环，或者用Map解决，或排序+双指针
+* [x] [1. 两数之和](https://leetcode-cn.com/problems/two-sum/)  
+    - [PHP 代码](editor/cn/TwoSum.php)
+    - 两层for循环
+    - 用Map解决
+    - @TODO 排序+双指针
+* [x] [1108. IP 地址无效化](https://leetcode-cn.com/problems/defanging-an-ip-address/) 
+    - [PHP 代码](editor/cn/DefangingAnIpAddress.php)
+    - replace
+    - new contact
+* [x] [344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/) 
+    - [PHP 代码](editor/cn/ReverseString.php)
+    - double pointer
+* [x] [剑指 Offer 58 - I. 翻转单词顺序](https://leetcode-cn.com/problems/fan-zhuan-dan-ci-shun-xu-lcof/)  
+    - [PHP 代码](editor/cn/FanZhuanDanCiShunXuLcof.php)
+    - 反转两次
+* [x] [125. 验证回文串](https://leetcode-cn.com/problems/valid-palindrome/)  比普通的验证回文串稍微复杂一点点
     - [PHP 代码](editor/cn/)
-* [x] [1108. IP 地址无效化](https://leetcode-cn.com/problems/defanging-an-ip-address/) （简单） 简单字符串替换
+* [x] [9. 回文数](https://leetcode-cn.com/problems/palindrome-number/) 需要先将数字转化成字符串数组
     - [PHP 代码](editor/cn/)
-* [x] [344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/) （简单）真的就是反转字符串
+* [x] [58. 最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/)  从后往前扫描更简单
     - [PHP 代码](editor/cn/)
-* [x] [剑指 Offer 58 - I. 翻转单词顺序](https://leetcode-cn.com/problems/fan-zhuan-dan-ci-shun-xu-lcof/) （简单） 反转两次
+* [ ] [剑指 Offer 05. 替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/)  字符串中元素替换，减少数组元素的搬移
+    - [PHP 代码](editor/cn/TiHuanKongGeLcof.php)
+* [x] [剑指 Offer 58 - II. 左旋转字符串](https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/)  纯数组搬移数据
     - [PHP 代码](editor/cn/)
-* [x] [125. 验证回文串](https://leetcode-cn.com/problems/valid-palindrome/) （简单） 比普通的验证回文串稍微复杂一点点
-    - [PHP 代码](editor/cn/)
-* [x] [9. 回文数](https://leetcode-cn.com/problems/palindrome-number/) （简单）需要先将数字转化成字符串数组
-    - [PHP 代码](editor/cn/)
-* [x] [58. 最后一个单词的长度](https://leetcode-cn.com/problems/length-of-last-word/) （简单） 从后往前扫描更简单
-    - [PHP 代码](editor/cn/)
-* [ ] [剑指 Offer 05. 替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/) （简单） 字符串中元素替换，减少数组元素的搬移
-    - [PHP 代码](editor/cn/)
-* [x] [剑指 Offer 58 - II. 左旋转字符串](https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/) （简单） 纯数组搬移数据
-    - [PHP 代码](editor/cn/)
-* [x] [26. 删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/) （简单）顺序扫描 下标操作
+* [x] [26. 删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/) 顺序扫描 下标操作
     - [PHP 代码](editor/cn/)
 * [x] [剑指 Offer 67. 把字符串转换成整数](https://leetcode-cn.com/problems/ba-zi-fu-chuan-zhuan-huan-cheng-zheng-shu-lcof/) （中等）经典atoi()，注意范围越界处理
-    - [PHP 代码](editor/cn/)
+    - [PHP 代码](editor/cn/BaZiFuChuanZhuanHuanChengZhengShuLcof.php)
 
 ## 找规律
 
-* [x] [面试题 01.08. 零矩阵](https://leetcode-cn.com/problems/zero-matrix-lcci/) （简单）
+* [x] [面试题 01.08. 零矩阵](https://leetcode-cn.com/problems/zero-matrix-lcci/) 
     - [PHP 代码](editor/cn/)
-* [x] [面试题 16.11. 跳水板](https://leetcode-cn.com/problems/diving-board-lcci/) （简单）
+* [x] [面试题 16.11. 跳水板](https://leetcode-cn.com/problems/diving-board-lcci/) 
     - [PHP 代码](editor/cn/)
 * [x] [面试题 01.05. 一次编辑](https://leetcode-cn.com/problems/one-away-lcci/) （中等）
     - [PHP 代码](editor/cn/)
-* [x] [面试题 16.15. 珠玑妙算](https://leetcode-cn.com/problems/master-mind-lcci/) （简单）
+* [x] [面试题 16.15. 珠玑妙算](https://leetcode-cn.com/problems/master-mind-lcci/) 
     - [PHP 代码](editor/cn/)
 * [ ] [面试题 16.04. 井字游戏](https://leetcode-cn.com/problems/tic-tac-toe-lcci/) （中等）
     - [PHP 代码](editor/cn/)
@@ -54,18 +60,20 @@
 
 ## 链表
 
-* [x] [203. 移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/) （简单）
+* [x] [203. 移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/) 
+    - [PHP 代码](editor/cn/RemoveLinkedListElements.php)
+    - new construct list
+    - recursive
+* [x] [876. 链表的中间结点](https://leetcode-cn.com/problems/middle-of-the-linked-list/) 
     - [PHP 代码](editor/cn/)
-* [x] [876. 链表的中间结点](https://leetcode-cn.com/problems/middle-of-the-linked-list/) （简单）
-    - [PHP 代码](editor/cn/)
-* [x] [83. 删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/) （简单）
+* [x] [83. 删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/) 
     - [PHP 代码](editor/cn/)
 * [x] [剑指 Offer 25. 合并两个排序的链表](https://leetcode-cn.com/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/) （中等）
     - [PHP 代码](editor/cn/)
 * [x] [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/) （中等）
     - [PHP 代码](editor/cn/)
 * [x] [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/) （中等）
-    - [PHP 代码](editor/cn/)
+    - [PHP 代码](editor/cn/ReverseLinkedList.php)
 * [x] [234. 回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/) （中等）
     - [PHP 代码](editor/cn/)
     - 快慢指针获取中间位置
@@ -73,42 +81,44 @@
 * [x] [328. 奇偶链表](https://leetcode-cn.com/problems/odd-even-linked-list/) （中等）
     - [PHP 代码](editor/cn/)
 * [ ] [25. K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/) （困难）
-    - [PHP 代码](editor/cn/)
-* [x] [剑指 Offer 22. 链表中倒数第k个节点](https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/) （简单）
+    - [PHP 代码](editor/cn/ReverseNodesInKGroup.php)
+* [x] [剑指 Offer 22. 链表中倒数第k个节点](https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/) 
     - [PHP 代码](editor/cn/)
     - 快慢指针
 * [ ] [19. 删除链表的倒数第 N 个结点](https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/) （中等）
     - [PHP 代码](editor/cn/RemoveNthNodeFromEndOfList.php)
     - 逆向思维:len-N
     - 快慢指针
-* [ ] [160. 相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/) （简单）
-    - [PHP 代码](editor/cn/)
-    - 长链表先走一定长度，同步长度
-* [x] [141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/) （简单）
-    - [PHP 代码](editor/cn/)
+* [x] [160. 相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/) 
+    - [PHP 代码](editor/cn/IntersectionOfTwoLinkedLists.php)
+    - two list contact final will meet same node 
+* [x] [141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/) 
+    - [PHP 代码](editor/cn/LinkedListCycle.php)
+    - hash
+    - fast && slow
 
 ## 栈和队列
 
-* [x] [剑指 Offer 09. 用两个栈实现队列](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/) （简单）
+* [x] [剑指 Offer 09. 用两个栈实现队列](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/) 
     - [PHP 代码](editor/cn/)
-* [x] [225. 用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues/) （简单）
+* [x] [225. 用队列实现栈](https://leetcode-cn.com/problems/implement-stack-using-queues/) 
     - [PHP 代码](editor/cn/)
 * [x] [面试题 03.05. 栈排序](https://leetcode-cn.com/problems/sort-of-stacks-lcci/) （中等）
     - [PHP 代码](editor/cn/)
-* [ ] [155. 最小栈](https://leetcode-cn.com/problems/min-stack/) （简单）
+* [ ] [155. 最小栈](https://leetcode-cn.com/problems/min-stack/) 
     - [PHP 代码](editor/cn/)
     - Method 1:maintiance a min stack by defferent order
     - Method 2:maintaince a array with top=>min
-* [x] [面试题 03.01. 三合一](https://leetcode-cn.com/problems/three-in-one-lcci/) （简单）
+* [x] [面试题 03.01. 三合一](https://leetcode-cn.com/problems/three-in-one-lcci/) 
     - [PHP 代码](editor/cn/)
-* [x] [20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/) （简单）
+* [x] [20. 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/) 
     - [PHP 代码](editor/cn/)
 * [ ] [面试题 16.26. 计算器](https://leetcode-cn.com/problems/calculator-lcci/) （中等）
     - [PHP 代码](editor/cn/)
     - TODO:执行字符串
 * [O] [772. 基本计算器 III](https://leetcode-cn.com/problems/basic-calculator-iii/) （困难 包含括号 力扣会员）
     - [PHP 代码](editor/cn/)
-* [x] [1047. 删除字符串中的所有相邻重复项](https://leetcode-cn.com/problems/remove-all-adjacent-duplicates-in-string/) （简单）
+* [x] [1047. 删除字符串中的所有相邻重复项](https://leetcode-cn.com/problems/remove-all-adjacent-duplicates-in-string/) 
     - [PHP 代码](editor/cn/)
 * [x] [剑指 Offer 31. 栈的压入、弹出序列](https://leetcode-cn.com/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/) （中等）
     - [PHP 代码](editor/cn/)
@@ -131,20 +141,20 @@
 
 ## 递归与分治
 
-* [x] [剑指 Offer 10- I. 斐波那契数列](https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/) （简单）
+* [x] [剑指 Offer 10- I. 斐波那契数列](https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/) 
     - [PHP 代码](editor/cn/)
     - TODO:尾递归原理
-* [x] [剑指 Offer 10- II. 青蛙跳台阶问题](https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/) （简单）
+* [x] [剑指 Offer 10- II. 青蛙跳台阶问题](https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/) 
     - [PHP 代码](editor/cn/)
     - TODO:尾递归&&迭代优化
-* [x] [面试题 08.01. 三步问题](https://leetcode-cn.com/problems/three-steps-problem-lcci/) （简单）
+* [x] [面试题 08.01. 三步问题](https://leetcode-cn.com/problems/three-steps-problem-lcci/) 
     - [PHP 代码](editor/cn/ThreeStepsProblemLcci.php)
     - 正常超时，用备忘录
     - 非递归
         + 迭代
-* [x] [剑指 Offer 06. 从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/) （简单）
+* [x] [剑指 Offer 06. 从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/) 
     - [PHP 代码](editor/cn/CongWeiDaoTouDaYinLianBiaoLcof.php)
-* [x] [剑指 Offer 24. 反转链表](https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/) （简单）
+* [x] [剑指 Offer 24. 反转链表](https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/) 
     - [PHP 代码](editor/cn/FanZhuanLianBiaoLcof.php)
 * [x] [剑指 Offer 16. 数值的整数次方](https://leetcode-cn.com/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/) （中等）
     - [PHP 代码](editor/cn/ShuZhiDeZhengShuCiFangLcof.php)
@@ -153,21 +163,21 @@
 
 ## 排序
 
-* [x] [面试题 10.01. 合并排序的数组](https://leetcode-cn.com/problems/sorted-merge-lcci/) （简单）
+* [x] [面试题 10.01. 合并排序的数组](https://leetcode-cn.com/problems/sorted-merge-lcci/) 
     - [PHP 代码](editor/cn/SortedMergeLcci.php)
         - 双指针实现
-* [ ] [21. 合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/) （简单）
+* [ ] [21. 合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/) 
     - [PHP 代码](editor/cn/)
-* [ ] [242. 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/) （简单）
+* [ ] [242. 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/) 
     - [PHP 代码](editor/cn/)
-* [x] [1502. 判断能否形成等差数列](https://leetcode-cn.com/problems/can-make-arithmetic-progression-from-sequence/) （简单）
+* [x] [1502. 判断能否形成等差数列](https://leetcode-cn.com/problems/can-make-arithmetic-progression-from-sequence/) 
     - [PHP 代码](editor/cn/CanMakeArithmeticProgressionFromSequence.php)
     - TODO: need sort by self
-* [O] [252. 会议室](https://leetcode-cn.com/problems/meeting-rooms/) （简单）
+* [O] [252. 会议室](https://leetcode-cn.com/problems/meeting-rooms/) 
     - [PHP 代码](editor/cn/)
 * [ ] [56. 合并区间](https://leetcode-cn.com/problems/merge-intervals/) （中等）
     - [PHP 代码](editor/cn/)
-* [x] [剑指 Offer 21. 调整数组顺序使奇数位于偶数前面](https://leetcode-cn.com/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof/) （简单）
+* [x] [剑指 Offer 21. 调整数组顺序使奇数位于偶数前面](https://leetcode-cn.com/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof/) 
     - [PHP 代码](editor/cn/DiaoZhengShuZuShunXuShiQiShuWeiYuOuShuQianMianLcof.php)
 * [ ] [75. 颜色分类](https://leetcode-cn.com/problems/sort-colors/) （中等）
     - [PHP 代码](editor/cn/)
@@ -184,30 +194,30 @@
 
 ## 二分
 
-* [x] [704. 二分查找](https://leetcode-cn.com/problems/binary-search/) （简单） 标准二分查找
+* [x] [704. 二分查找](https://leetcode-cn.com/problems/binary-search/)  标准二分查找
     - [PHP 代码](editor/cn/)
-* [x] [374. 猜数字大小](https://leetcode-cn.com/problems/guess-number-higher-or-lower/) （简单）
+* [x] [374. 猜数字大小](https://leetcode-cn.com/problems/guess-number-higher-or-lower/) 
     - 题意：猜的数字是代码生成
     - [PHP 代码](editor/cn/GuessNumberHigherOrLower.php)
-* [x] [744. 寻找比目标字母大的最小字母](https://leetcode-cn.com/problems/find-smallest-letter-greater-than-target/) （简单）
+* [x] [744. 寻找比目标字母大的最小字母](https://leetcode-cn.com/problems/find-smallest-letter-greater-than-target/) 
     - [PHP 代码](editor/cn/FindSmallestLetterGreaterThanTarget.php)
-* [x] [35. 搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/) （简单）
+* [x] [35. 搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/) 
     - [PHP 代码](editor/cn/)
 * [x] [34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/) （中等）
     - [PHP 代码](editor/cn/)
-* [ ] [面试题 10.05. 稀疏数组搜索](https://leetcode-cn.com/problems/sparse-array-search-lcci/) （简单）
+* [ ] [面试题 10.05. 稀疏数组搜索](https://leetcode-cn.com/problems/sparse-array-search-lcci/) 
     - [PHP 代码](editor/cn/)
 * [ ] [33. 搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/) （中等）无重复数据
-    - [PHP 代码](editor/cn/)
+    - [PHP 代码](editor/cn/SearchInRotatedSortedArray.php)
 * [x] [153. 寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/) （中等） 无重复数据
     - [PHP 代码](editor/cn/FindMinimumInRotatedSortedArray.php)
-* [x] [852. 山脉数组的峰顶索引](https://leetcode-cn.com/problems/peak-index-in-a-mountain-array/) （简单）峰值二分
+* [x] [852. 山脉数组的峰顶索引](https://leetcode-cn.com/problems/peak-index-in-a-mountain-array/) 峰值二分
     - [PHP 代码](editor/cn/)
 * [x] [162. 寻找峰值](https://leetcode-cn.com/problems/find-peak-element/) （中等）峰值二分
     - [PHP 代码](editor/cn/)
-* [x] [367. 有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square/) （简单）二分答案
+* [x] [367. 有效的完全平方数](https://leetcode-cn.com/problems/valid-perfect-square/) 二分答案
     - [PHP 代码](editor/cn/)
-* [x] [69. x 的平方根](https://leetcode-cn.com/problems/sqrtx/) （简单）二分答案
+* [x] [69. x 的平方根](https://leetcode-cn.com/problems/sqrtx/) 二分答案
     - [PHP 代码](editor/cn/)
 * [0] [74. 搜索二维矩阵](https://leetcode-cn.com/problems/search-a-2d-matrix/) （中等） 二维转一维，二分查找
     - [PHP 代码](editor/cn/)
@@ -223,53 +233,56 @@
 
 ## 哈希表
 
-* [x] [两数之和](https://leetcode-cn.com/problems/two-sum/) （简单）
-    - [PHP 代码](editor/cn/)
+* [x] [两数之和](https://leetcode-cn.com/problems/two-sum/) 
+    - [PHP 代码](editor/cn/TwoSum.)
     - 构造映射关系，如何去重
-* [o] [15. 三数之和](https://leetcode-cn.com/problems/3sum/) （中等）
+* [ ] [15. 三数之和](https://leetcode-cn.com/problems/3sum/) （中等）
+    - [PHP 代码](editor/cn/ThreeSum.php)
+* [ ] [160. 相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/) 
+    - [PHP 代码](editor/cn/IntersectionOfTwoLinkedLists.php)
+* [x] [141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/) 
+    - [PHP 代码](editor/cn/LinkedListCycle.php)
+* [x] [面试题 02.01. 移除重复节点](https://leetcode-cn.com/problems/remove-duplicate-node-lcci/) （中等）
+    - [PHP 代码](editor/cn/RemoveDuplicateNodeLcci.php)
+* [x] [面试题 16.02. 单词频率](https://leetcode-cn.com/problems/words-frequency-lcci/) 
     - [PHP 代码](editor/cn/)
-* [ ] [160. 相交链表](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/) （简单）
-    - [PHP 代码](editor/cn/)
-* [x] [141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/) （简单）
-    - [PHP 代码](editor/cn/)
-* [ ] [面试题 02.01. 移除重复节点](https://leetcode-cn.com/problems/remove-duplicate-node-lcci/) （中等）
-    - [PHP 代码](editor/cn/)
-* [x] [面试题 16.02. 单词频率](https://leetcode-cn.com/problems/words-frequency-lcci/) （简单）
-    - [PHP 代码](editor/cn/)
-* [ ] [面试题 01.02. 判定是否互为字符重排](https://leetcode-cn.com/problems/check-permutation-lcci/) （简单）
-    - [PHP 代码](editor/cn/)
-* [ ] [剑指 Offer 03. 数组中重复的数字](https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/) （简单）
-    - [PHP 代码](editor/cn/)
-* [ ] [242. 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/) （简单）
-    - [PHP 代码](editor/cn/)
-* [ ] [49. 字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/) （中等）
-    - [PHP 代码](editor/cn/)
-* [ ] [136. 只出现一次的数字](https://leetcode-cn.com/problems/single-number/) （简单）
-    - [PHP 代码](editor/cn/)
-* [x] [349. 两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/) （简单）
+* [x] [面试题 01.02. 判定是否互为字符重排](https://leetcode-cn.com/problems/check-permutation-lcci/) 
+    - [PHP 代码](editor/cn/CheckPermutationLcci.php)
+    - repeat character remember last index
+* [x] [剑指 Offer 03. 数组中重复的数字](https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/) 
+    - [PHP 代码](editor/cn/ShuZuZhongZhongFuDeShuZiLcof.php)
+* [x] [242. 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/) 
+    - [PHP 代码](editor/cn/ValidAnagram.php)
+    - repeat character remember last index
+* [x] [49. 字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/) （中等）
+    - [PHP 代码](editor/cn/GroupAnagrams.php)
+* [x] [136. 只出现一次的数字](https://leetcode-cn.com/problems/single-number/) 
+    - [PHP 代码](editor/cn/SingleNumber.php)
+* [x] [349. 两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/) 
     - [PHP 代码](editor/cn/)
 * [x] [1122. 数组的相对排序](https://leetcode-cn.com/problems/relative-sort-array/) （中等）
     - [PHP 代码](editor/cn/)
-* [x] [706. 设计哈希映射](https://leetcode-cn.com/problems/design-hashmap/) （简单）
-    - [PHP 代码](editor/cn/)
-* [ ] [146. LRU 缓存机制](https://leetcode-cn.com/problems/lru-cache/) （中等）标准的LRU
-    - [PHP 代码](editor/cn/)
-* [ ] [面试题 16.21. 交换和](https://leetcode-cn.com/problems/sum-swap-lcci/) （中等）
-    - [PHP 代码](editor/cn/)
+* [x] [706. 设计哈希映射](https://leetcode-cn.com/problems/design-hashmap/) 
+    - [PHP 代码](editor/cn/DesignHashmap.php)
+* [x] [146. LRU 缓存机制](https://leetcode-cn.com/problems/lru-cache/) 
+    - [PHP 代码](editor/cn/LruCache.php)
+* [x] [面试题 16.21. 交换和](https://leetcode-cn.com/problems/sum-swap-lcci/) （中等）
+    - [PHP 代码](editor/cn/SumSwapLcci.php)
+    - use hash php Defined function time cosume exceed
 
 ## 二叉树
 
 * 前中后序遍历
-    * [x] [144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/) （简单）
+    * [x] [144. 二叉树的前序遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/) 
         - [PHP 代码](editor/cn/)
-    * [x] [94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/) （简单）
+    * [x] [94. 二叉树的中序遍历](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/) 
         - [PHP 代码](editor/cn/)
-    * [x] [145. 二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/) （简单）
+    * [x] [145. 二叉树的后序遍历](https://leetcode-cn.com/problems/binary-tree-postorder-traversal/) 
         - TODO：重点理解迭代方法
         - [PHP 代码](editor/cn/BinaryTreePostorderTraversal.php)
-    * [x] [589. N 叉树的前序遍历](https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/) （简单）**例题**
+    * [x] [589. N 叉树的前序遍历](https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/) **例题**
         - [PHP 代码](editor/cn/NAryTreePreorderTraversal.php)
-    * [x] [590. N 叉树的后序遍历](https://leetcode-cn.com/problems/n-ary-tree-postorder-traversal/) （简单）
+    * [x] [590. N 叉树的后序遍历](https://leetcode-cn.com/problems/n-ary-tree-postorder-traversal/) 
         - TODO:非递归实现
         - [PHP 代码](editor/cn/NAryTreePostorderTraversal.php)
 * 按层遍历
@@ -286,15 +299,15 @@
     * [ ] [513. 找树左下角的值](https://leetcode-cn.com/problems/find-bottom-left-tree-value/) （中等）
         - [PHP 代码](editor/cn/FindBottomLeftTreeValue.php)
 * 递归
-    * [x] [104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/) （简单）**例题**
+    * [x] [104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/) **例题**
         - [PHP 代码](editor/cn/)
-    * [ ] [559. N 叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-n-ary-tree/) （简单）
+    * [ ] [559. N 叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-n-ary-tree/) 
         - [PHP 代码](editor/cn/)
     * [ ] [剑指 Offer 55 - II. 平衡二叉树](https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof/) （中等）**例题**
         - [PHP 代码](editor/cn/)
-    * [ ] [617. 合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees/) （简单）
+    * [ ] [617. 合并二叉树](https://leetcode-cn.com/problems/merge-two-binary-trees/) 
         - [PHP 代码](editor/cn/)
-    * [x] [226. 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/) （简单）
+    * [x] [226. 翻转二叉树](https://leetcode-cn.com/problems/invert-binary-tree/) 
         - [PHP 代码](editor/cn/InvertBinaryTree.php)
     * [ ] [101. 对称二叉树](https://leetcode-cn.com/problems/symmetric-tree/) （中等）
         - [PHP 代码](editor/cn/)
@@ -334,7 +347,7 @@
     * [ ] [剑指 Offer 33. 二叉搜索树的后序遍历序列](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/) （中等）
         - [PHP 代码](editor/cn/)
 * 二叉树上的最长路径和(学完回溯之后再来做)
-    * [ ] [543. 二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/) （简单）
+    * [ ] [543. 二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/) 
         - [PHP 代码](editor/cn/)
     * [ ] [剑指 Offer 34. 二叉树中和为某一值的路径](https://leetcode-cn.com/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/) （中等）
         - [PHP 代码](editor/cn/)
@@ -361,9 +374,9 @@
 * [ ] [208. 实现 Trie (前缀树)](https://leetcode-cn.com/problems/implement-trie-prefix-tree/) （中等） 标准Trie树
     - [PHP 代码](editor/cn/)
 * 选做
-    * [ ] [面试题 17.17. 多次搜索](https://leetcode-cn.com/problems/multi-search-lcci/) （中等） 标准AC自动机，不过写AC自动机太复杂，Trie树搞定
+    - [ ] [面试题 17.17. 多次搜索](https://leetcode-cn.com/problems/multi-search-lcci/) （中等） 标准AC自动机，不过写AC自动机太复杂，Trie树搞定
         - [PHP 代码](editor/cn/)
-    * [ ] [212. 单词搜索 II](https://leetcode-cn.com/problems/word-search-ii/) （困难）
+    - [ ] [212. 单词搜索 II](https://leetcode-cn.com/problems/word-search-ii/) （困难）
         - [PHP 代码](editor/cn/)
 
 ## 回溯
@@ -418,13 +431,13 @@
 ## DFS & BFS
 
 * 二叉树上的最长路径和
-    * [ ] [543. 二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/) （简单）
+    * [ ] [543. 二叉树的直径](https://leetcode-cn.com/problems/diameter-of-binary-tree/) 
     * [ ] [剑指 Offer 34. 二叉树中和为某一值的路径](https://leetcode-cn.com/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/) （中等）
     * [ ] [124. 二叉树中的最大路径和](https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/) （困难）
     * [ ] [437. 路径总和 III](https://leetcode-cn.com/problems/path-sum-iii/) （困难）
 
 * [ ] [剑指 Offer 13. 机器人的运动范围](https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/) （中等） DFS**（已讲）**
-* [ ] [面试题 08.10. 颜色填充](https://leetcode-cn.com/problems/color-fill-lcci/) （简单） DFS
+* [ ] [面试题 08.10. 颜色填充](https://leetcode-cn.com/problems/color-fill-lcci/)  DFS
 * [ ] [面试题 04.01. 节点间通路](https://leetcode-cn.com/problems/route-between-nodes-lcci/) （中等）DFS BFS搜索
 * [ ] [200. 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/) （中等） DFS求连通分量**（已讲）**
 * [ ] [面试题 16.19. 水域大小](https://leetcode-cn.com/problems/pond-sizes-lcci/) （中等） DFS连通性
@@ -439,10 +452,10 @@
     * [ ] [127. 单词接龙](https://leetcode-cn.com/problems/word-ladder/) （困难）
     * [ ] [126. 单词接龙 II](https://leetcode-cn.com/problems/word-ladder-ii/) （困难）
 
-## 态规划
+## 动态规划
 
 * 背包
-    * [ ] [416. 分割等和子集](https://leetcode-cn.com/problems/partition-equal-subset-sum/)
+    * [x] [416. 分割等和子集](https://leetcode-cn.com/problems/partition-equal-subset-sum/)
     * [ ] [494. 目标和](https://leetcode-cn.com/problems/target-sum/)
     * [ ] [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)
     * [ ] [518. 零钱兑换 II](https://leetcode-cn.com/problems/coin-change-2/)
@@ -458,6 +471,82 @@
     * [ ] [337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/)  (树形DP)
     * [ ] [714. 买卖股票的最佳时机含手续](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
     * [ ] [309. 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
+- 爬楼梯问题
+    * [x] [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)
+        - [PHP](editor/cn/ClimbingStairs.php)
+    * [ ] [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/)
+        - [](editor/cn/CoinChange.php)
+    * [ ] [518. 零钱兑换 II](https://leetcode-cn.com/problems/coin-change-2/)
+    * [ ] [剑指 Offer 14- I. 剪绳子](https://leetcode-cn.com/problems/jian-sheng-zi-lcof/)
+    * [ ] [剑指 Offer 46. 把数字翻译成字符串](https://leetcode-cn.com/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/)
+    * [ ] [139. 单词拆分](https://leetcode-cn.com/problems/word-break/)
+- 匹配问题
+    * [ ] [1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/)
+    * [ ] [72. 编辑距离](https://leetcode-cn.com/problems/edit-distance/)
+- 其他
+    * [ ] [437. 路径总和 III](https://leetcode-cn.com/problems/path-sum-iii/) (树形DP)
+    * [ ] [300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/)
+
+## 技巧类
+
+- 双指针：
+    * [x] [344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/)        
+        - [PHP](editor/cn/ReverseString.php)
+    * [x] [面试题 16.24. 数对和](https://leetcode-cn.com/problems/pairs-with-sum-lcci/)
+        - [php](editor/cn/PairsWithSumLcci.php)
+        - how one pointer know another pointer used element
+            - first sort
+    * [ ] [1. 两数之和](https://leetcode-cn.com/problems/two-sum/)        
+        - [php](editor/cn/TwoSum.php)
+        - 同一个元素在答案里不能重复出现
+        - 每种输入只会对应一个答案
+        - return index can't use double pointer
+    * [x] [15. 三数之和](https://leetcode-cn.com/problems/3sum/)
+        - [php](editor/cn/ThreeSum.php)
+    * [x] [剑指 Offer 21. 调整数组顺序使奇数位于偶数前面](https://leetcode-cn.com/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof/)
+        - [php](editor/cn/DiaoZhengShuZuShunXuShiQiShuWeiYuOuShuQianMianLcof.php)
+    * [x] [75. 颜色分类](https://leetcode-cn.com/problems/sort-colors/)
+        - [php](editor/cn/SortColors.php)
+        - @TODO: handle with different sort 
+    * [ ] [283. 移动零](https://leetcode-cn.com/problems/move-zeroes/) 已排序未排序指针
+        - [php](editor/cn/MoveZeroes.php)
+    * [x] [面试题 16.06. 最小差](https://leetcode-cn.com/problems/smallest-difference-lcci/) 类似合并两个有序数组
+        - [php](ditor/cn/SmallestDifferenceLcci.php)
+        - 排序后不存在交叉问题
+    * [ ] [面试题 17.11. 单词距离](https://leetcode-cn.com/problems/find-closest-lcci/) 类似合并两个有序数组
+        - [php](editor/cn/FindClosestLcci.php)
+- 滑动窗口：
+    * [ ] [剑指 Offer 57 - II. 和为s的连续正数序列](https://leetcode-cn.com/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/) **（例题1）**
+    * [ ] [剑指 Offer 48. 最长不含重复字符的子字符串](https://leetcode-cn.com/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/) **（例题2）**
+    * [ ] [438. 找到字符串中所有字母异位词](https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/)
+    * [ ] [76. 最小覆盖子串](https://leetcode-cn.com/problems/minimum-window-substring/)
+        - [php](editor/cn/MinimumWindowSubstring.php)
+- 前缀后缀统计：
+    * [ ] [121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/) **（例题1）**
+    * [ ] [238. 除自身以外数组的乘积](https://leetcode-cn.com/problems/product-of-array-except-self/) **（例题2）**
+    * [ ] [面试题 05.03. 翻转数位](https://leetcode-cn.com/problems/reverse-bits-lcci/)
+    * [ ] [42. 接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)
+    * [ ] [53. 最大子序和](https://leetcode-cn.com/problems/maximum-subarray/)
+- 位运算：
+    * [x] [191. 位1的个数](https://leetcode-cn.com/problems/number-of-1-bits/) **（例题1）**
+        - [PHP code](editor/cn/NumberOf1Bits.php)
+    * [ ] [461. 汉明距离](https://leetcode-cn.com/problems/hamming-distance/) **（例题2）**
+    * [x] [面试题 05.06. 整数转换](https://leetcode-cn.com/problems/convert-integer-lcci/)
+        - [](editor/cn/ConvertIntegerLcci.php)
+    * [ ] [面试题 05.07. 配对交换](https://leetcode-cn.com/problems/exchange-lcci/)
+    * [ ] [面试题 05.01. 插入](https://leetcode-cn.com/problems/insert-into-bits-lcci/)
+        - [PHP](editor/cn/InsertIntoBitsLcci.php)
+    * [x] [面试题 17.04. 消失的数字](https://leetcode-cn.com/problems/missing-number-lcci/)
+        - [PHP](editor/cn/MissingNumberLcci.php)
+    * [ ] [剑指 Offer 56 - I. 数组中数字出现的次数](https://leetcode-cn.com/prems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/)
+        - [php](editor/cn/ShuZuZhongShuZiChuXianDeCiShuLcof.php)
+    * [ ] [剑指 Offer 56 - II. 数组中数字出现的次数 II](https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-ii-lcof/)
+    * [x][面试题 16.01. 交换数字](https://leetcode-cn.com/problems/swap-numbers-lcci/)
+        - [php code](editor/cn/SwapNumbersLcci.php)
+        - @ODO 原理是什么
+    * [x] [231. 2 的幂](https://leetcode-cn.com/problems/power-of-two/)
+       - [PHP code](editor/cn/PowerOfTwo.php)
+       - 1 bit count == 1
 
 ## 其它
 

@@ -641,3 +641,10 @@ echo $top;
 $baseNumber = "123456754";
 $newNumber = base_convert($baseNumber, 8, 16);
 echo $newNumber;
+
+// change to index array
+$arr = [2 => 4, 3 => 5, 7 => 9];
+//array_shift($arr);
+echo current($arr);
+unset($arr[array_key_first($arr)]);
+var_dump($arr);

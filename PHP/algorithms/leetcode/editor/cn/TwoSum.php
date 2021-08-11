@@ -58,12 +58,13 @@ class Solution
      *
      * @return Integer[]
      */
-    public function twoSum1(array $nums, int $target): array
+    public function twoSum0(array $nums, int $target): array
     {
         $len = count($nums);
-        for ($i = 0; $i < $len; $i++) {
+
+        for ($i = 0; $i < $len - 1; $i++) {
             for ($j = $i + 1; $j < $len; $j++) {
-                if ($nums[$j] == $target - $nums[$i]) {
+                if ($nums[$i] + $nums[$j] == $target) {
                     return [$i, $j];
                 }
             }
@@ -72,42 +73,22 @@ class Solution
         return [0, 0];
     }
 
-    public function twoSum2(array $nums, int $target): array
-    {
-        $map = [];
-        foreach ($nums as $k => $v) {
-            $map[$v][] = $k;
-        }
-
-        $len = count($nums);
-        for ($i = 0; $i < $len; $i++) {
-            $res = $target - $nums[$i];
-            if (isset($map[$res]) && $res != $nums[$i]) {
-                return [$map[$nums[$i]][0], $map[$res][0]];
-            } else {
-                if (sizeof($map[$res]) > 1) {
-                    return [$map[$res][0], $map[$res][1]];
-                }
-            }
-        }
-        return [0, 0];
-    }
-
     /**
+     * hash
+     *
      * @param Integer[] $nums
      * @param Integer $target
      *
      * @return Integer[]
      */
-    public function twoSum3($nums, $target)
+    public function twoSum1($nums, $target)
     {
         $found = [];
         $count = count($nums);
 
         for ($i = 0; $i < $count; $i++) {
             $diff = $target - $nums[$i];
-
-            if (array_key_exists($diff, $found)) {
+            if (isset($found[$diff])) {
                 return [$found[$diff], $i];
             }
 
@@ -116,30 +97,32 @@ class Solution
     }
 
     /**
-     * hash table:fix value cooruption
-     *
-     * @param array $nums
-     * @param int $target
-     *
-     * @return array|int[]
+     * @TODO  How to use double pointer need sort
+     * @param $nums
+     * @param $target
      */
-    public function twoSum(array $nums, int $target): array
+    public function twoSum($nums, $target)
     {
-        $map = [];
-        foreach ($nums as $k => $v) {
-            $res = $target - $nums[$k];
-            if (isset($map[$res])) {
-                return [$k, $map[$res][0]];
-            }
-            $map[$v][] = $k;
-        }
-
-        return [0, 0];
+//        sort($nums);
+//        $len = count($nums);
+//        $begin = 0;
+//        $end = $len - 1;
+//
+//        while ($begin < $end) {
+//            $sum = $nums[$begin] + $nums[$end];
+//            if ($sum == $target) {
+//                $res = [$begin, $end];
+//                $begin++;
+//                $end--;
+//            } elseif ($sum > $target) {
+//                $end--;
+//            } else {
+//                $begin++;
+//            }
+//        }
+//        return $res;
     }
 }
 
 //leetcode submit region end(Prohibit modification and deletion)
-
-echo array_search(3, [3, 3], true) . PHP_EOL;
-print_r((new Solution())->twoSum([3, 2, 3], 6));
-print_r((new Solution())->twoSum([2, 7, 11, 15], 9));
+print_r((new Solution())->twoSum([5, 6, 5, 6], 11));

@@ -65,33 +65,11 @@ class Solution
                 $cur->next = new ListNode($head->val);
                 $cur = $cur->next;
             }
+
             $head = $head->next;
         }
 
         return $dummyHead->next;
-
-
-        $map = [];
-        $p = $head;
-        $prev = $head;
-
-        while ($p) {
-            if (in_array($p->data, $map)) {
-                // last node
-                if ($p->next == null) {
-                    $prev->next = null;
-                } else {
-                    $prev->next = $p->next;
-                }
-            } else {
-                $map[] = $p->data;
-                $prev = $p;
-            }
-
-            $p = $p->next;
-        }
-
-        return $head;
     }
 }
 

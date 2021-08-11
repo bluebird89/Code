@@ -9,7 +9,7 @@ namespace Algorithms\leetcode\editor\cn;
 // 示例 1：
 // 输入：intersectVal = 8, listA = [4,1,8,4,5], listB = [5,0,1,8,4,5], skipA = 2, skipB = 3
 // 输出：Reference of the node with value = 8
-//输入解释：相交节点的值为 8 （注意，如果两个链表相交则不能为 0）。从各自的表头开始算起，链表 A 为 [4,1,8,4,5]，链表 B 为 [5,0,1
+// 输入解释：相交节点的值为 8 （注意，如果两个链表相交则不能为 0）。从各自的表头开始算起，链表 A 为 [4,1,8,4,5]，链表 B 为 [5,0,1
 //,8,4,5]。在 A 中，相交节点前有 2 个节点；在 B 中，相交节点前有 3 个节点。
 //
 // 示例 2：
@@ -23,9 +23,9 @@ namespace Algorithms\leetcode\editor\cn;
 // 示例 3：
 // 输入：intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2
 // 输出：null
-//输入解释：从各自的表头开始算起，链表 A 为 [2,6,4]，链表 B 为 [1,5]。由于这两个链表不相交，所以 intersectVal 必须为 0，而
+// 输入解释：从各自的表头开始算起，链表 A 为 [2,6,4]，链表 B 为 [1,5]。由于这两个链表不相交，所以 intersectVal 必须为 0，而
 // skipA 和 skipB 可以是任意值。
-//解释：这两个链表不相交，因此返回 null。
+// 解释：这两个链表不相交，因此返回 null。
 //
 // 注意：
 //
@@ -47,7 +47,31 @@ namespace Algorithms\leetcode\editor\cn;
 class Solution
 {
     /**
-     * list
+     * contact two list final will meet in same index
+     *
+     * @param ListNode $headA
+     * @param ListNode $headB
+     *
+     * @return ListNode
+     */
+    public function getIntersectionNode1($headA, $headB)
+    {
+        if ($headA === null || $headB === null) {
+            return null;
+        }
+        $a_pointer = $headA;
+        $b_pointer = $headB;
+
+        while ($a_pointer !== $b_pointer) {
+            $a_pointer = $a_pointer != null ? $a_pointer->next : $headB;
+            $b_pointer = $b_pointer != null ? $b_pointer->next : $headA;
+        }
+
+        return $a_pointer;
+    }
+
+    /**
+     * Hash
      * @param ListNode $headA
      * @param ListNode $headB
      *
@@ -59,33 +83,23 @@ class Solution
             return null;
         }
 
-        $a_pos = 0;
-        while ($headA) {
-            $p = $headB;
-            $b_pos = 0;
-            while ($p) {
-                if ($headA == $p) {
-                    return $headA;
-                }
-                $p = $p->next;
-                $b_pos++;
+        $temp = $headA;
+        $hash = [];
+        while ($temp != null) {
+            array_push($hash, $temp);
+            $temp = $temp->next;
+        }
+
+        $temp = $headB;
+        while ($temp != null) {
+            // use same data pointer
+            if (in_array($temp, $hash, true)) {
+                return $temp;
             }
-            $headA = $headA->next;
-            $a_pos++;
+            $temp = $temp->next;
         }
 
         return null;
-    }
-
-    /**
-     * Hash
-     * @param ListNode $headA
-     * @param ListNode $headB
-     *
-     * @return ListNode
-     */
-    public function getIntersectionNode1($headA, $headB)
-    {
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

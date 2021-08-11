@@ -16,7 +16,7 @@ class Solution
 {
 
     /**
-     * @param  Integer[]  $nums
+     * @param Integer[] $nums
      *
      * @return Integer[]
      */
@@ -25,6 +25,7 @@ class Solution
         $count = count($nums);
         $i = 0;
         $j = $count - 1;
+
         while ($i < $j) {
             if ($nums[$i] % 2 == 1) {
                 $i++;

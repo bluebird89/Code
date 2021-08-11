@@ -25,20 +25,26 @@ class Solution
     {
         $s_len = strlen($s);
         $t_len = strlen($t);
-        $res = true;
-
-        for ($i = 0; $i < $s_len; $i++) {
-            for ($j = 0; $j < $t_len; $j++) {
-                if ($s[$i] == $t[$j]) {
-                    $i++;
-                    $j++;
-                } elseif ($s[$i] != $t[$j]) {
-                    break;
-                }
-            }
+        if ($s_len != $t_len) {
+            return false;
         }
 
-        return $res;
+        $res = [];
+        for ($i = 0; $i < $s_len; $i++) {
+            $offset = isset($res[$s[$i]]) ? $res[$s[$i]] + 1 : 0;
+            $index = strpos($t, $s[$i], $offset);
+
+            if ($index === false) {
+                return false;
+            }
+
+            $res[$s[$i]] = $index;
+        }
+
+        return true;
     }
 }
+
 //leetcode submit region end(Prohibit modification and deletion)
+var_dump(strpos('car', 't'));
+var_dump(0 == false);

@@ -33,11 +33,18 @@ class Solution
      */
     public function findRepeatNumber($nums)
     {
+        $new = [];
+        $len = count($nums);
+        for ($i = 0; $i < $len; $i++) {
+            if (!in_array($nums[$i], $new)) {
+                $new[] = $nums[$i];
+            } else {
+                return $nums[$i];
+            }
+        }
+
+        return 0;
     }
 }
 
 //leetcode submit region end(Prohibit modification and deletion)
-$arr = [1, 2, 3, 4, 5];
-var_dump($arr);
-unset($arr[3]);
-var_dump($arr);

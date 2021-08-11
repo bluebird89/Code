@@ -9,9 +9,10 @@ namespace Algorithms\leetcode\editor\cn;
 //
 // int get(int key) 如果关键字 key 存在于缓存中，则返回关键字的值，否则返回 -1 。
 //
-// void put(int key, int value) 如果关键字已经存在，则变更其数据值；如果关键字不存在，则插入该组「关键字-值」。当缓存容量达到上限时，它应该在写入新数据之前删除最久未使用的数据值，从而为新的数据值留出空间。
-//
-// 进阶：是否可以在 O(1) 时间复杂度内完成这两种操作？
+// void put(int key, int value)
+// 如果关键字已经存在，则变更其数据值；
+// 如果关键字不存在，则插入该组「关键字-值」。
+// 当缓存容量达到上限时，应该在写入新数据之前删除最久未使用的数据值，从而为新的数据值留出空间。
 //
 // 示例：
 //
@@ -40,8 +41,7 @@ namespace Algorithms\leetcode\editor\cn;
 // 0 <= value <= 104
 // 最多调用 3 * 104 次 get 和 put
 //
-// Related Topics 设计
-// 👍 1440 👎 0
+// 进阶：是否可以在 O(1) 时间复杂度内完成这两种操作？
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class LRUCache
@@ -68,9 +68,8 @@ class LRUCache
     {
         $ret_value = -1;
 
-        if (array_key_exists($key, $this->data)) {
+        if (isset($this->data[$key])) {
             $ret_value = $this->data[$key];
-            // 移动到队尾
             unset($this->data[$key]);
             $this->data[$key] = $ret_value;
         }
@@ -86,18 +85,17 @@ class LRUCache
      */
     public function put($key, $value)
     {
-        // 如果存在，则向队尾移动，先删除，后追加
-        if (array_key_exists($key, $this->data)) {
+        // 如果存在，移动队尾，先删除，后追加
+        if (isset($this->data[$key])) {
             unset($this->data[$key]);
+        } else {
+            //  not exist 长度检查，超长则删除首元素
+            if (count($this->data) >= $this->cap) {
+//                unset($this->data[array_key_first($this->data)]);
+                unset($this->data[key($this->data)]);
+            }
         }
-        // 长度检查，超长则删除首元素
-        if (count($this->data) >= $this->cap) {
-            // array_shift will change key
-            $delete_key = current($this->data);
-            unset($this->data[$delete_key]);
-//            array_shift($this->data);
-        }
-        // 队尾追加元素
+
         $this->data[$key] = $value;
     }
 
@@ -118,12 +116,15 @@ $lru = new LRUCache(2);
 $lru->put(1, 0);
 echo $lru->get(1) . PHP_EOL;
 $lru->vardump_cache();
+
 $lru->put(2, 2);
 echo $lru->get(2) . PHP_EOL;
 $lru->vardump_cache();
+
 $lru->put(4, 4);
 echo $lru->get(1) . PHP_EOL;
 $lru->vardump_cache();
+
 echo $lru->get(3) . PHP_EOL;
 $lru->vardump_cache();
 echo $lru->get(4) . PHP_EOL;

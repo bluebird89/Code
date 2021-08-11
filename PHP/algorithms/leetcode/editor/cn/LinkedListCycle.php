@@ -52,13 +52,13 @@ class Solution
 {
 
     /**
-     * 方法一：哈希表实现
+     * 方法一：哈希表
      *
      * @param $head
      *
      * @return bool
      */
-    public static function hasCycle($head)
+    public static function hasCycle1($head)
     {
         $res = [];
         while ($head) {
@@ -74,31 +74,22 @@ class Solution
     }
 
     /**
-     * 暴力:有环且不在第一个位置会无限循环
+     * slow && fast
      *
-     * @param  ListNode  $head
+     * @param ListNode $head
      *
      * @return Boolean
-     * @deprecated:无法实现
      */
-    public static function hasCycle1($head)
+    public static function hasCycle($head)
     {
         $slow = $head;
-        while ($slow) {
-            if ($slow->next == null) {
-                return false;
-            }
-            $fast = $slow->next;
-            while ($fast) {
-                if ($fast->next == null) {
-                    return false;
-                }
-                if ($slow == $fast) {
-                    return true;
-                }
-                $fast = $fast->next;
-            }
+        $fast = $slow->next;
 
+        while ($slow && $fast) {
+            if ($slow == $fast) {
+                return true;
+            }
+            $fast = $fast->next->next;
             $slow = $slow->next;
         }
 

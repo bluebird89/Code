@@ -30,7 +30,7 @@ class Solution
         if ($l >= $r) {
             return;
         }
-        $mid = (int)(floor(($l + $r) / 2));
+        $mid = floor(($l + $r) / 2);
 
         $this->cnt = $this->mergeSort($nums, $l, $mid) + $this->mergeSort($nums, $mid + 1, $r);
 

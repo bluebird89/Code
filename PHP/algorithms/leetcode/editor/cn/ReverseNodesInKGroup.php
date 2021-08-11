@@ -18,7 +18,7 @@ namespace Algorithms\leetcode\editor\cn;
 //
 // 示例 3： 输入：head = [1,2,3,4,5], k = 1 输出：[1,2,3,4,5]
 //
-// 示例 4： 输入：head = [1], k = 1 /输出：[1]
+// 示例 4： 输入：head = [1], k = 1 输出：[1]
 //
 
 // 提示：

@@ -34,6 +34,7 @@ class Solution
         if ($s == '') {
             return '';
         }
+
         $res = '';
         while (!empty($pos = strpos($s, ' '))) {
             echo $pos;
